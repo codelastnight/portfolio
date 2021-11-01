@@ -1,16 +1,17 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import "../fonts/PPNeueMontreal-Medium.woff2";
-import "../style/index.scss";
-import useSiteMetadata from "./SiteMetadata";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import "../../fonts/PPNeueMontreal-Medium.woff2";
+import "../../style/index.scss";
+import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
+import * as classes from "./layout.module.scss";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <div className={classes.layout__wrapper}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -49,9 +50,12 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
+      <div className={classes.layout__inner}>
       <Navbar />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
+      </div>
+     
     </div>
   );
 };

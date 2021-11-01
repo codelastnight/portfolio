@@ -1,5 +1,10 @@
+// normalize for cross compatability
+@use 'normalize';
+
+// css variables
 @use 'variables';
 
+//rest of css
 @use 'base';
 @use 'layout';
 

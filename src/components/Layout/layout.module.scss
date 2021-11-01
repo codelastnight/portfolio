@@ -1,0 +1,8 @@
+.layout__wrapper {
+    display: grid;
+    justify-content: center;
+}
+.layout__inner {
+    max-width: var(--width-max);
+    padding: 0 var(--f6) ;
+}
