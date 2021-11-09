@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
-import Blogroll from '../components/BlogRoll';
+import Blogroll from '../components/Blogroll/BlogRoll';
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
