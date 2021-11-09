@@ -1,0 +1,92 @@
+.button__highlight {
+	background: linear-gradient(180deg, #FFFFFF 30.73%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.49);
+	position: absolute;
+	top:-50%;	
+	transition: all 150ms cubic-bezier(0.08, 1.07, 0.17, 1.74);
+	opacity: 0.8;
+	
+	min-width: inherit;
+	min-height: inherit;
+	border-radius: inherit;
+	width: inherit;
+	height: inherit;
+}
+.button__under {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.5) 100%);
+	position: absolute;
+	transition: all 150ms cubic-bezier(0.08, 1.07, 0.17, 1.74);
+	min-width: inherit;
+	min-height: inherit;
+    border-radius: inherit;
+	width: inherit;
+	height: inherit;
+}
+.button__pressed {
+	position: absolute;
+	mix-blend-mode: color-burn;
+	box-shadow: none;
+	
+	min-width: inherit;
+	min-height: inherit;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+}
+.button__outer {
+	overflow: hidden;
+	position: relative;
+	//background: #D4BAFF;
+	outline: 2px solid #D7B8FF;
+	transition: all 150ms cubic-bezier(0.08, 1.07, 0.17, 1.74);
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+		
+	&:hover, &:focus-visible {
+	filter: drop-shadow(0px 0px 0.2rem #D7B8FF);
+		transform: rotate(5deg);
+	//outline: 2px solid #D4BAFF;
+		
+	}
+	&:focus {
+		outline-width: 4px;
+		
+	}
+
+	&:active {
+		.button__under, .text {
+			transform: translateY(0.2rem);
+			
+		}
+		.button__highlight {
+			transform: translateY(0.2rem);
+			opacity: 1;
+			
+		}
+		.button__pressed {
+				
+				box-shadow: inset 0px 0.1rem 0.7rem rgba(0, 0, 0, 0.25);
+		}
+	}
+	
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+article {
+	display: grid;
+	place-items: center;
+	height: 80vh;
+}
+
+.text {
+	display: grid;
+	place-items: center;
+	min-height: inherit;
+	//margin: 0rem 3rem;
+}
+

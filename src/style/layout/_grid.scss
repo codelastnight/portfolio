@@ -4,6 +4,7 @@
     //width: 100%;
     grid-template-columns: repeat(10,minmax(0, 1fr));
     max-width: var(--width-max);
-    gap: var(--f3);
+    column-gap: var(--f3);
+    
 }
 
