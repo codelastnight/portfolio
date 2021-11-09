@@ -50,8 +50,9 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <div className={classes.layout__inner}>
       <Navbar />
+
+      <div className={classes.layout__inner}>
       <main>{children}</main>
       <Footer />
       </div>

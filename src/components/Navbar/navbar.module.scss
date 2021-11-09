@@ -10,4 +10,25 @@
     position:fixed;
     z-index: 10;
     width: 100%;
+    padding: var(--f4) var(--f6);
+    max-width: var(--width-max);
+    
+}
+
+
+.logo {
+
+    display: flex;
+    justify-content: flex-end;
+    
+    svg {
+        height: var(--f4);
+    }
+}
+
+
+.nav__wrapper {
+    display: grid;
+    justify-content: center;
+
 }

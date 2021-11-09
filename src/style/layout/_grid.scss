@@ -8,3 +8,38 @@
     
 }
 
+
+.row1 {
+    grid-row: 1;
+}
+.row2 {
+    grid-row: 2;
+}
+.row3 {
+    grid-row: 3;
+
+}
+.row4 {
+    grid-row: 4;
+
+}
+
+
+@for $i from 1 through 10 { 
+    .col#{$i} {
+        grid-column: #{$i};
+    }
+  }
+
+
+.span2 {
+    
+    grid-column-end: span 2;
+}
+
+.span4 {
+    
+    grid-column-end: span 4;
+}
+
+

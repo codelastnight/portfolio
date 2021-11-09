@@ -6,6 +6,7 @@ const Button = ({
     height,
     radius,
     color,
+    className,
     children
 }) => {
     var colorOutline = s.Spectra(color);
@@ -14,7 +15,8 @@ const Button = ({
 	
 
     return (
-        <div tabindex="0"  className={c.button__outer} style={{minWidth: width, minHeight: height, borderRadius: radius, background: color}}>
+        <div className={className}>
+<div tabindex="0"  className={`${c.button__outer} `} style={{width: width, height: height, borderRadius: radius, background: color, outlineColor: colorOutline.hex()}}>
             <div className={c.button__under}></div>
             <div className={c.button__highlight}></div>
             <div className={c.button__pressed}></div>
@@ -22,15 +24,18 @@ const Button = ({
                  {children}
             </div>
         </div>
+        </div>
+        
     )
 
 }
 
 
 Button.defaultProps = {
-    width: '0',
-    height: '0',
+    width: '100%',
+    height: 'inherit',
     radius: '30rem',
-    color: '#D7BEFF'
+    color: '#D7BEFF',
+    className: ""
 }
 export default Button;

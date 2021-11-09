@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
-import Button from '../components/Button';
+import Blogroll from '../components/BlogRoll';
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
@@ -20,11 +20,9 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <section className="grid">
-        test
-        
-      </section>
+      
       <MainHeading />
+      <Blogroll />
     </div>
   );
 };

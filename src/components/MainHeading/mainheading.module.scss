@@ -1,41 +1,44 @@
 .mainheading {
+    height: fit-content;
     // fix later
     h1 {
-        font-size: 8rem;
+        font-size: 7rem;
+        z-index: 1;
+
+    }
+    h4 {
+        font-size: var(--f3);
     }
 }
-
-.row1 {
-    grid-row: 1;
-}
-.row2 {
-    grid-row: 2;
-}
-.row3 {
-    grid-row: 3;
+.mainheading__wrapper {
+    display: grid;
+    min-height: 90vh;
+    place-items: center;
 
 }
-
-.col2 {
-    grid-column: 2;
-}
-.col3 {
-    grid-column: 3;
-}
-.col4 {
-    grid-column: 4;
-}
-.col6 {
-    grid-column: 6;
+.svg {
+    place-self: center;
+    stroke-width: 2px;
+    stroke: var(--c-fg);
+    z-index: 1;
+    pointer-events: visibleStroke; /* SVG-only */
 }
 
-.span2 {
-    
-    grid-column-end: span 2;
+.globe {
+    padding: 0 2rem;
 }
 
-.span4 {
-    
-    grid-column-end: span 4;
+.button {
+    z-index: 0;
+    display: grid;
+    place-items: center;
+    padding: 0 1rem;
 }
 
+.btn1 {
+    transform: rotate(20deg);
+}
+.btn2 {
+    transform: rotate(45deg);
+
+}
