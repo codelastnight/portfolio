@@ -8,38 +8,29 @@
     
 }
 
-
-.row1 {
-    grid-row: 1;
-}
-.row2 {
-    grid-row: 2;
-}
-.row3 {
-    grid-row: 3;
-
-}
-.row4 {
-    grid-row: 4;
-
+.grid-row {
+    display: grid;
+    //width: 100%;
+    grid-template-rows: repeat(10,minmax(0, 1fr));
 }
 
+@for $i from 1 through 10 { 
+    .row#{$i} {
+        grid-row: #{$i};
+    }
+}
 
 @for $i from 1 through 10 { 
     .col#{$i} {
         grid-column: #{$i};
     }
-  }
-
-
-.span2 {
-    
-    grid-column-end: span 2;
 }
 
-.span4 {
-    
-    grid-column-end: span 4;
+@for $i from 1 through 10 { 
+    .span#{$i} {
+        grid-column-end: span #{$i};
+    }
 }
+
 
 

@@ -1,1 +1,1 @@
-export {default} from './BlogRoll';
+export { default } from './BlogRoll';

@@ -21,7 +21,7 @@
     stroke-width: 2px;
     stroke: var(--c-fg);
     z-index: 1;
-    pointer-events: visibleStroke; /* SVG-only */
+    pointer-events: none; /* SVG-only */
 }
 
 .globe {
