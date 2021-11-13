@@ -5,6 +5,7 @@
     padding: var(--f6) var(--f6);
     max-width: var(--width-max);
     bottom: 0;
+    pointer-events: none;
 }
 .nav__wrapper {
     display: grid;

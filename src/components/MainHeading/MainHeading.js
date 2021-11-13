@@ -38,8 +38,8 @@ const MainHeading = ({}) => {
                 </svg>
 
                 <h1 className={`row4 col3 span4`}>(of sorts)</h1>
-                <h4 className={`row5 col2 span2`}>industrial design + web dev + UI/UX + graphic design</h4>
-                <div className={`row5 col9 span2`}>
+                <h4 className={`row5 col2 span2 ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
+                <div className={`row5 col9 span2 ${c.paddingtop}`}>
                     <h4 >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
 
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,6 +48,17 @@ const MainHeading = ({}) => {
                     </svg>
 
                 </div>
+                <div className={`col2 row6 ${c.links}`}>
+                        <a href="https://www.instagram.com/art.last.night/"><p>instagram</p></a> 
+                        <a href="https://www.behance.net/artlastnight"><p>behance</p></a> 
+                        <a href="https://www.linkedin.com/in/not-simon/"><p>linkedin</p></a> 
+                    </div>
+                    <div className={`col3 row6 ${c.links}`}>
+                        <p>©</p>
+                        <p>copyright</p>
+                        <p>2021</p>
+
+                    </div>
             </div>
            
         </section>

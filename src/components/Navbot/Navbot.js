@@ -13,6 +13,7 @@ const Navbot = () => {
                         <LogoIcon />
 
                     </div>
+                    
                 </div>
             </div>
         </div>
