@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
+
+
 import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
+
 import BlogRoll from '../components/BlogRoll';
+
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,

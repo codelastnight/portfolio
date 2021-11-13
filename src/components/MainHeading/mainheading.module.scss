@@ -19,7 +19,7 @@
 .svg {
     place-self: center;
     stroke-width: 2px;
-    stroke: var(--c-fg);
+    stroke: currentColor;
     z-index: 1;
     pointer-events: none; /* SVG-only */
 }

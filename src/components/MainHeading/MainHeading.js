@@ -49,16 +49,16 @@ const MainHeading = ({}) => {
 
                 </div>
                 <div className={`col2 row6 ${c.links}`}>
-                        <a href="https://www.instagram.com/art.last.night/"><p>instagram</p></a> 
-                        <a href="https://www.behance.net/artlastnight"><p>behance</p></a> 
-                        <a href="https://www.linkedin.com/in/not-simon/"><p>linkedin</p></a> 
-                    </div>
-                    <div className={`col3 row6 ${c.links}`}>
-                        <p>©</p>
-                        <p>copyright</p>
-                        <p>2021</p>
+                    <p><a href="https://www.instagram.com/art.last.night/">instagram</a> </p>
+                    <p><a href="https://www.behance.net/artlastnight">behance</a> </p>
+                    <p><a href="https://www.linkedin.com/in/not-simon/">linkedin</a> </p>
+                </div>
+                <div className={`col3 row6 ${c.links}`}>
+                    <p>©</p>
+                    <p>copyright</p>
+                    <p>2021</p>
 
-                    </div>
+                </div>
             </div>
            
         </section>
