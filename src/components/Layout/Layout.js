@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
 import "../../fonts/PPNeueMontreal-Medium.woff2";
 import "../../style/index.scss";
@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => {
     root.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`)
 
     return () => {
-      root.style.setProperty(null)
+      root.style.setProperty("--scrollbarWidth", `0px`)
     };
 });
  
@@ -68,7 +68,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       
-      <Navbot />
+      
       <div className={classes.layout__inner}>
         <main>{children}</main>
         <Footer />

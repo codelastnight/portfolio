@@ -1,6 +1,8 @@
 import * as c from './mainheading.module.scss';
 import React from "react";
 import Button from '../Button';
+import LogoIcon from '../LogoIcon';
+
 const MainHeading = ({}) => {
     
     return (
@@ -49,12 +51,16 @@ const MainHeading = ({}) => {
                     </svg>
 
                 </div>
-                <div className={`col2 row6 ${c.links}`}>
+                <div className={`row6 ${c.cycle}`}>
+                        <LogoIcon />
+
+                    </div>
+                <div className={`row6 col2 ${c.links}`}>
                     <p><a href="https://www.instagram.com/art.last.night/">instagram</a> </p>
                     <p><a href="https://www.behance.net/artlastnight">behance</a> </p>
                     <p><a href="https://www.linkedin.com/in/not-simon/">linkedin</a> </p>
                 </div>
-                <div className={`col3 row6 ${c.links}`}>
+                <div className={`row6 col3  ${c.links}`}>
                     <p>©</p>
                     <p>copyright</p>
                     <p>2021</p>

@@ -1,18 +1,30 @@
 .nav {
     position:fixed;
-    z-index: 10;
+    z-index: 0;
     width: 100%;
     padding: var(--f6) var(--f6);
     max-width: var(--width-max);
     bottom: 0;
-    pointer-events: none;
 }
 .nav__wrapper {
     display: grid;
     justify-content: center;
+    //pointer-events: none;
 
 }
 
 .cycle {
     grid-column: 1;
+}
+
+.links {
+    z-index: 1;
+    align-self: center;
+    //pointer-events: all;
+
+    p {
+        //pointer-events: all;
+
+    }
+
 }
