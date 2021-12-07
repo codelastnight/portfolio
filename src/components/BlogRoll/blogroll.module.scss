@@ -1,24 +1,24 @@
 .blogroll {
     :nth-child(1){
-        grid-column: 6 / span 5 ;
+        grid-column: 7 / span 5 ;
         grid-row: 1 / 4;        
     }
     :nth-child(2) {
-        grid-column: 1 / span 5 ;
+        grid-column: 2 / span 5 ;
         grid-row: 2 / 5;        
     }
 
 
     :nth-child(3) {
-        grid-column: 1 / span 3 ;
+        grid-column: 2 / span 3 ;
         grid-row: 5 / 8;        
     }
     :nth-child(4) {
-        grid-column: 1 / span 4 ;
+        grid-column: 5 / span 4 ;
         grid-row: 5 / 8;        
     }
     :nth-child(5) {
-        grid-column: 1 / span 3 ;
+        grid-column: 7 / span 3 ;
         grid-row: 5 / 8;        
     }
 }

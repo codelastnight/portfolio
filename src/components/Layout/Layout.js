@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -11,6 +12,20 @@ import Navbot from "../Navbot";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+
+
+  useEffect(()  => {
+    let root = document.documentElement;
+
+    const scrollbarWidth = window.innerWidth - document.body.clientWidth
+    root.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`)
+
+    return () => {
+      root.style.setProperty(null)
+    };
+});
+ 
+
   return (
     <div className={classes.layout__wrapper}>
       <Helmet>

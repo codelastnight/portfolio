@@ -12,10 +12,16 @@
 }
 .mainheading__wrapper {
     display: grid;
-    min-height: 90vh;
+    min-height: 98vh;
     place-items: center;
+    position: fixed;
+}
+
+.mainheading__dummy {
+    min-height: 90vh;
 
 }
+
 .svg {
     place-self: center;
     stroke-width: 2px;
@@ -49,4 +55,9 @@
 
 .paddingtop {
     padding-top: var(--f2);
+}
+
+
+.margin1rem {
+    margin-top: 1rem;
 }

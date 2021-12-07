@@ -3,7 +3,7 @@ import { motion, useViewportScroll, useSpring, useTransform } from "framer-motio
 import * as c from './logoicon.module.scss';
 const LogoIcon = () => {
     const { scrollYProgress } = useViewportScroll()
-    const yValue = useTransform(scrollYProgress, [0,1], [0,360])
+    const yValue = useTransform(scrollYProgress, [0,1], [45,405])
     const pathLength = useSpring(yValue, { stiffness: 400, damping: 90 });
 
     return (

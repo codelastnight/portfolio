@@ -2,7 +2,7 @@
 .grid {
     display: grid;
     //width: 100%;
-    grid-template-columns: repeat(10,minmax(0, 1fr));
+    grid-template-columns: var(--grid);
     max-width: var(--width-max);
     column-gap: var(--f3);
     
@@ -11,26 +11,38 @@
 .grid-row {
     display: grid;
     //width: 100%;
-    grid-template-rows: repeat(10,minmax(0, 1fr));
+    grid-template-rows: var(--grid);
 }
 
-@for $i from 1 through 10 { 
+@for $i from 1 through 12 { 
     .row#{$i} {
         grid-row: #{$i};
     }
 }
 
-@for $i from 1 through 10 { 
+
+@for $i from 1 through 12 { 
     .col#{$i} {
         grid-column: #{$i};
     }
 }
 
-@for $i from 1 through 10 { 
+@for $i from 1 through 12 { 
+    .col#{$i}__r {
+        grid-column: -#{$i};
+    }
+}
+
+
+
+@for $i from 1 through 12 { 
     .span#{$i} {
         grid-column-end: span #{$i};
     }
 }
 
+section {
+    padding: 0 var(--f6) ;
+}
 
 

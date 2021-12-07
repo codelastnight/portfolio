@@ -29,6 +29,7 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-helmet": "^6.0.0",
+    "react-scroll-to-component": "^1.0.2",
     "sass": "^1.43.2",
     "spectra": "^0.2.3",
     "uuid": "^7.0.0"

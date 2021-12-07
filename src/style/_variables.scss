@@ -6,7 +6,7 @@
     --f5: 36px;
     --f6: 42px;
 
-    --width-max: 1440px;
+    --width-max: 1800px;
     --width-desktop: 1200px;
 
 
@@ -15,12 +15,18 @@
     // colors
     // light mode
 
-    --c-bg: #E6E1EC;
-    --c-fg: #0034EB;
+    --c-bg: #ECEAEF;
+    --c-fg: #0400B4;
 
     //btn colors light
     --c-purple: #D7BEFF;
     --c-pink: #F8ACF0;
     --c-green: #88DC8B;
+
+    --grid: repeat(12,minmax(0, 1fr));
+
+
+    //scrollbar fix
+    --viewportWidth: calc(100vw - var(--scrollbarWidth));
 
 }

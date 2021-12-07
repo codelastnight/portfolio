@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
-
-
 import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
 
@@ -23,9 +21,9 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
 
   return (
-    <div>
+    <div id="top">
       
-      <MainHeading />
+      <MainHeading  />
       <BlogRoll />
     </div>
   );
