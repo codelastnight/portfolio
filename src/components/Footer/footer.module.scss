@@ -1,4 +1,21 @@
 .footer__wrapper {
     background: var(--c-fg);
     color: var(--c-bg);
+    z-index: 10;
+    position: relative;
+    padding-top: var(--f3);
+}
+
+
+.logo {
+    margin-top: var(--f6);
+    grid-row: 1 / span 5;
+    svg {
+        width: 100%;
+
+    }
+}
+
+.contact {
+
 }
