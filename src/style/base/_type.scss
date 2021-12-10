@@ -17,8 +17,12 @@ h1,h2,h3,h4,h5,h6, p {
   margin: 0;
 }
 
+a {
+  text-decoration: underline;
+  color: currentColor;
+}
 a:visited {
-  color: var(--c-fg);
+  color: currentColor;
 }
 a:hover {
   opacity: 0.4;

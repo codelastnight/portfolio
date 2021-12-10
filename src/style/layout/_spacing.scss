@@ -1,0 +1,11 @@
+@for $i from 1 through 6 { 
+    .v-margin#{$i} {
+        margin-bottom: var(--f#{$i});
+    }
+}
+
+@for $i from 1 through 6 { 
+    .v-padding#{$i} {
+        padding-bottom: var(--f#{$i});
+    }
+}

@@ -24,6 +24,7 @@ export const IndexPageTemplate = ({
     <div id="top">
       
       <MainHeading  />
+      
       <BlogRoll />
     </div>
   );

@@ -7,7 +7,7 @@ const MainHeading = ({}) => {
     
     return (
         <React.Fragment>
-            <section className={c.mainheading__wrapper} > 
+             <section className={c.mainheading__wrapper} > 
             <div className={`grid ${c.mainheading}`}>
                 <h4 className={`row1 col3 span2`} >hello, my name is simon</h4>
                 <h1 className={`row2 col2 span3`}>I'm a</h1>
@@ -70,7 +70,7 @@ const MainHeading = ({}) => {
            
             </section>
             <section className={c.mainheading__dummy}>
-                
+          
             </section>
         </React.Fragment>
         

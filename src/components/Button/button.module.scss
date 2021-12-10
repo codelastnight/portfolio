@@ -87,6 +87,10 @@
 	display: grid;
 	place-items: center;
 	min-height: inherit;
+	height: inherit;
+	text-decoration: underline;
+	color: var(--c-fg);
+
 	//margin: 0rem 3rem;
 }
 

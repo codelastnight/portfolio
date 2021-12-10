@@ -15,7 +15,7 @@ class BlogRollTemplate extends React.Component {
             
             <article
               key={post.id}
-            
+              className={c.article}
             >
 
                 {post.frontmatter.featuredimage ? (

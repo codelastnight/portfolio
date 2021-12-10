@@ -1,4 +1,8 @@
 .blogroll {
+    z-index: 10;
+    position: relative;
+    pointer-events: none;
+
     :nth-child(1){
         grid-column: 7 / span 5 ;
         grid-row: 1 / 4;        
@@ -21,6 +25,11 @@
         grid-column: 7 / span 3 ;
         grid-row: 5 / 8;        
     }
+    
+}
+
+.article {
+    pointer-events: all;
 }
 
 .image {
