@@ -23,7 +23,7 @@ const Footer = class extends React.Component {
             </p>
           </section>
         <section className="grid ">
-            <Button className={`col11__r row2 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
+            <Button className={`col11__r row3 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
             <Button className={`col8__r row4 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
 
             <Button className={`col7__r row3 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
@@ -54,6 +54,12 @@ const Footer = class extends React.Component {
 
            
 
+        </section>
+        <section className="grid v-padding6 ">
+               
+        </section>
+        <section className="grid v-padding6 ">
+               
         </section>
       </footer>
     );
