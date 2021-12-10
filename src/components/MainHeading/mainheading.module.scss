@@ -16,6 +16,7 @@
     place-items: center;
     position: fixed;
     z-index: 10;
+    max-width: var(--width-max);
 }
 
 .mainheading__dummy {
