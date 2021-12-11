@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="grid">
 
           <p className={c.link1}>  
-            <Link type="top" element="title">
+            <Link to="/" type="top" element="title">
               work
             </Link>
           </p>

@@ -18,32 +18,41 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="grid">
+    <React.Fragment>
+      <section className="grid text">
       {helmet || ""}
-      <article className="col2 span8">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
+      <h1 className="col2 span4">
+        {title}
+      </h1>
+      <p className="col6 span4">
+        {description}
+      </p>
+                 
+
+      </section>
+      <section className="grid text">
+        <article className="col2 span8">
+          <PostContent content={content} />
+
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
                 </ul>
               </div>
             ) : null}
-          </div>
-        </div>
-      </article>
-    </section>
+        </article>
+       
+      </section>
+
+   
+    </React.Fragment>
+  
   );
 };
 

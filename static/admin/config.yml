@@ -2,9 +2,9 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Created {{collection}} “{{slug}}”"
+    update: "Updated {{collection}} “{{slug}}”"
+    delete: "Deleted {{collection}} “{{slug}}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
@@ -32,6 +32,30 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{slug}}--{{minute}}{{second}}{{hour}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "portfolio",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "list",
+          fields:
+          - {label: Name, name: name, widget: "markdown"}
+          - {label: Avatar, name: avatar, widget: image }
+        }
 
   - name: "pages"
     label: "Pages"
