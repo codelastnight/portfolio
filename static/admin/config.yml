@@ -53,8 +53,8 @@ collections:
           name: "body",
           widget: "list",
           fields:
-          - {label: "Text", name: "text", widget: "markdown"}
-          - {label: "Body Image", name: "bodyimage", widget: image }
+            - {label: "Text", name: "text", widget: "markdown"}
+            - {label: "Body Image", name: "bodyimage", widget: image }
         }
 
   - name: "pages"
