@@ -33,6 +33,7 @@
     "react-scroll-to-component": "^1.0.2",
     "sass": "^1.43.2",
     "spectra": "^0.2.3",
+    "trim": "^1.0.1",
     "uuid": "^7.0.0"
   },
   "keywords": [
@@ -43,14 +44,15 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "develop": "npm run clean && gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "yarn-audit-fix": "^9.0.0"
   },
   "engines": {
     "node": ">= 14.15.0"
