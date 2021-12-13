@@ -52,7 +52,7 @@ collections:
           label: "Body",
           name: "body",
           widget: "list",
-          fields:
+          fields: 
             - {label: "Text", name: "text", widget: "markdown"}
             - {label: "Body Image", name: "bodyimage", widget: image }
         }
