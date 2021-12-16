@@ -46,11 +46,17 @@
     max-width: 20em;
 }
 
+.w15{
+    max-width: 15em;
+}
 .btn1 {
     transform: rotate(20deg);
 }
 .btn2 {
     transform: rotate(45deg);
+
+    right: 20%;
+    top: 50%;
 
 }
 
@@ -67,3 +73,6 @@
     margin-top: 1rem;
 }
 
+.maxcontent {
+    max-width: max-content; 
+}
