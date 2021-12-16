@@ -31,7 +31,13 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
+        <link
+          rel="preload"
+          href="../../fonts/PPNeueMontreal-Medium.woff2"
+          as="font"
+          crossorigin="anonymous"
+          type="font/woff2"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
