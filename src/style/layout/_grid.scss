@@ -43,7 +43,7 @@
 
 @for $i from 1 through 11 { 
     .end#{$i}__r {
-        grid-column-end: -#{$i +1};
+        grid-column-end: -#{$i};
     }
 }
 

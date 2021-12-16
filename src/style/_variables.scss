@@ -25,8 +25,22 @@
 
     --grid: repeat(12,minmax(0, 1fr));
 
+    
+
 
     //scrollbar fix
     --viewportWidth: calc(100vw - var(--scrollbarWidth));
 
+}
+
+@media screen and (max-width: 1300px){
+    :root {
+        --grid: repeat(10,minmax(0, 1fr));
+
+    }
+}
+
+.darkmode {
+    --c-bg: #0400B4;
+    --c-fg: #ECEAEF;
 }

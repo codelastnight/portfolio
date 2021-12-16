@@ -42,13 +42,13 @@ const Footer = class extends React.Component {
             )}
            
             
-            <div className={`col10__r span10 ${c.logo}`}>
+            <div className={`col2 end1__r ${c.logo}`}>
               <Logo />
             </div>
 
         </section>
         <section className="grid v-padding6 ">
-            <div className={`col10__r `} >
+            <div className={`col2 `} >
               <p>portfolio</p>
               </div>
 

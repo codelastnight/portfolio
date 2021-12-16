@@ -19,19 +19,23 @@ export const BlogPostTemplate = ({
 
   return (
     <React.Fragment>
-      <section className="grid text">
+      <section className="grid text spacer__top">
       {helmet || ""}
-      <h1 className="col2 span4">
+      <h1 className="col3 span5">
         {title}
       </h1>
-      <p className="col6 span4">
-        {description}
+      <p className="col8 end4__r">
+        test
+      </p>
+      <p className="row2 col3 span4">
+         {description}
+
       </p>
                  
 
       </section>
       <section className="grid text">
-        <article className="col2 span8">
+        <article className="col3 end4__r">
           <PostContent content={content} />
 
           {tags && tags.length ? (

@@ -69,7 +69,7 @@ const TemplateWrapper = ({ children }) => {
       
       
       <div className={classes.layout__inner}>
-        <main>{children}</main>
+        <main className="darkmode">{children}</main>
         <Footer />
       </div>
      
