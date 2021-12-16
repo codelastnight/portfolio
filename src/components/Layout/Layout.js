@@ -8,7 +8,6 @@ import "../../style/index.scss";
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
 import * as classes from "./layout.module.scss";
-import Navbot from "../Navbot";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();

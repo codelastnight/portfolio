@@ -14,35 +14,37 @@
     grid-template-rows: var(--grid);
 }
 
-@for $i from 1 through 12 { 
+@for $i from 1 through 11 { 
     .row#{$i} {
         grid-row: #{$i};
     }
 }
 
 
-@for $i from 1 through 12 { 
+@for $i from 1 through 11 { 
     .col#{$i} {
         grid-column: #{$i};
     }
 }
 
-@for $i from 1 through 12 { 
+@for $i from 1 through 11 { 
     .col#{$i}__r {
-        grid-column: -#{$i};
+        grid-column: -#{$i +1};
     }
 }
 
 
 
-@for $i from 1 through 12 { 
+@for $i from 1 through 11 { 
     .span#{$i} {
         grid-column-end: span #{$i};
     }
 }
 
-section {
-    padding: 0 var(--f6) ;
+@for $i from 1 through 11 { 
+    .end#{$i}__r {
+        grid-column-end: -#{$i +1};
+    }
 }
 
 

@@ -85,7 +85,7 @@ export default function BlogRoll() {
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 340
+                        width: 240
                         quality: 100
                         layout: FULL_WIDTH
                       )

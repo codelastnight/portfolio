@@ -4,6 +4,14 @@ import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import Button from './../Button'
 
+const buttonLoc  = [
+  "col11__r row3 span2",
+  `col8__r row4 span2`,
+  `col7__r row3 span2`,
+  `col5__r row2 span2`,
+  `col3__r row5 span2`
+]
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -23,14 +31,17 @@ const Footer = class extends React.Component {
             </p>
           </section>
         <section className="grid ">
-            <Button className={`col11__r row3 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
-            <Button className={`col8__r row4 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
 
-            <Button className={`col7__r row3 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
 
-            <Button className={`col5__r row2 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
-            <Button className={`col3__r row5 span2`} height="3em" color="#FF9023"><h3 className={c.contact}>Contact Me</h3></Button>
-
+            {
+              buttonLoc.map((i) => (
+                <Button className={i} height="3em" color="#FF9023">
+                  <h4 className={c.contact}>Contact Me</h4>
+                </Button>
+              )
+            )}
+           
+            
             <div className={`col10__r span10 ${c.logo}`}>
               <Logo />
             </div>

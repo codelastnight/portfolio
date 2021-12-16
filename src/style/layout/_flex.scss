@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+}
+
+
+.justify__center {
+    justify-content: center;
+}
+
+.align__center {
+    align-items: center;
+}
+
+.flexgap > * {
+    margin-right: var(--f3);
+    &:only-child, &:last-child  {
+        margin-right: 0; 
+    }
+}
