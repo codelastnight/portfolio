@@ -11,12 +11,7 @@
 
 
 
-    //colors
-    // colors
-    // light mode
 
-    --c-bg: #ECEAEF;
-    --c-fg: #0400B4;
 
     //btn colors light
     --c-purple: #D7BEFF;
@@ -40,7 +35,26 @@
     }
 }
 
-.darkmode {
+[data-theme="dark"] {
     --c-bg: #0400B4;
-    --c-fg: #ECEAEF;
+    --c-fg: #d0c7dd;
 }
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+          //colors
+    // colors
+    // light mode
+
+    --c-bg: #ECEAEF;
+    --c-fg: #0400B4;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --c-bg: #25237c;
+        --c-fg: #cec4db;
+    }
+  }
+  
