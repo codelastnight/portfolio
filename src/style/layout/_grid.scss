@@ -11,7 +11,8 @@
 .grid-row {
     display: grid;
     //width: 100%;
-    grid-template-rows: var(--grid);
+    grid-auto-rows: minmax(0,1fr);
+    grid-auto-flow: row;
 }
 
 @for $i from 1 through 11 { 

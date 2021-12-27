@@ -29,13 +29,10 @@ export const BlogPostTemplate = ({
       </p>
       <p className="row2 col3 span4">
          {description}
-
       </p>
-                 
-
       </section>
-      <section className="grid text">
-        <article className="col3 end4__r">
+      <section className="grid ">
+        <article className="col3 end4__r text">
           <PostContent content={content} />
 
           {tags && tags.length ? (

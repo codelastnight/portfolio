@@ -10,14 +10,19 @@ class BlogRollTemplate extends React.Component {
 
     return (
       <section className={`grid grid-row ${c.blogroll}`}>
+        <div className={c.posts}>
         {posts &&
           posts.map(({ node: post }) => (
             
             <article
               key={post.id}
-              className={c.article}
+              className={`text ${c.article}`}
             >
 
+                <Link
+                  className={c.img__hover}
+                  to={post.fields.slug}
+                >
                 {post.frontmatter.featuredimage ? (
                   <div className="featured-thumbnail">
                     <PreviewCompatibleImage
@@ -34,9 +39,10 @@ class BlogRollTemplate extends React.Component {
                     />
                   </div>
                 ) : <div className={c.img__placeholder}></div>}
-                <p className="post-meta">
+                </Link>
+                <p className="post-meta ">
                   <Link
-                    className="title has-text-primary is-size-4"
+                    className=""
                     to={post.fields.slug}
                   >
                     {post.frontmatter.title}
@@ -47,6 +53,8 @@ class BlogRollTemplate extends React.Component {
             </article>
             
           ))}
+        </div>
+      
       </section>
     )
   }
@@ -88,6 +96,7 @@ export default function BlogRoll() {
                         width: 200
                         quality: 90
                         layout: FULL_WIDTH
+                        
                       )
 
                     }
