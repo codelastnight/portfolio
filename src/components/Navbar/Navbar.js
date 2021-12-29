@@ -5,7 +5,7 @@ import * as c from './navbar.module.scss'
 
 const Navbar = () => {
   return (
-    <nav className={` ${c.nav__wrapper}`}>
+    <nav className={`z100 ${c.nav__wrapper}`}>
       <div className={`${c.nav}`}>
 
         <div className="grid">

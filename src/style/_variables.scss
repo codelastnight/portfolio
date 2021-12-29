@@ -7,9 +7,11 @@
     --f6: 42px;
 
     --width-max: 1800px;
+
     --width-desktop: 1200px;
+    --width-desktop-l: 1300px;
 
-
+    --width-mobile: 1080px;
 
 
 
@@ -28,7 +30,7 @@
 
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: var(--width-desktop-l)){
     :root {
         --grid: repeat(10,minmax(0, 1fr));
 

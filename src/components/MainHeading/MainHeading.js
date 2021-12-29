@@ -14,7 +14,7 @@ const MainHeading = ({}) => {
 
                 <div className="row2 col2 span8 flex flexgap align__center">
                     <h1 className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</h1>
-                    <div className={`relative ${c.w20} flex align__center`}>
+                    <div className={`relative ${c.w20} flex align__center show__d`}>
                         <div className='absolute width100' >
                             <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="2.5rem" radius="0.5rem" />
                         </div>
@@ -30,7 +30,7 @@ const MainHeading = ({}) => {
                     </svg>
                 </div>
                 <div className="row3 col2 span8 flex flexgap align__center">
-                    <div className={`relative flex align__center`}>
+                    <div className={`relative flex align__center  show__d`}>
                         <div className={`absolute width100 ${c.w20}`}>
                         <Button className={`width100 ${c.button} ${c.btn1}`}  height="3.5rem" radius="10rem" />
                       
