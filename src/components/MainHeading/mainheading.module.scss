@@ -24,7 +24,6 @@
 
 .mainheading__dummy {
     min-height: 90vh;
-
 }
 
 .svg {
@@ -73,14 +72,20 @@
 
 
 .margin1rem {
-    margin-top: 1rem;
+    margin-top: 3vmin;
 }
 
 .maxcontent {
     max-width: max-content; 
 }
 
+.starcircle {
+    max-width: 12vmin;
+}
 
+.flower {
+    max-width: 5vmin;
+}
 
 .animate {
     animation: 0.1s ease-out 1s 1 loadIn;

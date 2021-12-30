@@ -14,25 +14,25 @@ const MainHeading = ({}) => {
 
                 <div className="row2 col2 end1__r flex flexgap align__center">
                     <h1 className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</h1>
-                    <div className={`relative ${c.w20} flex align__center show__d`}>
+                    <div className={`relative ${c.w20} flex align__center `}>
                         <div className='absolute width100' >
-                            <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="2.5rem" radius="0.5rem" />
-                        </div>
+                            <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="3.5vmin" radius="0.5rem" />
+                        </div> 
                         <svg className={`width100 ${c.svg}  ${c.margin1rem}`} viewBox="0 0 271 105" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 82.0703C37.4877 57.3352 72.0715 26.0492 111.767 9.96763C124.767 4.70099 154.129 -4.08814 166.32 8.32062C172.012 14.1139 170.302 30.0883 168.957 37.2349C164.765 59.5141 138.199 74.3119 121.326 82.9853C113.067 87.2309 104.74 90.9453 97.0981 96.5274C95.8164 97.4637 89.4838 104.391 87.2093 102.749C85.8746 101.786 86.4714 96.0861 86.55 94.5144C87.0137 85.2457 95.8244 81.5675 102.537 78.4102C125.636 67.5454 150.573 60.9331 174.231 51.6005C183.973 47.7579 211.098 35.2735 201.261 59.1036C199.476 63.4291 176.383 80.4233 188.158 80.4233C194.684 80.4233 198.219 76.3477 203.898 73.1947C213.97 67.6028 225.82 62.8604 236.367 58.3716C247.274 53.7289 257.775 50.9551 269 54.071" strokeLinecap="round"/>
                         </svg>
                     </div>
                    
                 
-                    <svg width="90" className={` ${c.svg} `} height="37" viewBox="0 0 96 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={` ${c.svg} ${c.starcircle}`}  viewBox="0 0 96 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M48.9519 37C48.9519 32.226 47.1704 27.6477 43.9994 24.2721C40.8281 20.8963 36.5273 18.9999 32.0431 18.9999C36.5273 18.9999 40.8281 17.1035 43.9994 13.7279C47.1704 10.3521 48.9519 5.77378 48.9519 1C48.9519 5.77378 50.7334 10.3521 53.9047 13.7279C57.0757 17.1035 61.3766 18.9999 65.8613 18.9999C61.3766 18.9999 57.0757 20.8963 53.9047 24.2721C50.7334 27.6477 48.9519 32.226 48.9519 37Z" fill="currentColor"/>
                         <ellipse cx="48.4824" cy="18.5" rx="46.5" ry="17.5" stroke="currentColor" strokeWidth="2"/>
                     </svg>
                 </div>
                 <div className="row3 col2 end1__r flex flexgap align__center">
-                    <div className={`relative flex align__center  show__d`}>
+                    <div className={`relative flex align__center  `}>
                         <div className={`absolute width100 ${c.w20}`}>
-                        <Button className={`width100 ${c.button} ${c.btn1}`}  height="3.5rem" radius="10rem" />
+                        <Button className={`width100 ${c.button} ${c.btn1}`}  height="6vmin" radius="10rem" />
                       
                         </div>
                         <svg className={`width100 row3 col2 span2 ${c.svg}  `} viewBox="0 0 276 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const MainHeading = ({}) => {
                 </div>
                 <div className="row4 col2 end1__r flex flexgap align__center">
 
-                    <svg className={`${c.svg}`} width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`${c.svg} ${c.flower}`}  viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8516 13.2933C14.8317 11.8635 14.2821 10.1406 14.2821 8.3721C14.2821 3.7511 17.9649 0 22.501 0C27.0371 0 30.7199 3.7511 30.7199 8.3721C30.7199 10.1406 30.1702 11.8635 29.1497 13.2933L27.4855 15.6276L29.1497 13.2933C30.1702 11.8635 31.6084 10.7984 33.2592 10.2522C37.5736 8.82435 42.2141 11.2331 43.6157 15.6276C45.0174 20.0222 42.6529 24.7495 38.3385 26.1774C36.6883 26.7243 34.91 26.7243 33.2592 26.1774L30.5661 25.286L33.2592 26.1774C34.91 26.7243 36.3488 27.7887 37.3686 29.2191C40.0348 32.9578 39.2199 38.1982 35.5506 40.9142C31.8806 43.6303 26.7366 42.8002 24.0704 39.0615C23.0506 37.6317 22.501 35.9089 22.501 34.1403V31.2552V34.1403C22.501 35.9089 21.9513 37.6317 20.9315 39.0615C18.2653 42.8002 13.1213 43.6303 9.45136 40.9142C5.78138 38.1982 4.96718 32.9578 7.63334 29.2191C8.65318 27.7887 10.092 26.7243 11.7421 26.1774L14.4359 25.286L11.7421 26.1774C10.092 26.7243 8.31366 26.7243 6.66284 26.1774C2.34905 24.7495 -0.0153972 20.0222 1.38623 15.6276C2.78786 11.2331 7.42835 8.82435 11.7421 10.2522C13.393 10.7984 14.8317 11.8635 15.8516 13.2933L17.5165 15.6276L15.8516 13.2933Z" fill="currentColor"/>
                     </svg>
@@ -61,8 +61,8 @@ const MainHeading = ({}) => {
                
 
         
-                <h4 className={`row5 col2 span2 ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
-                <div className={`row5 col2__r end1__r ${c.paddingtop}`}>
+                <h4 className={`row5 col2 span2 z5 ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
+                <div className={`row5 col2__r end1__r z5 ${c.paddingtop}`}>
                     <h4 >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
 
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
