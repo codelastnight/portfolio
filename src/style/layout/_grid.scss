@@ -1,11 +1,14 @@
-
+@use '../variables' as v;
 .grid {
     display: grid;
     //width: 100%;
     grid-template-columns: var(--grid);
     max-width: var(--width-max);
-    column-gap: var(--f3);
-    
+    column-gap: var(--f1);
+    @media screen and (min-width: v.$width-mobile) {
+        column-gap: var(--f3);
+
+    }
 }
 
 .grid-row {
@@ -24,13 +27,13 @@
 
 @for $i from 1 through 11 { 
     .col#{$i} {
-        grid-column: #{$i};
+        grid-column-start: #{$i};
     }
 }
 
 @for $i from 1 through 11 { 
     .col#{$i}__r {
-        grid-column: -#{$i +1};
+        grid-column-start: -#{$i +1};
     }
 }
 
@@ -42,6 +45,7 @@
     }
 }
 
+
 @for $i from 1 through 11 { 
     .end#{$i}__r {
         grid-column-end: -#{$i};
@@ -49,3 +53,11 @@
 }
 
 
+.col2 {
+    grid-column-start: 1;
+}
+@media screen and (min-width: v.$width-mobile) {
+    .col2 {
+        grid-column-start: 2;
+    }
+}

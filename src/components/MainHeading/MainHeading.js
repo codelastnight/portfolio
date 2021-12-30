@@ -12,7 +12,7 @@ const MainHeading = ({}) => {
             <div className={`grid ${c.mainheading}`}>
                 <h4 className={`row1 col3 span2`} >hello, my name is simon</h4>
 
-                <div className="row2 col2 span8 flex flexgap align__center">
+                <div className="row2 col2 end1__r flex flexgap align__center">
                     <h1 className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</h1>
                     <div className={`relative ${c.w20} flex align__center show__d`}>
                         <div className='absolute width100' >
@@ -29,7 +29,7 @@ const MainHeading = ({}) => {
                         <ellipse cx="48.4824" cy="18.5" rx="46.5" ry="17.5" stroke="currentColor" strokeWidth="2"/>
                     </svg>
                 </div>
-                <div className="row3 col2 span8 flex flexgap align__center">
+                <div className="row3 col2 end1__r flex flexgap align__center">
                     <div className={`relative flex align__center  show__d`}>
                         <div className={`absolute width100 ${c.w20}`}>
                         <Button className={`width100 ${c.button} ${c.btn1}`}  height="3.5rem" radius="10rem" />
@@ -44,7 +44,7 @@ const MainHeading = ({}) => {
                         <span >®</span>
                     </h1>
                 </div>
-                <div className="row4 col2 span8 flex flexgap align__center">
+                <div className="row4 col2 end1__r flex flexgap align__center">
 
                     <svg className={`${c.svg}`} width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 

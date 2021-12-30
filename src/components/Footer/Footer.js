@@ -36,7 +36,7 @@ const Footer = class extends React.Component {
             {
               buttonLoc.map((i) => (
                 <Button className={i} height="3em" color="#FF9023">
-                  <h4 className={c.contact}>Contact Me</h4>
+                  <h4 className={''}>Contact Me</h4>
                 </Button>
               )
             )}

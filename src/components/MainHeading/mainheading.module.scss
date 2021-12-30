@@ -1,9 +1,12 @@
+@use '../../style/variables' as v;
+
 .mainheading {
     height: fit-content;
     // fix later
     h1 {
-        font-size: 7rem;
+        font-size: 13vmin;
         z-index: 1;
+       
     }
     h4 {
         font-size: var(--f3);
