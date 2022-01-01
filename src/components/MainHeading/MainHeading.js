@@ -14,7 +14,7 @@ const MainHeading = ({}) => {
 
                 <div className="row2 col2 end1__r flex flexgap align__center">
                     <h1 className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</h1>
-                    <div className={`relative ${c.w20} flex align__center `}>
+                    <div className={`relative ${c.w20} flex align__center show__d `}>
                         <div className='absolute width100' >
                             <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="3.5vmin" radius="0.5rem" />
                         </div> 
@@ -51,7 +51,7 @@ const MainHeading = ({}) => {
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8516 13.2933C14.8317 11.8635 14.2821 10.1406 14.2821 8.3721C14.2821 3.7511 17.9649 0 22.501 0C27.0371 0 30.7199 3.7511 30.7199 8.3721C30.7199 10.1406 30.1702 11.8635 29.1497 13.2933L27.4855 15.6276L29.1497 13.2933C30.1702 11.8635 31.6084 10.7984 33.2592 10.2522C37.5736 8.82435 42.2141 11.2331 43.6157 15.6276C45.0174 20.0222 42.6529 24.7495 38.3385 26.1774C36.6883 26.7243 34.91 26.7243 33.2592 26.1774L30.5661 25.286L33.2592 26.1774C34.91 26.7243 36.3488 27.7887 37.3686 29.2191C40.0348 32.9578 39.2199 38.1982 35.5506 40.9142C31.8806 43.6303 26.7366 42.8002 24.0704 39.0615C23.0506 37.6317 22.501 35.9089 22.501 34.1403V31.2552V34.1403C22.501 35.9089 21.9513 37.6317 20.9315 39.0615C18.2653 42.8002 13.1213 43.6303 9.45136 40.9142C5.78138 38.1982 4.96718 32.9578 7.63334 29.2191C8.65318 27.7887 10.092 26.7243 11.7421 26.1774L14.4359 25.286L11.7421 26.1774C10.092 26.7243 8.31366 26.7243 6.66284 26.1774C2.34905 24.7495 -0.0153972 20.0222 1.38623 15.6276C2.78786 11.2331 7.42835 8.82435 11.7421 10.2522C13.393 10.7984 14.8317 11.8635 15.8516 13.2933L17.5165 15.6276L15.8516 13.2933Z" fill="currentColor"/>
                     </svg>
                     <div className="relative flex">
-                        <Button className={`absolute ${c.button} ${c.btn2}`} color="#88DC8B"  height="8rem" width="8rem" radius="1.5rem" />
+                        <Button className={`absolute ${c.button} ${c.btn2}`} color="#88DC8B"  height="18vmin" width="18vmin" radius="3vmin" />
 
                         <h1 className={``}>(of sorts)</h1>
                     </div>
@@ -61,9 +61,9 @@ const MainHeading = ({}) => {
                
 
         
-                <h4 className={`row5 col2 span2 z5 ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
+                <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
                 <div className={`row5 col2__r end1__r z5 ${c.paddingtop}`}>
-                    <h4 >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
+                    <h4 className="text" >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
 
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.211 1.34155C10.9258 6.19 11.3931 10.9613 11.4237 15.8067C11.4398 18.3644 11.3535 20.9187 11.6364 23.4648" stroke="#0034EB" stroke-width="2" stroke-linecap="round"/>

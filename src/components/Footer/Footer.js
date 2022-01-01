@@ -15,7 +15,7 @@ const buttonLoc  = [
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className={c.footer__wrapper}>
+      <footer className={`${c.footer__wrapper} reverse`}>
         <section className="grid v-margin6">
             <p className="col2">
               <a>back to top</a>
@@ -36,7 +36,7 @@ const Footer = class extends React.Component {
             {
               buttonLoc.map((i) => (
                 <Button className={i} height="3em" color="#FF9023">
-                  <h4 className={''}>Contact Me</h4>
+                  <h4 className={'text'}>Contact Me</h4>
                 </Button>
               )
             )}
