@@ -98,3 +98,8 @@
         animation-delay: #{1000 + $i * 20}ms;
     }
 }
+
+.tagline {
+    max-width: 20rem;
+    align-self: baseline;
+}

@@ -54,6 +54,7 @@ const MainHeading = ({}) => {
                         <Button className={`absolute ${c.button} ${c.btn2}`} color="#88DC8B"  height="8rem" width="8rem" radius="1.5rem" />
 
                         <h1 className={``}>(of sorts)</h1>
+                        <h4 class={c.tagline}>working towards a digital future that can be enjoyed by all</h4>
                     </div>
                     
                 </div>
