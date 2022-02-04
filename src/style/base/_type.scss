@@ -1,3 +1,5 @@
+@use '../variables' as v;
+
 @font-face {
     font-family: "Neue Montreal";
     src: url("../fonts/PPNeueMontreal-Medium.woff2") format("woff2");
@@ -18,40 +20,16 @@ h1,h2,h3,h4,h5,h6, p {
   margin: 0;
 }
 
-a {
-  text-decoration: underline;
-  color: currentColor;
-}
-a:visited {
-  color: currentColor;
-}
-a:hover {
-  opacity: 0.4;
-}
-
-
-h1 {
-  font-size: var(--f6);
-}
-h2 {
-  font-size: var(--f5);
-
-}
-h3 {
-  font-size: var(--f4);
-
-}
-
-h4 {
-  font-size: var(--f3);
-
-}
 
 .text {
-  font-size: var(--f3);
-  line-height: 150%;
+  font-size: var(--f2);
 
   > * {
     margin-bottom: var(--2);
   }
+
+  @media screen and (min-width: v.$width-mobile) {
+    font-size: var(--f3);
+  }
+  
 }

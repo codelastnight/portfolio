@@ -7,7 +7,7 @@ const LogoIcon = () => {
     const pathLength = useSpring(yValue, { stiffness: 200, damping: 30 });
 
     return (
-    <div >
+    <div className={c.logoicon}>
         
         <motion.div className={c.rotate} style={{ rotate: pathLength, originX: 0.5, originY: 0.5}}> 
             <svg width="90" height="90" fill="currentColor" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">

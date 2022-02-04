@@ -1,7 +1,16 @@
 
 .rotate {
     position: absolute;
-
+    height: 100%;
+    width: 100%;
+    svg {
+        height: 100%;
+        width: 100%;
+    }
 }
 
+.logoicon {
+    position: relative;
+    margin: 1.5vmin;
+}
 

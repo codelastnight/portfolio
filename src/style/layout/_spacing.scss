@@ -1,3 +1,6 @@
+@use '../variables' as v;
+
+
 @for $i from 1 through 6 { 
     .v-margin#{$i} {
         margin-bottom: var(--f#{$i});
@@ -12,7 +15,10 @@
 
 
 section {
-    padding: 0 var(--f6) ;
+    padding: 0 var(--f3) ;
+    @media screen and (min-width:calc(v.$width-mobile)) {
+        padding: 0 var(--f6) ;
+    }
 }
 
 

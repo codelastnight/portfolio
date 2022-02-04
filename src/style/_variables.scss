@@ -1,3 +1,8 @@
+//workaround for @media and variables
+$width-desktop: 1200px;
+$width-desktop-l: 1300px;
+$width-mobile: 1080px;
+
 :root {
     --f1: 12px;
     --f2: 14px;
@@ -8,11 +13,10 @@
 
     --width-max: 1800px;
 
-    --width-desktop: 1200px;
-    --width-desktop-l: 1300px;
+    --width-desktop: $width-desktop;
+    --width-desktop-l: $width-desktop-l;
 
-    --width-mobile: 1080px;
-
+    --width-mobile: $width-mobile;
 
 
     //btn colors light
@@ -20,28 +24,24 @@
     --c-pink: #F8ACF0;
     --c-green: #88DC8B;
 
-    --grid: repeat(12,minmax(0, 1fr));
-
-    
-
+    --grid: repeat(4,minmax(0, 1fr));
 
     //scrollbar fix
     --viewportWidth: calc(100vw - var(--scrollbarWidth));
-
 }
 
-@media screen and (max-width: var(--width-desktop-l)){
+
+@media screen and (min-width: $width-mobile) {
     :root {
         --grid: repeat(10,minmax(0, 1fr));
-
     }
 }
 
-[data-theme="dark"] {
-    --c-bg: #0400B4;
-    --c-fg: #d0c7dd;
+@media screen and (min-width: $width-desktop-l) {
+    :root {
+        --grid: repeat(12,minmax(0, 1fr));
+    }
 }
-
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -51,12 +51,17 @@
 
     --c-bg: #ECEAEF;
     --c-fg: #0400B4;
+    --c-hover-l: #DBDDE3;
+    --c-hover-d: #3A3D4A;
+
     }
   }
   @media (prefers-color-scheme: dark) {
     :root {
         --c-bg: #25237c;
         --c-fg: #cec4db;
+        --c-hover-d: #DBDDE3;
+        --c-hover-l: #3A3D4A;
     }
   }
   

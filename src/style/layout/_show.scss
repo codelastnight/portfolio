@@ -1,0 +1,17 @@
+@use '../variables' as v;
+
+// show__d
+// only show on desktop
+.show__d {
+    @media screen and (max-width: v.$width-mobile) {
+        display: none;
+    }
+}
+
+ // show__m
+    // only show on mobile
+.show__m {
+    @media screen and (min-width:calc(v.$width-mobile + 1px)) {
+        display: none;
+    }
+}

@@ -1,13 +1,13 @@
+
 .mainheading {
     height: fit-content;
     // fix later
     h1 {
-        font-size: 7rem;
+        font-size: 13vmin;
         z-index: 1;
+       
     }
-    h4 {
-        font-size: var(--f3);
-    }
+    
 }
 
 .mainheading__wrapper {
@@ -21,7 +21,6 @@
 
 .mainheading__dummy {
     min-height: 90vh;
-
 }
 
 .svg {
@@ -70,14 +69,20 @@
 
 
 .margin1rem {
-    margin-top: 1rem;
+    margin-top: 3vmin;
 }
 
 .maxcontent {
     max-width: max-content; 
 }
 
+.starcircle {
+    max-width: 12vmin;
+}
 
+.flower {
+    max-width: 5vmin;
+}
 
 .animate {
     animation: 0.1s ease-out 1s 1 loadIn;

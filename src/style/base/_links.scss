@@ -1,0 +1,34 @@
+
+a {
+    text-decoration: underline;
+    color: currentColor;
+    background-color: var(--c-bg);
+}
+a:visited {
+    color: currentColor;
+}
+a:hover {
+    background-color:var(--c-hover-l) ;
+
+}
+a:active {
+    color: var(--c-bg);
+    background-color:var(--c-fg) ;
+}
+  
+// for use in reverse color context (eg footer)
+.reverse {
+    a {
+  
+        background-color: var(--c-fg);
+    }
+
+    a:hover {
+        background-color:var(--c-hover-d) ;
+    
+    }
+    a:active {
+        color: var(--c-fg);
+        background-color:var(--c-bg) ;
+    }
+}
