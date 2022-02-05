@@ -2,72 +2,61 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import * as c from './btnspam.module.scss';
 import Button from '../Button';
+import distribute from './poordistribute';
+import { motion } from "framer-motion"
 // found here: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 
-function randomInt(min,max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return [Math.floor(Math.random() * (max - min + 1)) + min, Math.floor(Math.random() * (max - min + 1)) + min];
-}
-
-function checkPoint(point1,point2,r) {
-    const dist = getDistance(point1[0],point1[1],point2[0],point2[1]);
-    
-    return (dist > r);
-}
-
-function getDistance(x1, y1, x2, y2){
-    let y = x2 - x1;
-    let x = y2 - y1;
-    
-    return Math.sqrt(x * x + y * y);
-}
-
-function randomize(count, min, max) {
-
-    let arr =[]
-    for (var i = 0; i < count; i++) {
-        if (arr.length > 0) {
-            let test;
-            let r = 30
-            for (var repeat = 0; repeat < 10; repeat++) {
-                let track = false;
-                test = randomInt(min,max)
-                arr.forEach(e => {
-                    track = checkPoint(test,e,r)
-                })
-                if (track) {
-                    repeat = 11;
-                } 
-                if (repeat > 5) {
-                    r+= -5
-                }
-            }
-            arr.push(test);
-          
-        } else {
-
-            arr.push(randomInt(min,max))
-
+const container = {
+    hidden: { opacity: 0},
+    show: { 
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            duration: 0
+          }
         }
-    }
-    return arr
-}
+  }
+const variants = {
+    hidden: { opacity: 0 },
+    show: { 
+        opacity: 1,
+        transition: {
+            duration: 0
+        }
+        }
+  }
+
 
 
 const BtnSpam = ({children,count, color}) => {
-    const [arr,setArr] = useState([])
+    const [arr,setArr] = useState()
 
     useEffect(() => {
-        setArr(randomize(count,0,80))
+        setArr(distribute(count,0,80))
       }, []);
 
     return ( 
         <React.Fragment>
+             {arr && 
+             <motion.div
+                initial="hidden"
+                whileInView="show"
+                variants={container}
+            >
+            
             {arr.map((e, i) => (
-                <Button color={color} height="3rem" width="15rem" className="absolute" style={{top: `${e[0]}%`, left: `${e[1]}%`}} key={i}>{children}</Button>
+                <motion.div 
+                key={i}
+                
+                variants = {variants}
+                >
+                    <Button color={color} height="3rem" width="15rem" className="absolute" style={{top: `${e[0]}%`, left: `${e[1]}%`}} >{children}</Button>
+
+                </motion.div>
             ))}
+        </motion.div> }
         </React.Fragment>
+       
     )
 }
 

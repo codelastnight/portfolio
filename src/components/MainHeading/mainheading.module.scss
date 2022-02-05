@@ -88,20 +88,7 @@
 
 }
 
-@keyframes loadIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
-@for $i from 1 through 4 { 
-    .delay#{$i} {
-        animation-delay: #{1000 + $i * 20}ms;
-    }
-}
 
 .tagline {
     max-width: 17rem;
