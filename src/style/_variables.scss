@@ -1,6 +1,6 @@
 //workaround for @media and variables
 $width-desktop: 1200px;
-$width-desktop-l: 1300px;
+$width-desktop-l: 1900px;
 $width-mobile: 1080px;
 
 :root {
@@ -50,7 +50,9 @@ $width-mobile: 1080px;
     // light mode
 
     --c-bg: #ECEAEF;
-    --c-fg: #0400B4;
+    --c-bg: #F0EBF6;
+
+    --c-fg: #0500E1;
     --c-hover-l: #DBDDE3;
     --c-hover-d: #3A3D4A;
 

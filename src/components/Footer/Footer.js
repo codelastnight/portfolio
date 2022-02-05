@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import Button from './../Button'
-
+import BtnSpam from "../BtnSpam";
 const buttonLoc  = [
   "col11__r row3 span2",
   `col8__r row4 span2`,
@@ -32,17 +32,13 @@ const Footer = class extends React.Component {
           </section>
         <section className="grid ">
 
-
-            {
-              buttonLoc.map((i) => (
-                <Button className={i} height="3em" color="#FF9023">
-                  <h4 className={'text'}>Contact Me</h4>
-                </Button>
-              )
-            )}
            
             
-            <div className={`col2 end1__r ${c.logo}`}>
+            <div className={`col2 end1__r relative ${c.logo}`}>
+           
+              <BtnSpam color="#FF9023">
+                <h3>Contact Me</h3>
+              </BtnSpam>
               <Logo />
             </div>
 

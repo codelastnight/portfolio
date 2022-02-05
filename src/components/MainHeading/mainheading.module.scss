@@ -15,7 +15,6 @@
     min-height: 100vh;
     place-items: center;
     position: fixed;
-    z-index: 10;
     max-width: var(--width-max);
 }
 
@@ -25,7 +24,7 @@
 
 .svg {
     place-self: center;
-    stroke-width: 2px;
+    stroke-width: 2.5px;
     stroke: currentColor;
     z-index: 1;
     pointer-events: none; /* SVG-only */
@@ -105,6 +104,8 @@
 }
 
 .tagline {
-    max-width: 20rem;
+    max-width: 17rem;
     align-self: baseline;
+    margin-top: 1rem;
+    
 }

@@ -10,19 +10,19 @@ const Navbar = () => {
 
         <div className="grid">
 
-          <p className={c.link1}>  
+          <p className={'col2'}>  
             <Link to="/" type="top" element="title">
               work
             </Link>
           </p>
           
-          <p className={''}>  
+          <p className={'col5'}>  
             <Link type="about" element="title">
               about
             </Link>
           </p>
 
-          <p className={c.link3}>  
+          <p className={''}>  
             <Link type="contact" element="title">
               contact
             </Link>

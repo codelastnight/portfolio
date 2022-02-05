@@ -4,6 +4,7 @@
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
+    "bridson": "^0.0.3",
     "cross-env": "^7.0.3",
     "framer-motion": "^5.3.0",
     "gatsby": "^4.0.0",

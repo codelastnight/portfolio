@@ -7,7 +7,7 @@ const MainHeading = ({}) => {
     
     return (
         <React.Fragment>
-             <section className={c.mainheading__wrapper} > 
+             <section className={`z5 ${c.mainheading__wrapper}`} > 
              
             <div className={`grid ${c.mainheading}`}>
                 <h4 className={`row1 col3 span2`} >hello, my name is simon</h4>
@@ -16,7 +16,7 @@ const MainHeading = ({}) => {
                     <h1 className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</h1>
                     <div className={`relative ${c.w20} flex align__center show__d `}>
                         <div className='absolute width100' >
-                            <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="3.5vmin" radius="0.5rem" />
+                            <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="5vmin" radius="0.5rem" />
                         </div> 
                         <svg className={`width100 ${c.svg}  ${c.margin1rem}`} viewBox="0 0 271 105" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 82.0703C37.4877 57.3352 72.0715 26.0492 111.767 9.96763C124.767 4.70099 154.129 -4.08814 166.32 8.32062C172.012 14.1139 170.302 30.0883 168.957 37.2349C164.765 59.5141 138.199 74.3119 121.326 82.9853C113.067 87.2309 104.74 90.9453 97.0981 96.5274C95.8164 97.4637 89.4838 104.391 87.2093 102.749C85.8746 101.786 86.4714 96.0861 86.55 94.5144C87.0137 85.2457 95.8244 81.5675 102.537 78.4102C125.636 67.5454 150.573 60.9331 174.231 51.6005C183.973 47.7579 211.098 35.2735 201.261 59.1036C199.476 63.4291 176.383 80.4233 188.158 80.4233C194.684 80.4233 198.219 76.3477 203.898 73.1947C213.97 67.6028 225.82 62.8604 236.367 58.3716C247.274 53.7289 257.775 50.9551 269 54.071" strokeLinecap="round"/>
@@ -54,7 +54,7 @@ const MainHeading = ({}) => {
                         <Button className={`absolute ${c.button} ${c.btn2}`} color="#88DC8B"  height="18vmin" width="18vmin" radius="3vmin" />
 
                         <h1 className={``}>(of sorts)</h1>
-                        <h4 class={c.tagline}>working towards a digital future that can be enjoyed by all</h4>
+                        <h4 class={`text z5 ${c.tagline}`}>working towards a digital future that can be enjoyed by all</h4>
                     </div>
                     
                 </div>
@@ -62,7 +62,7 @@ const MainHeading = ({}) => {
                
 
         
-                <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4>
+                {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
                 <div className={`row5 col2__r end1__r z5 ${c.paddingtop}`}>
                     <h4 className="text" >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
 

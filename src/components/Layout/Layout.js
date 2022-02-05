@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => {
  
 
   return (
-    <div className={classes.layout__wrapper}>
+    <div >
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -67,10 +67,15 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       
-      
-      <div className={classes.layout__inner}>
-        <main className="darkmode">{children}</main>
-        <Footer />
+      <div className={classes.layout__wrapper}>
+        <div className={classes.layout__inner}>
+          <main className="darkmode">{children}</main>
+        </div>
+      </div>
+      <div className={`z5 relative ${classes.footer} ${classes.layout__wrapper}`}>
+        <div className={classes.layout__inner}>
+          <Footer />
+        </div>
       </div>
      
     </div>

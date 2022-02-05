@@ -2,10 +2,14 @@
     display: grid;
     justify-content: center;
     max-width:100%;
-
+    margin-top: calc(var(--f4)*2);
 }
 .layout__inner {
     max-width: var(--width-max);
     width: var(--viewportWidth);
-    margin-top: calc(var(--f4)*2);
+}
+
+.footer {
+    background: var(--c-fg);
+    color: var(--c-bg);
 }
