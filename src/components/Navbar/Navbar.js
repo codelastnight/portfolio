@@ -16,7 +16,7 @@ const Navbar = () => {
             </Link>
           </p>
           
-          <p className={'col5'}>  
+          <p className={'col4'}>  
             <Link type="about" element="title">
               about
             </Link>

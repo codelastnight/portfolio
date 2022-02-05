@@ -63,7 +63,7 @@
 }
 
 .paddingtop {
-    padding-top: var(--f2);
+    padding-top: var(--f4);
 }
 
 
@@ -77,10 +77,12 @@
 
 .starcircle {
     max-width: 12vmin;
+    min-width: 10vmin;
 }
 
 .flower {
-    max-width: 5vmin;
+    width: 5vmin;
+
 }
 
 .animate {

@@ -42,28 +42,40 @@ $width-mobile: 1080px;
         --grid: repeat(12,minmax(0, 1fr));
     }
 }
+:root {
+              //colors
+        // colors
+        // light mode
+    
+        --c-bg: #ECEAEF;
+        --c-bg: #F0EBF6;
+    
+        --c-fg: #0500E1;
+        --c-hover-l: #DBDDE3;
+        --c-hover-d: #3A3D4A;
+    
+        }
+// @media (prefers-color-scheme: light) {
+//     :root {
+//           //colors
+//     // colors
+//     // light mode
 
-@media (prefers-color-scheme: light) {
-    :root {
-          //colors
-    // colors
-    // light mode
+//     --c-bg: #ECEAEF;
+//     --c-bg: #F0EBF6;
 
-    --c-bg: #ECEAEF;
-    --c-bg: #F0EBF6;
+//     --c-fg: #0500E1;
+//     --c-hover-l: #DBDDE3;
+//     --c-hover-d: #3A3D4A;
 
-    --c-fg: #0500E1;
-    --c-hover-l: #DBDDE3;
-    --c-hover-d: #3A3D4A;
-
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-        --c-bg: #25237c;
-        --c-fg: #cec4db;
-        --c-hover-d: #DBDDE3;
-        --c-hover-l: #3A3D4A;
-    }
-  }
+//     }
+//   }
+//   @media (prefers-color-scheme: dark) {
+//     :root {
+//         --c-bg: #25237c;
+//         --c-fg: #cec4db;
+//         --c-hover-d: #DBDDE3;
+//         --c-hover-l: #3A3D4A;
+//     }
+//   }
   

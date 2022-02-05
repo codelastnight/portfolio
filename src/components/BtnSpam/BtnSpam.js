@@ -12,6 +12,7 @@ const container = {
         opacity: 1,
         transition: {
             staggerChildren: 0.1,
+            delayChildren: 0.3,
             duration: 0
           }
         }
@@ -50,11 +51,13 @@ const BtnSpam = ({children,count, color}) => {
                 
                 variants = {variants}
                 >
-                    <Button color={color} height="3rem" width="15rem" className="absolute" style={{top: `${e[0]}%`, left: `${e[1]}%`}} >{children}</Button>
+                    <Button color={color} height="3em" width="15em" className={`absolute show__d`} style={{top: `${e[0]}%`, left: `${e[1]}%`}} >{children}</Button>
 
                 </motion.div>
             ))}
         </motion.div> }
+        <Button color={color} height="3em"  className={` show__m`}  >{children}</Button>
+
         </React.Fragment>
        
     )

@@ -41,7 +41,8 @@
 	cursor: pointer;
 	width: 100%;
 	height: 100%;
-		
+	min-width: fit-content;
+	
 	&:hover, &:focus-visible {
 	filter: drop-shadow(0px 0px 0.2rem #D7B8FF);
 		transform: rotate(5deg);
@@ -90,6 +91,7 @@
 	height: inherit;
 	text-decoration: underline;
 	color: var(--c-fg);
+	min-width: fit-content;
 
 	//margin: 0rem 3rem;
 }

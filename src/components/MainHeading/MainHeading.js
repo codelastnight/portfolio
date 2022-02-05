@@ -10,9 +10,9 @@ const container = {
     show: { 
         opacity: 1,
         transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.3,
-            duration: 0
+            staggerChildren: 0.07,
+            delayChildren: 0.5,
+            duration: 0.1
           }
         }
   }
@@ -21,11 +21,32 @@ const variants = {
     show: { 
         opacity: 1,
         transition: {
-            duration: 0
+            duration: 0.1
         }
         }
   }
+const links = {
+    hidden2: { opacity: 0},
+    show2: { 
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            staggerDirection: -1,
+            delayChildren: 0.5,
+            duration: 0.1
+          }
+        }
+  }
 
+const link = {
+    hidden2: { opacity: 0 },
+    show2: { 
+        opacity: 1,
+        transition: {
+            duration: 0.1
+        }
+        }
+  }
 function stagger(number) {
     return {
         duration: 0,
@@ -44,7 +65,9 @@ const MainHeading = ({}) => {
              > 
              
             <div className={`grid ${c.mainheading}`}>
-                <motion.h4 className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
+                <motion.h4 initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }} 
+                            transition={{duration: 0}} className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
 
                 <div className="row2 col2 end1__r flex flexgap align__center">
                     <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</motion.h1>
@@ -100,39 +123,65 @@ const MainHeading = ({}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={``}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} class={`text z5 ${c.tagline}`}>working towards a digital future that can be enjoyed by all</motion.h4>
+                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a digital future that can be enjoyed by all</motion.h4>
                     </div>
                     
                 </div>
 
                
+                <motion.h4 variants={variants} class={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a digital future that can be enjoyed by all</motion.h4>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
-                <div className={`row5 col2__r end1__r z5 ${c.paddingtop}`}>
-                    <h4 className="text" >scroll down to see some of my selected work, or go visit the playground to see my experiments. If you’re curious, check out my astrology chart.</h4>
+                <motion.div 
+                className={`row5 col2__r end1__r z5 ${c.paddingtop}`}
+                initial="hidden2"
+                animate="show2"  
+                variants={links}
+                >
+                    <h4 className="text" >
+                        <motion.span variants={link}>scroll down to see some of my selected work, </motion.span> 
+                        <motion.span variants={link}>or send me a message via online mail. </motion.span> 
+                        <motion.span variants={link}>If you’re curious, check out my astrology chart. </motion.span>
+                    </h4>
 
-                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.211 1.34155C10.9258 6.19 11.3931 10.9613 11.4237 15.8067C11.4398 18.3644 11.3535 20.9187 11.6364 23.4648" stroke="#0034EB" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M1 15.594C2.44192 17.9503 4.25581 20.0564 5.82173 22.3302C6.62219 23.4926 7.64517 24.4532 8.63441 25.4502C9.00712 25.8258 9.80773 27.0473 10.5016 26.892C11.3709 26.6974 12.2628 25.7503 12.9361 25.2375C14.3168 24.186 15.722 23.1606 17.0724 22.0702C18.9255 20.574 19.8713 18.5755 21.4215 16.8703" stroke="#0034EB" stroke-width="2" stroke-linecap="round"/>
+                    <svg width="23" height="28" viewBox="0 0 23 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" xmlns="http://www.w3.org/2000/svg">
+                        <motion.path 
+                        initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }} 
+                            transition={{duration: 0.3, delay: 0.1}}
+                            d="M11.211 1.34155C10.9258 6.19 11.3931 10.9613 11.4237 15.8067C11.4398 18.3644 11.3535 20.9187 11.6364 23.4648" />
+                        <motion.path 
+                        initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }} 
+                            transition={{duration: 0.3, delay: 0.2}}
+                            d="M1 15.594C2.44192 17.9503 4.25581 20.0564 5.82173 22.3302C6.62219 23.4926 7.64517 24.4532 8.63441 25.4502C9.00712 25.8258 9.80773 27.0473 10.5016 26.892C11.3709 26.6974 12.2628 25.7503 12.9361 25.2375C14.3168 24.186 15.722 23.1606 17.0724 22.0702C18.9255 20.574 19.8713 18.5755 21.4215 16.8703" />
                     </svg>
 
-                </div>
-                <motion.div variants={variants} className={`row6 `}>
+                </motion.div>
+                <motion.div variants={variants} transition={{when: "beforeChildren" }} className={`row6 show__d`}>
                         <LogoIcon />
 
                     </motion.div>
-                <div className={`row6 col2 ${c.links}`}>
-                    <p><a href="https://www.instagram.com/art.last.night/">instagram</a> </p>
-                    <p><a href="https://www.behance.net/artlastnight">behance</a> </p>
-                    <p><a href="https://www.linkedin.com/in/not-simon/">linkedin</a> </p>
-                </div>
-                <div className={`row6 col3  ${c.links}`}>
-                    <p>©</p>
-                    <p>copyright</p>
-                    <p>2021</p>
+                <motion.div className={`row6 col2 ${c.links}`}
+                initial="hidden2"
+                animate="show2"  
+                variants={links}
+                >
+                    <motion.p variants={link} ><a href="https://www.instagram.com/art.last.night/">instagram</a> </motion.p>
+                    <motion.p variants={link} ><a href="https://www.behance.net/artlastnight">behance</a> </motion.p>
+                    <motion.p variants={link} ><a href="https://www.linkedin.com/in/not-simon/">linkedin</a> </motion.p>
+                </motion.div>
+                <motion.div className={`row6 col3  ${c.links}`}
+                initial="hidden2"
+                animate="show2"  
+                variants={links}
+                >
+                    <motion.p variants={link} >©</motion.p>
+                    <motion.p variants={link} >copyright</motion.p>
+                    <motion.p variants={link} >2021</motion.p>
 
-                </div>
+                </motion.div>
             </div>
            
             </motion.section>
