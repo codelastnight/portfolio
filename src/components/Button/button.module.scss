@@ -36,7 +36,7 @@
 	overflow: hidden;
 	position: relative;
 	//background: #D4BAFF;
-	outline: 2px solid #D7B8FF;
+	border: 2px solid #D7B8FF;
 	transition: all 150ms cubic-bezier(0.08, 1.07, 0.17, 1.74);
 	cursor: pointer;
 	width: 100%;
@@ -49,10 +49,7 @@
 	//outline: 2px solid #D4BAFF;
 		
 	}
-	&:focus {
-		outline-width: 4px;
-		
-	}
+	
 
 	&:active {
 		.button__under, .text {
