@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
   // const heroImage = getImage(image) || image;
 
   return (
-    <div id="top">
+    <div >
       
       <MainHeading  />
       

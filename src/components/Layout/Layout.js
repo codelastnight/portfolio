@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => {
  
 
   return (
-    <div >
+    <div id="top">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
