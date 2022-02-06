@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import * as c from './navbar.module.scss'
-//import scrollToComponent from 'react-scroll-to-component';
-import ScrollIntoView from 'react-scroll-into-view'
 const Navbar = () => {
   return (
     <nav className={`z100 ${c.nav__wrapper}`}>

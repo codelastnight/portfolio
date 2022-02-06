@@ -12247,11 +12247,6 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-scroll-into-view@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/react-scroll-into-view/-/react-scroll-into-view-1.11.0.tgz#6da21abfd68b97c0948af12b662afd762b320cdc"
-  integrity sha512-4zVsbwH9+Ro1+7Lb4PT8TRjQlcFQ7JMZwX3LDaAG0PaMqJVtIVz6J08my1rKgk7D5tS17AH8G/PagmVtTbM1JQ==
-
 react-scroll-sync@^0.9.0:
   version "0.9.0"
   resolved "https://registry.npmjs.org/react-scroll-sync/-/react-scroll-sync-0.9.0.tgz"

@@ -140,9 +140,9 @@ const MainHeading = ({}) => {
                 variants={links}
                 >
                     <h4 className="text" >
-                        <motion.span variants={link}>scroll down to see some of my selected work, </motion.span> 
+                        <motion.span variants={link}><a href="#work">scroll down</a> to see some of my selected work, </motion.span> 
                         <motion.span variants={link}>or send me a message via online mail. </motion.span> 
-                        <motion.span variants={link}>If you’re curious, check out my astrology chart. </motion.span>
+                        <motion.span variants={link}>If you’re curious, go analyze my astrology chart. </motion.span>
                     </h4>
 
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" xmlns="http://www.w3.org/2000/svg">
