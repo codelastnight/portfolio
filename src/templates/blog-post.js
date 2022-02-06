@@ -21,10 +21,10 @@ export const BlogPostTemplate = ({
     <React.Fragment>
       <section className="grid text spacer__top">
       {helmet || ""}
-      <h1 className="col3 span5">
+      <h1 className="col3__d span5">
         {title}
       </h1>
-      <p className="col8 end4__r">
+      <p className="col8__d end4__r">
         test
       </p>
       <p className="row2 col3 span4">
@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
       </p>
       </section>
       <section className="grid ">
-        <article className="col3 end4__r text">
+        <article className="col3__d span4 text">
           <PostContent content={content} />
 
           {tags && tags.length ? (

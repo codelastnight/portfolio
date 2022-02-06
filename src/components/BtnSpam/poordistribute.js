@@ -25,7 +25,7 @@ export default function distribute(count, min, max) {
     for (var i = 0; i < count; i++) {
         if (arr.length > 0) {
             let test;
-            let r = 25
+            let r = 30
             for (var repeat = 0; repeat < 8; repeat++) {
                 let track = false;
                 test = randomInt(min,max)
