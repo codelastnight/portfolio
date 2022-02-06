@@ -1,7 +1,8 @@
 
+// my attempt at a pretty distribution of random points. i would use poisson but idk how it works
+
+// found here: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 function randomInt(min,max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
     return [Math.floor(Math.random() * (max - min + 1)) + min, Math.floor(Math.random() * (max - min + 1)) + min];
 }
 
@@ -24,19 +25,20 @@ export default function distribute(count, min, max) {
     for (var i = 0; i < count; i++) {
         if (arr.length > 0) {
             let test;
-            let r = 30
-            for (var repeat = 0; repeat < 10; repeat++) {
+            let r = 25
+            for (var repeat = 0; repeat < 8; repeat++) {
                 let track = false;
                 test = randomInt(min,max)
                 arr.forEach(e => {
                     track = checkPoint(test,e,r)
                 })
-                if (track) {
-                    repeat = 11;
-                } 
+                
                 if (repeat > 5) {
                     r+= -5
                 }
+                if (track) {
+                    break;
+                } 
             }
             arr.push(test);
           

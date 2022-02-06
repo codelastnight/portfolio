@@ -2,8 +2,8 @@ import * as React from "react";
 import { Link } from "gatsby";
 import * as c from './footer.module.scss'
 import Logo from './../Logo'
-import Button from './../Button'
 import BtnSpam from "../BtnSpam";
+import Button from "../Button";
 
 const Footer = class extends React.Component {
   render() {
@@ -11,27 +11,29 @@ const Footer = class extends React.Component {
       <footer className={`${c.footer__wrapper} reverse`}>
         <section className="grid v-margin6">
             <p className="col2">
-              <a>back to top</a>
+              <a href="#top">back to top</a>
             </p>
-            <p className="col3"> 
-            <a>back to top</a>
+            <p className="col3 "> 
+            <a href="#top">back to top</a>
             </p>
-            <p className="col6">
-            <a>back to top</a>
+            <p className="col6 show__d">
+            <a href="#top">back to top</a>
             </p>
-            <p className="col1__r">
-            <a>back to top</a>
+            <p className="col1__r justify__end show__d">
+            <a href="#top">back to top</a>
             </p>
           </section>
         <section className="grid ">
-
-           
             
             <div className={`col2 end1__r relative ${c.logo}`}>
            
-              <BtnSpam color="#FF9023">
+              <BtnSpam color="#FF9023" className="show__d">
                 <h3>Contact Me</h3>
               </BtnSpam>
+              <Button color="#FF9023" height="3em" className={` show__m`}  >
+                <h3>Contact Me</h3>
+              </Button>
+
               <Logo />
             </div>
 

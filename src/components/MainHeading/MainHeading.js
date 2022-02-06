@@ -70,7 +70,7 @@ const MainHeading = ({}) => {
                             transition={{duration: 0}} className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
 
                 <div className="row2 col2 end1__r flex flexgap align__center">
-                    <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate} ${c.delay1} `}>I'm a</motion.h1>
+                    <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate} `}>I'm a</motion.h1>
                     <motion.div variants={variants}  className={`relative ${c.w20} flex align__center show__d `}>
                         <motion.div variants={variants} transition={stagger(15)} className='absolute width100' >
                             <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="5vmin" radius="0.5rem" />
@@ -185,7 +185,7 @@ const MainHeading = ({}) => {
             </div>
            
             </motion.section>
-            <section className={c.mainheading__dummy}>
+            <section  className={c.mainheading__dummy}>
           
             </section>
         </React.Fragment>

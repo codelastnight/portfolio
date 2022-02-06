@@ -9,7 +9,7 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section className={`grid grid-row ${c.blogroll}`}>
+      <section id="work" className={`grid grid-row ${c.blogroll}`}>
         <div className={c.posts}>
         {posts &&
           posts.map(({ node: post }) => (
@@ -29,12 +29,12 @@ class BlogRollTemplate extends React.Component {
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        width:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.width,
-                        height:
-                          post.frontmatter.featuredimage.childImageSharp
-                            .gatsbyImageData.height,
+                        // width:
+                        //   post.frontmatter.featuredimage.childImageSharp
+                        //     .gatsbyImageData.width,
+                        // height:
+                        //   post.frontmatter.featuredimage.childImageSharp
+                        //     .gatsbyImageData.height,
                       }}
                     />
                   </div>

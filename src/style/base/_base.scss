@@ -1,12 +1,13 @@
 body {
     background-color: var(--c-bg);
     color: var(--c-fg);
-    
 }
 
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 
 }
 
