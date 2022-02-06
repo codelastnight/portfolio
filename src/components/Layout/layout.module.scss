@@ -2,7 +2,6 @@
     display: grid;
     justify-content: center;
     max-width:100%;
-    margin-top: calc(var(--f4)*2);
 }
 .layout__inner {
     max-width: var(--width-max);
@@ -12,4 +11,8 @@
 .footer {
     background: var(--c-fg);
     color: var(--c-bg);
+}
+
+.margintop {
+    margin-top: calc(var(--f4)*2);
 }

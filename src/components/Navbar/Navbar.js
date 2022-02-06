@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 import * as c from './navbar.module.scss'
 const Navbar = () => {
   return (
-    <nav className={`z100 ${c.nav__wrapper}`}>
-      <div className={`${c.nav}`}>
+    <nav className={`${c.nav__wrapper}`}>
+      <div className={`z100 ${c.nav}`}>
 
         <div className="grid">
 
@@ -14,7 +14,7 @@ const Navbar = () => {
             </Link>
           </p>
           
-          <p className={'col4'}>  
+          <p className={'col4__d col3'}>  
             <Link type="about" element="title">
               about
             </Link>

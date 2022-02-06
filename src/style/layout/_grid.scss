@@ -31,13 +31,11 @@
     }
 }
 
-@for $i from 1 through 11 { 
+@for $i from 1 through 4 { 
     .col#{$i}__r {
         grid-column-start: -#{$i +1};
     }
 }
-
-
 
 @for $i from 1 through 11 { 
     .span#{$i} {
@@ -56,8 +54,27 @@
 .col2 {
     grid-column-start: 1;
 }
+
+// desktop overrides
 @media screen and (min-width: v.$width-mobile) {
     .col2 {
         grid-column-start: 2;
     }
 }
+
+@media screen and (min-width: v.$width-mobile) {
+    @for $i from 1 through 11 { 
+        .col#{$i}__d {
+            grid-column-start: #{$i};
+        }
+    }
+}
+// reverse only for desktop 
+@media screen and (min-width: v.$width-mobile) {
+    @for $i from 5 through 11 { 
+        .col#{$i}__r {
+            grid-column-start: -#{$i +1};
+        }
+    }
+}
+

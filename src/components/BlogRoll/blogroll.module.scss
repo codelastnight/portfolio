@@ -31,6 +31,8 @@
     pointer-events: all;
     p {
         background-color: var(--c-bg);
+        padding-top: calc(var(--f1)/2);
+        padding-bottom: var(--f1);
     }
 }
 
@@ -38,8 +40,11 @@
     background: var(--c-bg);
 }
 
-.img__hover{
+.img{
+    border: 3px solid var(--c-bg);
+    
     &:hover {
-        
+        border-color:  var(--c-fg);
+
     }
 }

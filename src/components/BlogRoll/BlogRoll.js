@@ -20,11 +20,10 @@ class BlogRollTemplate extends React.Component {
             >
 
                 <Link
-                  className={c.img__hover}
                   to={post.fields.slug}
                 >
                 {post.frontmatter.featuredimage ? (
-                  <div className="featured-thumbnail">
+                  <div className={`featured-thumbnail ${c.img}`}>
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.featuredimage,

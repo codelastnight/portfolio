@@ -72,7 +72,7 @@ const TemplateWrapper = ({ children }) => {
           <main className="darkmode">{children}</main>
         </div>
       </div>
-      <div className={`z5 relative ${classes.footer} ${classes.layout__wrapper}`}>
+      <div className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}>
         <div className={classes.layout__inner}>
           <Footer />
         </div>
