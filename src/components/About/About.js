@@ -5,7 +5,7 @@ import * as c from './about.module.scss';
 
 const About = () => {
     return (
-        <section className={` ${c.about}`}>
+        <section id="about" className={` ${c.about}`}>
             <div className='grid'>
             <div className={`z5 col2 end1__r ${c.spacer}`}>
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>

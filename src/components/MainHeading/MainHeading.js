@@ -5,7 +5,7 @@ import Button from '../Button';
 import LogoIcon from '../LogoIcon';
 import { motion ,useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
-
+import {Link} from 'gatsby';
 const container = {
     hidden: { opacity: 0},
     show: { 
@@ -149,13 +149,13 @@ const MainHeading = ({}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={`${c.titletext}`}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a digital future that can be enjoyed by all</motion.h4>
+                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
                     </div>
                     
                 </div>
 
                
-                <motion.h4 variants={variants} class={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a digital future that can be enjoyed by all</motion.h4>
+                <motion.h4 variants={variants} class={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
@@ -166,9 +166,9 @@ const MainHeading = ({}) => {
                 variants={links}
                 >
                     <h4 className="text" >
-                        <motion.span variants={link}><a href="#work">scroll down</a> to see some of my selected work, </motion.span> 
+                        <motion.span variants={link}><Link to="#work" type='work' element="work">scroll down</Link> to see some of my selected work, </motion.span> 
                         <motion.span variants={link}>or send me a message via online mail. </motion.span> 
-                        <motion.span variants={link}>If you’re curious, go analyze my astrology chart. </motion.span>
+                        <motion.span variants={link}>If you’re curious, check out what I'm <Link to="#about" type='about' element="about">listening to</Link> right now. </motion.span>
                     </h4>
                     <a href="#work">
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" xmlns="http://www.w3.org/2000/svg">
