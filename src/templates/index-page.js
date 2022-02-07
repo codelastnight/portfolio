@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
 
 import BlogRoll from '../components/BlogRoll';
-
+import About from "../components/About";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
@@ -26,6 +26,7 @@ export const IndexPageTemplate = ({
       <MainHeading  />
       
       <BlogRoll />
+      <About />
     </div>
   );
 };

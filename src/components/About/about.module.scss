@@ -1,0 +1,42 @@
+@use '../../style/variables' as v;
+
+
+.about {
+    min-height: 60vh;
+}
+.paragraph {
+    font-size: var(--f4);
+    text-indent: 4em;
+    max-width: 25em;
+    box-sizing: content-box;
+
+    @media screen and (min-width: v.$width-mobile) {
+        font-size: var(--f5);
+
+    }
+
+}
+
+.spacer {
+    margin-top: calc(2*var(--f6));
+}
+
+.connect {
+    color: var(--c-bg)
+}
+
+.bg {
+    background-color: var(--c-bg);
+    padding: var(--f3) 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0, 1fr));
+    gap: var(--f3);
+
+    @media screen and (min-width: v.$width-mobile) {
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+
+    }
+}

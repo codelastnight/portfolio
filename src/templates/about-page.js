@@ -10,7 +10,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="grid">
+    <section className={`grid ${c.aboutsection}`}>
       <div className="col2 end1__r ">
           <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
