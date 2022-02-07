@@ -4,23 +4,23 @@ import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import BtnSpam from "../BtnSpam";
 import Button from "../Button";
-
+import {Links} from "gatsby";
 const Footer = class extends React.Component {
   render() {
     return (
       <footer className={`${c.footer__wrapper} reverse`}>
         <section className="grid v-margin6">
             <p className="col2">
-              <a href="#top">back to top</a>
+              <Link to="/">back to top</Link>
             </p>
             <p className="col3 "> 
-            <a href="#top">back to top</a>
+            <Link to="/">back to top</Link>
             </p>
             <p className="col6 show__d">
-            <a href="#top">back to top</a>
+            <Link to="/">back to top</Link>
             </p>
             <p className="col1__r justify__end show__d">
-            <a href="#top">back to top</a>
+            <Link to="/">back to top</Link>
             </p>
           </section>
         <section className="grid ">

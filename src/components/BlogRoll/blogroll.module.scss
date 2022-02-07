@@ -41,10 +41,12 @@
 }
 
 .img{
-    border: 3px solid var(--c-bg);
-    
-    &:hover {
-        border-color:  var(--c-fg);
+    border: 2px solid var(--c-bg);
+    border-color:  var(--c-fg);
 
+    &:hover {
+        a {
+            background-color: var(--c-hover-l);
+        }
     }
 }

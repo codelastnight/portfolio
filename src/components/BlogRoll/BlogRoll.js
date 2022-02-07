@@ -38,7 +38,6 @@ class BlogRollTemplate extends React.Component {
                     />
                   </div>
                 ) : <div className={c.img__placeholder}></div>}
-                </Link>
                 <p className="post-meta ">
                   <Link
                     className=""
@@ -48,6 +47,8 @@ class BlogRollTemplate extends React.Component {
                   </Link>
                  
                 </p>
+                </Link>
+                
         
             </article>
             

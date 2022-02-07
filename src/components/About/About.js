@@ -11,7 +11,7 @@ const About = () => {
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>
                     Simon Zhang is a cross-disciplinary designer based in ATL {'&'} SEA —
                     Netscape-Oriented with a Windows Aero slant. 
-                    Working towards a more inclusive yesterday. <a>Lets connect</a> {'<3'}
+                    Working towards a more inclusive yesterday.™ <a>Lets connect</a> {'<3'}
                         
                 </h3>
             </div>

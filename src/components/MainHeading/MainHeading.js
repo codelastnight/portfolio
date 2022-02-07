@@ -7,7 +7,7 @@ import { motion ,useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import {Link} from 'gatsby';
 const container = {
-    hidden: { opacity: 0},
+    hidden: { opacity: 1},
     show: { 
         opacity: 1,
         transition: {
@@ -149,7 +149,7 @@ const MainHeading = ({}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={`${c.titletext}`}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
+                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday™</motion.h4>
                     </div>
                     
                 </div>
@@ -187,7 +187,7 @@ const MainHeading = ({}) => {
                    
 
                 </motion.div>
-                <motion.div variants={variants} transition={{when: "beforeChildren" }} className={`row7 show__d`}>
+                <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{when: "beforeChildren", duration: 0.2 }} className={`row7 show__d`}>
                         <LogoIcon />
 
                     </motion.div>
