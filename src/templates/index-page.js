@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
@@ -17,16 +17,17 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  openContact
 }) => {
   // const heroImage = getImage(image) || image;
 
   return (
     <div >
       
-      <MainHeading  />
+      <MainHeading  openContact={() => openContact()}/>
       
       <BlogRoll />
-      <About />
+      <About openContact={() => openContact()} />
     </div>
   );
 };
@@ -41,13 +42,14 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  openContact: PropTypes.func
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
+  const layoutRef = useRef();
   return (
-    <Layout>
+    <Layout ref={layoutRef}>
       <IndexPageTemplate
         // image={frontmatter.image}
         title={frontmatter.title}
@@ -56,6 +58,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        openContact={()=> layoutRef.current.openContact()}
       />
     </Layout>
   );

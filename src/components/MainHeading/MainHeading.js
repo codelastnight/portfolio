@@ -61,7 +61,7 @@ const link = {
   }
 
 
-const MainHeading = ({}) => {
+const MainHeading = ({openContact}) => {
     const [ ref, inView] = useInView();
     const controls = useAnimation();
     const linkAni = useAnimation();
@@ -167,7 +167,7 @@ const MainHeading = ({}) => {
                 >
                     <h4 className="text" >
                         <motion.span variants={link}><Link to="#work" type='work' element="work">scroll down</Link> to see some of my selected work, </motion.span> 
-                        <motion.span variants={link}>or send me a message via online mail. </motion.span> 
+                        <motion.span variants={link}>or send me a message via <span className='pseudolink' onClick={() => openContact()}>online mail. </span></motion.span> 
                         <motion.span variants={link}>If you’re curious, check out what I'm <Link to="#about" type='about' element="about">listening to</Link> right now. </motion.span>
                     </h4>
                     <a href="#work">

@@ -3,7 +3,7 @@ import * as c from './about.module.scss';
 
 
 
-const About = () => {
+const About = ({openContact}) => {
     return (
         <section id="about" className={` ${c.about}`}>
             <div className='grid'>
@@ -11,7 +11,7 @@ const About = () => {
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>
                     simon zhang is a cross-disciplinary designer based in ATL {'&'} SEA —
                     netscape-oriented with a windows aero slant. 
-                    working towards a more inclusive yesterday.™ <a>lets connect</a> {'<3'}
+                    working towards a more inclusive yesterday.™ <span className='pseudolink' onClick={()=> openContact()}>lets connect</span> {'<3'}
                         
                 </h3>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle  } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
@@ -10,9 +10,18 @@ import * as classes from "./layout.module.scss";
 import Contact from "../Contact";
 
 
-export default function TemplateWrapper ({ children }) {
+ const Layout = forwardRef(({ children},  ref )  =>{
   const { title, description } = useSiteMetadata();
   const [isContact, setContact] = useState(false);
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        openContact: openContact
+      }
+    }
+  )
 
   useEffect(()  => {
     let root = document.documentElement;
@@ -84,7 +93,7 @@ export default function TemplateWrapper ({ children }) {
         <div className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}>
           <div className={classes.layout__inner}>
             <h1>{isContact}</h1>
-            <Footer />
+            <Footer onOpen={openContact}/>
           </div>
         </div>
         <Contact isOpen={isContact} onClose={closeContact} />
@@ -95,6 +104,7 @@ export default function TemplateWrapper ({ children }) {
      
     </div>
   );
-};
+})
 
 
+export default Layout;

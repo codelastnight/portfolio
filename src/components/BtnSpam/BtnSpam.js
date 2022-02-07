@@ -77,13 +77,13 @@ const BtnSpam = ({children,count, color, className, onClick}) => {
                 animate={controls}
                 variants = {variants}
                 key={i}
+                onClick={() => onClick()}
                 >
                     <Button 
                         color={color} 
                         height="3em" 
                         width="15em" 
                         className={`absolute `} 
-                        onClick={onClick ? onClick : () => {return}}
                         style={{top: `${e[0]}%`, left: `${e[1]}%`}} >
                         {children}
                         </Button>

@@ -5,7 +5,7 @@ import Logo from './../Logo'
 import BtnSpam from "../BtnSpam";
 import Button from "../Button";
 
-const Footer = ({isOpen}) =>  {
+const Footer = ({onOpen}) =>  {
 
     return (
       <footer className={`${c.footer__wrapper} reverse`}>
@@ -27,7 +27,7 @@ const Footer = ({isOpen}) =>  {
             
             <div className={`col2 end1__r relative ${c.logo}`}>
            
-              <BtnSpam color="#FF9023" className="show__d" >
+              <BtnSpam color="#FF9023" className="show__d" onClick={() =>onOpen()}>
                 <h3>Contact Me</h3>
               </BtnSpam>
               <Button color="#FF9023" height="3em" className={` show__m`}  >

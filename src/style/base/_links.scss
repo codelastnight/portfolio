@@ -1,19 +1,24 @@
 
-a {
+a, .pseudolink {
     text-decoration: underline;
     color: currentColor;
     background-color: var(--c-bg);
-}
-a:visited {
-    color: currentColor;
-}
-a:hover {
-    background-color:var(--c-hover-l) ;
+    &:visited {
+        color: currentColor;
+    }
+    &:hover {
+        background-color:var(--c-hover-l) ;
+    
+    }
+    &:active {
+        color: var(--c-bg);
+        background-color:var(--c-fg) ;
+    }
 
 }
-a:active {
-    color: var(--c-bg);
-    background-color:var(--c-fg) ;
+
+.pseudolink {
+    cursor: pointer;
 }
   
 // for use in reverse color context (eg footer)
