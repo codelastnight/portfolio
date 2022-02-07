@@ -1,3 +1,116 @@
+$borderRadius: var(--f1);
+
+.wrapper {
+    padding: var(--f1);
+    max-width: 40rem;
+    width: 100%;
+    position: relative;
+
+}
 .phone {
-    background-color: black;
+    --contactfg: #eee;
+    --contactbg: #222;
+    color: var(--contactfg);
+    width: 100%;
+
+    position: relative;
+
+    $border: 3px;
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    border-radius: $borderRadius;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(180deg, #000000 0%, #979797 0.01%, #D0D0D0 15.1%, #FFFFFF 31.77%, #CCCCCC 57.29%, #999999 100%);
+    }
+
+}
+.white {
+    color: var(--contactfg);
+}
+
+.topbar {
+    background-color: var(--contactbg);
+    width: 100%;
+    padding: 0.25em 1em;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+
+}
+
+.content {
+    background-image: linear-gradient(45deg, #1a1a1a 25%, #5c5c5c 25%, #5c5c5c 50%, #1a1a1a 50%, #1a1a1a 75%, #5c5c5c 75%, #5c5c5c 100%);
+    background-size: 8px 8px;
+
+    padding: 0.5em;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+}
+form {
+    color: var(--contactbg);
+    background: var(--contactfg);
+    border-radius: 0.25em;
+    padding: 0.25rem 0.5rem;
+}
+
+input {
+    padding: 0.25rem 0.5rem;
+}
+
+textarea {
+    padding: 0.25em;
+    width: 100%;
+    height: 7rem;
+}
+
+.button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}  
+
+.hero {
+    position: relative;
+    padding:  1em 0;
+    a {
+        background-color: transparent;
+        &:hover {
+            background-color: var(--c-hover-l);
+        }
+    }
+}
+.big {    
+    font-size: var(--f4);
+}
+
+.herobg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.2rem;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+
+}
+
+.herobg__inner {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: var(--contactbg);
+    filter: blur(8px);
+
 }

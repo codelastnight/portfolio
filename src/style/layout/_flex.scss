@@ -10,13 +10,20 @@
 .justify__end {
     justify-content: flex-end;
 }
+.justify__between {
+    justify-content: space-between;
+}
 .align__center {
     align-items: center;
 }
 
-.flexgap > * {
-    margin-right: var(--f3);
-    &:only-child, &:last-child  {
-        margin-right: 0; 
+
+
+@for $i from 1 through 3 { 
+    .flexgap#{$i} > * {
+        margin-right: var(--f#{$i});
+        &:only-child, &:last-child  {
+            margin-right: 0; 
+        }
     }
 }

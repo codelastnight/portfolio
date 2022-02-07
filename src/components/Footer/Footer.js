@@ -27,10 +27,10 @@ const Footer = ({onOpen}) =>  {
             
             <div className={`col2 end1__r relative ${c.logo}`}>
            
-              <BtnSpam color="#FF9023" className="show__d" onClick={() =>onOpen()}>
+              <BtnSpam color="#FF9023" className="show__d fg" onClick={() =>onOpen()}>
                 <h3>Contact Me</h3>
               </BtnSpam>
-              <Button color="#FF9023" height="3em" className={` show__m`}  >
+              <Button color="#FF9023" height="3em " className={`fg show__m`}  >
                 <h3>Contact Me</h3>
               </Button>
 

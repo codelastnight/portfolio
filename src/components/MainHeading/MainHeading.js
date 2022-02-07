@@ -95,7 +95,7 @@ const MainHeading = ({openContact}) => {
                 <motion.h4 variants={variants}
                             className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
 
-                <div className={`row2 col2 end1__r flex flexgap align__cente  ${c.titletext} `}>
+                <div className={`row2 col2 end1__r flex flexgap3 align__cente  ${c.titletext} `}>
                     <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate}`}>i'm a</motion.h1>
                     <motion.div variants={variants}  className={`relative ${c.w20} flex align__center  `}>
                         <motion.div variants={variants} className='absolute width100' >
@@ -116,7 +116,7 @@ const MainHeading = ({openContact}) => {
                         <ellipse cx="48.4824" cy="18.5" rx="46.5" ry="17.5" stroke="currentColor" strokeWidth="2"/>
                     </motion.svg>
                 </div>
-                <div className={`row3 col2 end1__r flex flexgap align__center ${c.titletext}`}>
+                <div className={`row3 col2 end1__r flex flexgap3 align__center ${c.titletext}`}>
                     <motion.div variants={variants} className={`relative flex align__center  `}>
                         <motion.div initial="hidden"
                 animate="show"   className={`absolute width100 ${c.w20}`}>
