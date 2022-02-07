@@ -9,9 +9,9 @@ const About = () => {
             <div className='grid'>
             <div className={`z5 col2 end1__r ${c.spacer}`}>
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>
-                    Simon Zhang is a cross-disciplinary designer based in ATL {'&'} SEA —
-                    Netscape-Oriented with a Windows Aero slant. 
-                    Working towards a more inclusive yesterday.™ <a>Lets connect</a> {'<3'}
+                    simon zhang is a cross-disciplinary designer based in ATL {'&'} SEA —
+                    netscape-oriented with a windows aero slant. 
+                    working towards a more inclusive yesterday.™ <a>lets connect</a> {'<3'}
                         
                 </h3>
             </div>

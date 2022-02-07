@@ -96,7 +96,7 @@ const MainHeading = ({}) => {
                             className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
 
                 <div className={`row2 col2 end1__r flex flexgap align__cente  ${c.titletext} `}>
-                    <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate}`}>I'm a</motion.h1>
+                    <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate}`}>i'm a</motion.h1>
                     <motion.div variants={variants}  className={`relative ${c.w20} flex align__center  `}>
                         <motion.div variants={variants} className='absolute width100' >
                             <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="5vmin" radius="0.5rem" />
@@ -112,7 +112,7 @@ const MainHeading = ({}) => {
                    
                 
                     <motion.svg variants={variants} className={` ${c.svg} ${c.starcircle}`}  viewBox="0 0 96 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M48.9519 37C48.9519 32.226 47.1704 27.6477 43.9994 24.2721C40.8281 20.8963 36.5273 18.9999 32.0431 18.9999C36.5273 18.9999 40.8281 17.1035 43.9994 13.7279C47.1704 10.3521 48.9519 5.77378 48.9519 1C48.9519 5.77378 50.7334 10.3521 53.9047 13.7279C57.0757 17.1035 61.3766 18.9999 65.8613 18.9999C61.3766 18.9999 57.0757 20.8963 53.9047 24.2721C50.7334 27.6477 48.9519 32.226 48.9519 37Z" fill="currentColor"/>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M48.9519 37C48.9519 32.226 47.1704 27.6477 43.9994 24.2721C40.8281 20.8963 36.5273 18.9999 32.0431 18.9999C36.5273 18.9999 40.8281 17.1035 43.9994 13.7279C47.1704 10.3521 48.9519 5.77378 48.9519 1C48.9519 5.77378 50.7334 10.3521 53.9047 13.7279C57.0757 17.1035 61.3766 18.9999 65.8613 18.9999C61.3766 18.9999 57.0757 20.8963 53.9047 24.2721C50.7334 27.6477 48.9519 32.226 48.9519 37Z" fill="currentColor"/>
                         <ellipse cx="48.4824" cy="18.5" rx="46.5" ry="17.5" stroke="currentColor" strokeWidth="2"/>
                     </motion.svg>
                 </div>
@@ -140,7 +140,7 @@ const MainHeading = ({}) => {
 
                     <motion.svg variants={variants} className={`${c.svg} ${c.flower}`}  viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8516 13.2933C14.8317 11.8635 14.2821 10.1406 14.2821 8.3721C14.2821 3.7511 17.9649 0 22.501 0C27.0371 0 30.7199 3.7511 30.7199 8.3721C30.7199 10.1406 30.1702 11.8635 29.1497 13.2933L27.4855 15.6276L29.1497 13.2933C30.1702 11.8635 31.6084 10.7984 33.2592 10.2522C37.5736 8.82435 42.2141 11.2331 43.6157 15.6276C45.0174 20.0222 42.6529 24.7495 38.3385 26.1774C36.6883 26.7243 34.91 26.7243 33.2592 26.1774L30.5661 25.286L33.2592 26.1774C34.91 26.7243 36.3488 27.7887 37.3686 29.2191C40.0348 32.9578 39.2199 38.1982 35.5506 40.9142C31.8806 43.6303 26.7366 42.8002 24.0704 39.0615C23.0506 37.6317 22.501 35.9089 22.501 34.1403V31.2552V34.1403C22.501 35.9089 21.9513 37.6317 20.9315 39.0615C18.2653 42.8002 13.1213 43.6303 9.45136 40.9142C5.78138 38.1982 4.96718 32.9578 7.63334 29.2191C8.65318 27.7887 10.092 26.7243 11.7421 26.1774L14.4359 25.286L11.7421 26.1774C10.092 26.7243 8.31366 26.7243 6.66284 26.1774C2.34905 24.7495 -0.0153972 20.0222 1.38623 15.6276C2.78786 11.2331 7.42835 8.82435 11.7421 10.2522C13.393 10.7984 14.8317 11.8635 15.8516 13.2933L17.5165 15.6276L15.8516 13.2933Z" fill="currentColor"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M15.8516 13.2933C14.8317 11.8635 14.2821 10.1406 14.2821 8.3721C14.2821 3.7511 17.9649 0 22.501 0C27.0371 0 30.7199 3.7511 30.7199 8.3721C30.7199 10.1406 30.1702 11.8635 29.1497 13.2933L27.4855 15.6276L29.1497 13.2933C30.1702 11.8635 31.6084 10.7984 33.2592 10.2522C37.5736 8.82435 42.2141 11.2331 43.6157 15.6276C45.0174 20.0222 42.6529 24.7495 38.3385 26.1774C36.6883 26.7243 34.91 26.7243 33.2592 26.1774L30.5661 25.286L33.2592 26.1774C34.91 26.7243 36.3488 27.7887 37.3686 29.2191C40.0348 32.9578 39.2199 38.1982 35.5506 40.9142C31.8806 43.6303 26.7366 42.8002 24.0704 39.0615C23.0506 37.6317 22.501 35.9089 22.501 34.1403V31.2552V34.1403C22.501 35.9089 21.9513 37.6317 20.9315 39.0615C18.2653 42.8002 13.1213 43.6303 9.45136 40.9142C5.78138 38.1982 4.96718 32.9578 7.63334 29.2191C8.65318 27.7887 10.092 26.7243 11.7421 26.1774L14.4359 25.286L11.7421 26.1774C10.092 26.7243 8.31366 26.7243 6.66284 26.1774C2.34905 24.7495 -0.0153972 20.0222 1.38623 15.6276C2.78786 11.2331 7.42835 8.82435 11.7421 10.2522C13.393 10.7984 14.8317 11.8635 15.8516 13.2933L17.5165 15.6276L15.8516 13.2933Z" fill="currentColor"/>
                     </motion.svg>
                     <div className="relative flex">
                         <motion.div variants={variants} >
@@ -149,13 +149,13 @@ const MainHeading = ({}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={`${c.titletext}`}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} class={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday™</motion.h4>
+                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday™</motion.h4>
                     </div>
                     
                 </div>
 
                
-                <motion.h4 variants={variants} class={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
+                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
@@ -207,7 +207,7 @@ const MainHeading = ({}) => {
                 >
                     <motion.p variants={link} >©</motion.p>
                     <motion.p variants={link} >copyright</motion.p>
-                    <motion.p variants={link} >2021</motion.p>
+                    <motion.p variants={link} >2022</motion.p>
 
                 </motion.div>
             </div>

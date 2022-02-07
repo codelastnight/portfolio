@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar";
@@ -8,10 +7,12 @@ import "../../style/index.scss";
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
 import * as classes from "./layout.module.scss";
+import Contact from "../Contact";
 
-const TemplateWrapper = ({ children }) => {
+
+export default function TemplateWrapper ({ children }) {
   const { title, description } = useSiteMetadata();
-
+  const [isContact, setContact] = useState(false);
 
   useEffect(()  => {
     let root = document.documentElement;
@@ -24,7 +25,13 @@ const TemplateWrapper = ({ children }) => {
     };
 });
  
+  const openContact = () => {
+    setContact(true);
+  }
 
+  const closeContact = () => {
+    setContact(false);
+  }
   return (
     <div id="top">
       <Helmet>
@@ -65,21 +72,29 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+
       
-      <div className={classes.layout__wrapper}>
-        <div className={classes.layout__inner}>
-          <main className="">{children}</main>
+      <Navbar openContact={openContact} />
+        
+        <div className={classes.layout__wrapper}>
+          <div className={classes.layout__inner}>
+            <main className="">{children}</main>
+          </div>
         </div>
-      </div>
-      <div className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}>
-        <div className={classes.layout__inner}>
-          <Footer />
+        <div className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}>
+          <div className={classes.layout__inner}>
+            <h1>{isContact}</h1>
+            <Footer />
+          </div>
         </div>
-      </div>
+        <Contact isOpen={isContact} onClose={closeContact} />
+        
+
+      
+     
      
     </div>
   );
 };
 
-export default TemplateWrapper;
+

@@ -35,7 +35,7 @@ const variants = {
 
 
 
-const BtnSpam = ({children,count, color, className}) => {
+const BtnSpam = ({children,count, color, className, onClick}) => {
     const [arr,setArr] = useState()
     const [ ref, inView] = useInView();
     const controls = useAnimation({
@@ -68,6 +68,7 @@ const BtnSpam = ({children,count, color, className}) => {
              <div
              ref={ref}
                 className={className}
+                
             >
             {arr.map((e, i) => (
                 <motion.div 
@@ -77,7 +78,15 @@ const BtnSpam = ({children,count, color, className}) => {
                 variants = {variants}
                 key={i}
                 >
-                    <Button color={color} height="3em" width="15em" className={`absolute `} style={{top: `${e[0]}%`, left: `${e[1]}%`}} >{children}</Button>
+                    <Button 
+                        color={color} 
+                        height="3em" 
+                        width="15em" 
+                        className={`absolute `} 
+                        onClick={onClick ? onClick : () => {return}}
+                        style={{top: `${e[0]}%`, left: `${e[1]}%`}} >
+                        {children}
+                        </Button>
 
                 </motion.div>
             ))}

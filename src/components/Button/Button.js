@@ -18,7 +18,7 @@ const Button = ({
 
     return (
         <div className={className} style={style} >
-<div tabindex="0"  className={`${c.button__outer} `} style={{width: width, height: height, borderRadius: radius, background: color, borderColor: color}}>
+<div tabIndex="0"  className={`${c.button__outer} `} style={{width: width, height: height, borderRadius: radius, background: color, borderColor: color}}>
             <div className={c.button__under}></div>
             <div className={c.button__highlight}></div>
             <div className={c.button__pressed}></div>

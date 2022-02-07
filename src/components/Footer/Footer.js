@@ -4,9 +4,9 @@ import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import BtnSpam from "../BtnSpam";
 import Button from "../Button";
-import {Links} from "gatsby";
-const Footer = class extends React.Component {
-  render() {
+
+const Footer = ({isOpen}) =>  {
+
     return (
       <footer className={`${c.footer__wrapper} reverse`}>
         <section className="grid v-margin6">
@@ -27,7 +27,7 @@ const Footer = class extends React.Component {
             
             <div className={`col2 end1__r relative ${c.logo}`}>
            
-              <BtnSpam color="#FF9023" className="show__d">
+              <BtnSpam color="#FF9023" className="show__d" >
                 <h3>Contact Me</h3>
               </BtnSpam>
               <Button color="#FF9023" height="3em" className={` show__m`}  >
@@ -51,7 +51,7 @@ const Footer = class extends React.Component {
             <div className={`col5__r `}>
                 <p>©</p>
                 <p>copyright</p>
-                <p>2021</p>
+                <p>2022</p>
             </div>
 
            
@@ -64,8 +64,7 @@ const Footer = class extends React.Component {
                
         </section>
       </footer>
-    );
-  }
+    )
 };
 
 export default Footer;

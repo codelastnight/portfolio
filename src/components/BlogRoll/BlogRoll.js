@@ -38,13 +38,10 @@ class BlogRollTemplate extends React.Component {
                     />
                   </div>
                 ) : <div className={c.img__placeholder}></div>}
-                <p className="post-meta ">
-                  <Link
-                    className=""
-                    to={post.fields.slug}
-                  >
+                <p className="post-meta hover ">
+                 
                     {post.frontmatter.title}
-                  </Link>
+               
                  
                 </p>
                 </Link>
