@@ -43,7 +43,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "portfolio",
+          default: "portfolio-post",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "string" }

@@ -72,8 +72,8 @@ export default function BlogRoll() {
       query={graphql`
         query BlogRollQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            sort: { order: DESC, fields: [frontmatter___title] }
+            filter: { frontmatter: { templateKey: { eq: "portfolio-post" } } }
           ) {
             edges {
               node {
@@ -85,8 +85,7 @@ export default function BlogRoll() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
+                  tags
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
