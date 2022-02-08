@@ -4,6 +4,8 @@ import Modal from './Modal'
 import  { ReactComponent as Battery } from './battery.svg'
 import { ReactComponent as  Lte} from './LTE.svg'
 import { ReactComponent as  Mail}  from './mail.svg'
+import { ReactComponent as  Away}  from './away.svg'
+
 import Button from '../Button';
 import {motion, AnimatePresence} from 'framer-motion'
 
@@ -65,9 +67,13 @@ function Contact({onClose,isOpen}) {
                         <div className={` ${c.herobg}`}>
                             <div className={c.herobg__inner}></div>
                         </div>
-                        <div className='z5'>
-                            <h4 className={c.big}>sorry i missed you</h4>
-                            <p className='text'>i'm away from my computer right now... shoot me a message or connect with me on <a>linkedin</a> </p>
+
+                        <div className={`${c.hero__content} `}>
+                           
+                 
+                           <p className={`${c.paragraph} ${c.big} long`}>i'm away from my computer right now... shoot me a message or connect with me on <a href="https://www.linkedin.com/in/not-simon/">linkedin</a>. I also have a <a href="https://www.behance.net/artlastnight">behance</a> and <a href="https://www.instagram.com/art.last.night/">instagram</a>. </p>
+                           <p style={{color: "#FF5833"}}><span><Away /></span> simon is away</p>
+
                         </div>
                     </div>
                     <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
@@ -94,7 +100,7 @@ function Contact({onClose,isOpen}) {
                                 <Button color='#DCDCDC' height='3em' width='7em' radius='0.7em'><h3 className={` bold `}  >Cancel</h3></Button>
                             </div>
                             <div className='flex align__center flexgap1'>
-                                <p>ℹ️sending as online mail</p>
+                                <p>ℹ️ sending as online mail</p>
                             <button type='submit' className={`${c.button} ${c.white}`}>
                             <Button color='#1c1c1c' height='3em'  width='7em' radius='0.7em'><h3 className={`bold   `}>Send</h3></Button>
                             </button>

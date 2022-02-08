@@ -29,15 +29,3 @@
     background-color: var(--c-bg);
     padding: var(--f3) 0;
 }
-
-.split {
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0, 1fr));
-    gap: var(--f1);
-
-    @media screen and (min-width: v.$width-mobile) {
-        grid-template-columns: repeat(2,minmax(0, 1fr));
-        gap: var(--f3);
-
-    }
-}

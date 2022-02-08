@@ -17,7 +17,7 @@ const Navbar = ({openContact}) => {
           </p>
           
           <p className={'col4__d col3'}>  
-            <Link to="#about" type="about" element="title">
+            <Link to="/#about" type="about" element="title">
               about
             </Link>
           </p>

@@ -91,7 +91,8 @@ textarea {
     }
 }
 .big {    
-    font-size: var(--f4);
+    font-size: var(--f3);
+    margin-bottom: var(--f2);
 }
 
 .herobg {
@@ -113,4 +114,14 @@ textarea {
     background-color: var(--contactbg);
     filter: blur(8px);
 
+}
+
+.hero__content {
+    padding: 0 0.5em;
+    max-width: 30em;
+}
+.paragraph {
+    text-indent: 4em;
+    max-width: 25em;
+    margin: 1em 0;
 }

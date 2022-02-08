@@ -15,7 +15,7 @@ const About = ({openContact}) => {
                         
                 </h3>
             </div>
-            <div className={`z5 col2 end5__r ${c.split} text`}>
+            <div className={`z5 col2 end5__r split text`}>
                 <div>
                     <p className={c.bg}>
                         Currently studying Industrial Design at Georgia Tech, with a minor in Sustainable Cities.
