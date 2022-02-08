@@ -149,13 +149,13 @@ const MainHeading = ({openContact}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={`${c.titletext}`}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>working towards a more inclusive yesterday™</motion.h4>
+                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>exploring the tension between practical and experimental</motion.h4>
                     </div>
                     
                 </div>
 
                
-                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`}>working towards a more inclusive yesterday</motion.h4>
+                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`}>exploring the tension between practical and experimental</motion.h4>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
