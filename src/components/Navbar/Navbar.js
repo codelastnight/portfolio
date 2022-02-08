@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import * as c from './navbar.module.scss'
 
@@ -23,7 +23,7 @@ const Navbar = ({openContact}) => {
           </p>
 
           <p className={''} >  
-            <span className={'pseudolink'} onClick={()=> openContact()}>
+            <span className={'pseudolink'} onClick={()=> openContact()} role="button" tabIndex='0' onKeyUp={()=> openContact()}>
               contact
             </span>
           </p>

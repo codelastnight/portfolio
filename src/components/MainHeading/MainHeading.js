@@ -81,7 +81,7 @@ const MainHeading = ({openContact}) => {
             linkAni.start("hidden");
 
         }
-    }, [inView]);
+    }, [inView, controls, linkAni]);
 
     return (
         <React.Fragment>
@@ -96,7 +96,7 @@ const MainHeading = ({openContact}) => {
                             className={`row1 col3 span2 text`} >hello, my name is simon</motion.h4>
 
                 <div className={`row2 col2 end1__r flex flexgap3 align__cente  ${c.titletext} `}>
-                    <motion.h1 variants={variants} className={`${c.maxcontent} ${c.animate}`}>i'm a</motion.h1>
+                    <motion.h1 variants={variants} className={`${c.maxcontent}`}>i'm a</motion.h1>
                     <motion.div variants={variants}  className={`relative ${c.w20} flex align__center  `}>
                         <motion.div variants={variants} className='absolute width100' >
                             <Button className={`width100 ${c.button} ${c.margin1rem}`} color="#F8ACF0" height="5vmin" radius="0.5rem" />
@@ -167,7 +167,7 @@ const MainHeading = ({openContact}) => {
                 >
                     <h4 className="text" >
                         <motion.span variants={link}><Link to="#work" type='work' element="work">scroll down</Link> to see some of my selected work, </motion.span> 
-                        <motion.span variants={link}>or send me a message via <span className='pseudolink' onClick={() => openContact()}>online mail. </span></motion.span> 
+                        <motion.span variants={link}>or send me a message via <span className='pseudolink' onClick={() => openContact()} role="link" onKeyUp={() => openContact()} tabIndex='0'>online mail. </span></motion.span> 
                         <motion.span variants={link}>If you’re curious, check out what I'm <Link to="#about" type='about' element="about">listening to</Link> right now. </motion.span>
                     </h4>
                     <a href="#work">

@@ -7,7 +7,7 @@ import { ReactComponent as  Mail}  from './mail.svg'
 import { ReactComponent as  Away}  from './away.svg'
 
 import Button from '../Button';
-import {motion, AnimatePresence} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 const variant = {
     hidden: {
@@ -96,7 +96,7 @@ function Contact({onClose,isOpen}) {
                             <textarea name="comment" placeholder='send a message...' required />
                         </label>
                         <div className="flex justify__between">
-                            <div tabIndex="0" onClick={() => onClose()}>
+                            <div tabIndex="0" onClick={() => onClose()} role="button" onKeyUp={() => onClose()}>
                                 <Button color='#DCDCDC' height='3em' width='7em' radius='0.7em'><h3 className={` bold `}  >Cancel</h3></Button>
                             </div>
                             <div className='flex align__center flexgap1'>

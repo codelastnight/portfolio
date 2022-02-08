@@ -1,6 +1,5 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import * as c from './btnspam.module.scss';
 import Button from '../Button';
 import distribute from './poordistribute';
 import { motion ,useAnimation } from "framer-motion"
@@ -55,11 +54,11 @@ const BtnSpam = ({children,count, color, className, onClick}) => {
         controls.start("hidden");
 
         }
-    }, [inView]);
+    }, [inView,controls, count]);
   
     useEffect(() => {
         setArr(distribute(count,0,80))
-    }, []);
+    }, [count]);
 
     return ( 
         <React.Fragment>
@@ -78,6 +77,8 @@ const BtnSpam = ({children,count, color, className, onClick}) => {
                 variants = {variants}
                 key={i}
                 onClick={() => onClick()}
+                role='button'
+                onKeyUp={() => onClick()}
                 >
                     <Button 
                         color={color} 
