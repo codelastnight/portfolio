@@ -1,7 +1,6 @@
 import React, {useRef} from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import {  graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import MainHeading from '../components/MainHeading';
