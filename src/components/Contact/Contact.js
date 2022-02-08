@@ -79,7 +79,7 @@ function Contact({onClose,isOpen}) {
                     <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
-                        <div className='flex flexgap1'>
+                        <div className='flex flexgap1 wrap'>
                             <label>
                             <p>Your Name</p>
                             <input type="text" name="name" />
