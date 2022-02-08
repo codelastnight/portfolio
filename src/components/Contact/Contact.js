@@ -82,18 +82,18 @@ function Contact({onClose,isOpen}) {
                         <div className='flex flexgap1 wrap'>
                             <label>
                             <p>Your Name</p>
-                            <input type="text" name="name" />
+                            <input type="text" name="name" required />
                             </label>
                             <label>
                             <p>Email</p>
-                            <input type="email" name="email" />
+                            <input type="email" name="email" required />
                         </label>
                         </div>
                         
                        
                         <label>
                             <p>Message</p>
-                            <textarea name="comment" placeholder='send a message...' />
+                            <textarea name="comment" placeholder='send a message...' required />
                         </label>
                         <div className="flex justify__between">
                             <div tabIndex="0" onClick={() => onClose()}>
