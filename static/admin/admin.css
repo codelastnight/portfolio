@@ -6,3 +6,13 @@
     display: flex;
     gap: 1rem;
 }
+
+.css-1iqjs8m-ControlContainer-Shortcode .css-1rsca1y-ControlContainer  {
+    margin-top: 16px;
+}
+
+
+.css-1iqjs8m-ControlContainer-Shortcode .css-1rsca1y-ControlContainer > .css-pcief1-FieldLabel-fieldLabel {
+    display: none;
+}
+
