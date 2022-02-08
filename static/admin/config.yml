@@ -35,7 +35,7 @@ collections:
 
   - name: "portfolio"
     label: "Portfolio"
-    folder: "src/pages/blog"
+    folder: "src/pages/portfolio"
     create: true
     slug: "{{slug}}--{{minute}}{{second}}{{hour}}"
     fields:
@@ -46,8 +46,15 @@ collections:
           default: "portfolio",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "string" }
+      - { label: "small description", name: "description2", widget: "string" }
+
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Thumbnail", name: "thumbnail", widget: image }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
  
 
   - name: "pages"

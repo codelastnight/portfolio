@@ -6,6 +6,34 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
+
+const Heading = ({
+    children,
+    first,
+    second,
+    label
+  }) => {
+  return (
+    <section className="grid spacer__top">
+    <label className="col1 col2__d ">{label}</label>
+    <div className="col1 col3__d end1__r limit">
+      {children}
+    </div>
+    <div className="col1 split text col3__d limit end1__r " style={{marginTop: "var(--f1)"}}>
+      <div>
+        {first}
+
+      </div>
+      <div>
+        {second}
+      </div>
+      
+    </div>
+    </section>
+  )
+  
+}
+
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
   content,
@@ -19,34 +47,43 @@ export const BlogPostTemplate = ({
 
   return (
     <React.Fragment>
-      <section className="grid text spacer__top">
       {helmet || ""}
-      <h1 className="col3__d span5">
-        {title}
-      </h1>
-      <p className="col8__d end4__r">
-        test
-      </p>
-      <p className="row2 col3 span4">
-         {description}
-      </p>
-      </section>
-      <section className="grid ">
-        <article className="col2__d span4 text">
+      <div className="flex flex__column justify__end" style={{minHeight: '60vh'}}>
+      <Heading 
+        label="title"
+        second={tags && tags.length ? (
+          <div className="flex flexgap1" >
+              {tags.map((tag) => (
+                <p key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </p>
+              ))}
+            </div>
+          ) : null}
+        >
+        <h1 className="title indent ">
+                {title}
+        </h1>
+      </Heading>
+      </div>
+    
+      <Heading 
+        label="about"
+
+        first={<p>2021</p>}
+
+        second={<p>test client</p>}
+        >
+        <p className="big long indent ">
+                {description}
+        </p>
+      </Heading>
+
+      <section className="grid spacer__top">
+        <article className="col1 col3__d end1__r text long limit">
           <PostContent content={content} />
 
-          {tags && tags.length ? (
-            <div style={{ marginTop: `4rem` }}>
-              <h4>Tags</h4>
-              <ul className="taglist">
-                {tags.map((tag) => (
-                  <li key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  </li>
-                ))}
-                </ul>
-              </div>
-            ) : null}
+         
         </article>
        
       </section>

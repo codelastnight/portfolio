@@ -1,7 +1,9 @@
 .flex {
     display: flex;
 }
-
+.flex__column {
+    flex-direction: column;
+}
 
 .justify__center {
     justify-content: center;
@@ -15,6 +17,10 @@
 }
 .align__center {
     align-items: center;
+}
+
+.align__end {
+    align-items: end;
 }
 
 

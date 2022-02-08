@@ -61,5 +61,20 @@ mark {
   @media screen and (min-width: v.$width-mobile) {
     font-size: var(--f5);
 
+  }
 }
+.title {
+  font-size: var(--f6);
+  @media screen and (min-width: v.$width-mobile) {
+    font-size: var(--f7);
+
+  }
+}
+.indent {
+  text-indent: 5em;
+  
+}
+
+.limit {
+  max-width: 50rem;
 }

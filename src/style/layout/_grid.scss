@@ -44,12 +44,8 @@
 }
 
 
-@for $i from 1 through 4 { 
-    .end#{$i}__r {
-        grid-column-end: -#{$i};
-    }
-}
-@for $i from 5 through 11 { 
+
+@for $i from 1 through 11 { 
     .end#{$i}__r {
         grid-column-end: -1;
     }

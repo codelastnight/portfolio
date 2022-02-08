@@ -23,5 +23,8 @@ section {
 
 
 .spacer__top {
-    margin-top: calc(var(--f6)*3);
+    margin-top: calc(var(--f6)*2);
+    @media screen and (min-width:calc(v.$width-mobile)) {
+        margin-top: calc(var(--f6)*3);
+    }
 }
