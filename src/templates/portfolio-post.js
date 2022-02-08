@@ -5,8 +5,8 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
-
+import { getImage } from "gatsby-plugin-image";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const Heading = ({
     children,
     first,
@@ -52,6 +52,18 @@ export const BlogPostTemplate = ({
     <React.Fragment>
       {helmet || ""}
       <div className="flex flex__column justify__end" style={{minHeight: '60vh'}}>
+      {/* <section className="grid">
+        <div className="col1 col3__d end1__r limirt">
+        <PreviewCompatibleImage imageInfo={{
+                        image: featuredimage,
+                        alt: `featured image for ${title}`
+                        
+                      }}  />
+        </div>
+          
+
+      </section> */}
+
       <Heading 
         label="title"
         second={tags && tags.length ? (
@@ -83,7 +95,7 @@ export const BlogPostTemplate = ({
       </Heading>
 
       <section className="grid spacer__top">
-        <article className="col1 col3__d end1__r text long limit">
+        <article className="col1 col2__d end1__r text long " style={{maxWidth: '70rem'}}>
           <PostContent content={content} />
 
          
@@ -102,6 +114,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   description2: PropTypes.string,
   date: PropTypes.string,
   helmet: PropTypes.object,
@@ -117,7 +130,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         description2={post.frontmatter.description2}
-        date={post.frontmatter.date}
+        date={post.frontmatter.prettydate}
         featuredimage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
@@ -153,14 +166,14 @@ export const pageQuery = graphql`
         description
         tags
         description2
-        date
+        prettydate
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 200
+              width: 1000
               quality: 90
               layout: FULL_WIDTH
-              
+              formats: WEBP
             )
 
           }

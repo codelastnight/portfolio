@@ -1,7 +1,8 @@
 ---
-templateKey: portfolio
+templateKey: portfolio-post
 title: Eco-friendly 6-Pack Carrier Redesign
-date: "2021"
+prettydate: "2021"
+date: 2021-11-14T07:47:15.043Z
 description2: "Client: "
 description: A paperboard only bottle carrier design. Easy to manufacture,
   environmentally conscious, and has a large marketing surface. Created for the

@@ -22,9 +22,9 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+        <section className=" grid spacer__top">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
+          <div className="col1 col2__d end1__r limit">
             <div className="columns">
               <div
                 className="column is-10 is-offset-1"

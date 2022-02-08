@@ -29,7 +29,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image", name: "featured", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
@@ -46,8 +46,9 @@ collections:
           default: "portfolio-post",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Date", name: "prettydate", widget: "string" }
       - { label: "small description", name: "description2", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
 
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Thumbnail", name: "thumbnail", widget: image }

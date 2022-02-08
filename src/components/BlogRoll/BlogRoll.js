@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 import * as c from './blogroll.module.scss'
+
 class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props
@@ -22,11 +23,11 @@ class BlogRollTemplate extends React.Component {
                 <Link
                   to={post.fields.slug}
                 >
-                {post.frontmatter.featuredimage ? (
+                {post.frontmatter.thumbnail ? (
                   <div className={`featured-thumbnail ${c.img}`}>
                     <PreviewCompatibleImage
                       imageInfo={{
-                        image: post.frontmatter.featuredimage,
+                        image: post.frontmatter.thumbnail,
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         // width:
                         //   post.frontmatter.featuredimage.childImageSharp
@@ -70,23 +71,44 @@ export default function BlogRoll() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
-          allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___title] }
-            filter: { frontmatter: { templateKey: { eq: "portfolio-post" } } }
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                  slug
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: {order: DESC, fields: [frontmatter___title]}
+          filter: {frontmatter: {templateKey: {eq: "portfolio-post"}}}
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                tags
+                prettydate
+                thumbnail {
+                  id
+                  childImageSharp {
+                    gatsbyImageData(formats: WEBP, width: 200, quality: 90, layout: FULL_WIDTH)
+                  }
                 }
-                frontmatter {
-                  title
-                  templateKey
-                  tags
-                  featuredimage {
+              }
+            }
+          }
+        }
+      }
+      
+      `}
+      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+    />
+  );
+}
+
+/**
+ * 
+ *  thumbnail {
                     childImageSharp {
                       gatsbyImageData(
                         width: 200
@@ -96,14 +118,7 @@ export default function BlogRoll() {
                       )
 
                     }
-                  }
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
-    />
-  );
-}
+ * 
+ * 
+ * 
+ */
