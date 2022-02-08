@@ -10,16 +10,14 @@ const Button = ({
     className,
     style,
     children,
-    tab
+    
 }) => {
-    // var colorOutline = s.Spectra(color);
-	// const newHue = (230 - colorOutline.hue()) * 0.2
-	// colorOutline.hue(colorOutline.hue() + newHue)
+    
 	
 
     return (
         <div className={className} style={style} >
-        <div tabIndex={tab ? "0" : null}  className={`${c.button__outer} `} style={{width: width, height: height, borderRadius: radius, background: color, borderColor: color}}>
+        <div className={`${c.button__outer} `} style={{width: width, height: height, borderRadius: radius, background: color, borderColor: color}}>
                     <div className={c.button__under}></div>
                     <div className={c.button__highlight}></div>
                     <div className={c.button__pressed}></div>
@@ -41,6 +39,5 @@ Button.defaultProps = {
     color: '#D7BEFF',
     className: "",
     style: {transform: ""},
-    tab: false
 }
 export default Button;
