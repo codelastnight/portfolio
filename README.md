@@ -1,6 +1,6 @@
 # Gatsby + Netlify CMS Starter
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f0c7468a-b663-4142-9bc7-b329a5271ac8/deploy-status)](https://app.netlify.com/sites/jolly-wescoff-1d99f1/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 
 **Note:** This starter uses [Gatsby v4](https://www.gatsbyjs.com/gatsby-4/).
 
