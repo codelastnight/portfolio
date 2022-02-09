@@ -55,6 +55,17 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Tagline, name: tagline, widget: text }
           - { label: About Blurb, name: aboutblurb, widget: text }
+          - {
+              label: socials,
+              name: social links,
+              widget: list,
+              fields:
+                [
+                  { label: Social name, name: prettyLink, widget: text },
+                  { label: url, name: url, widget: text },
+                ],
+            }
+          - {label: year, name: year, widget: date}
 
 
       - file: "src/pages/about/index.md"
@@ -73,30 +84,5 @@ collections:
 
      
 
-  - name: "settings"
-    label: "Site Settings"
-    files:
-    - file: "src/settings/footer.md"
-      label: "Footer"
-      name: "footer"
-      fields:
-        - {
-            label: "Template Key",
-            name: "templateKey",
-            widget: "hidden",
-            default: "setting-footer",
-          }
-        - {
-            label: socials,
-            name: social links,
-            widget: list,
-            fields:
-              [
-                { label: Social name, name: prettyLink, widget: text },
-                { label: url, name: url, widget: text },
-              ],
-          }
-        - {label: year, name: year, widget: date}
-        
 
       
