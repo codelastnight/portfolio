@@ -11,6 +11,11 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: diluc300
+    api_key: 647925268514523
 
 collections:
   - name: "portfolio"
@@ -55,17 +60,35 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Tagline, name: tagline, widget: text }
           - { label: About Blurb, name: aboutblurb, widget: text }
+          - { label: About Description, name: aboutdesc, widget: text }
+          - {
+              label: Listening To,
+              name: listen,
+              widget: object,
+              fields:
+                - { label: Social name, name: prettyLink, widget: string }
+                - { label: url, name: url, widget: string }
+            }
+          - {
+              label: Reading Right Now,
+              name: read,
+              widget: object,
+              fields:
+                - { label: Social name, name: prettyLink, widget: string }
+                - { label: url, name: url, widget: string }
+            }
+
           - {
               label: socials,
               name: social links,
               widget: list,
               fields:
                 [
-                  { label: Social name, name: prettyLink, widget: text },
-                  { label: url, name: url, widget: text },
+                  { label: Social name, name: prettyLink, widget: string },
+                  { label: url, name: url, widget: string },
                 ],
             }
-          - {label: year, name: year, widget: date}
+          - {label: year, name: year, widget: string}
 
 
       - file: "src/pages/about/index.md"

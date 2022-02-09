@@ -3,39 +3,41 @@ import * as c from './about.module.scss';
 
 
 
-const About = ({openContact}) => {
+const About = ({openContact, blurb, desc, listening, reading}) => {
     return (
         <section id="about" className={` ${c.about}`}>
             <div className='grid'>
             <div className={`z5 col2 end1__r ${c.spacer}`}>
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>
-                    simon zhang is a cross-disciplinary designer based in ATL {'&'} SEA —
-                    netscape-oriented with a windows aero slant. 
-                    exploring the tension between practical and experimental. <span className='pseudolink' onKeyUp={()=> openContact()} role="button" tabIndex='0' onClick={()=> openContact()}>lets connect</span> {'<3'}
+                    {blurb} <span className='pseudolink' onKeyUp={()=> openContact()} role="button" tabIndex='0' onClick={()=> openContact()}>lets connect</span> {'<3'}
                         
                 </h3>
             </div>
             <div className={`z5 col2 end5__r split text`}>
                 <div>
                     <p className={c.bg}>
-                        Currently studying Industrial Design at Georgia Tech, with a minor in Sustainable Cities.
+                        {desc}
                     </p>
                 </div>
                 
                 <div>
+                    { listening &&
                     <div className={c.bg}>
                         <h4>Listening to:</h4>
-                        <p><a href="https://soundcloud.com/y4ndere/alpha-halo-blackwinterwells">
-                            alpha halo w/ blackwinterwells by yandere
-                            </a></p>
+                        <p><a href={listening.url}>
+                        {listening.prettyLink}                            
+                        </a></p>
                     </div>
+                    }
+                    { reading &&
+
                     <div className={c.bg}>
                         <h4>Reading right now: </h4>
-                        <p><a href="https://books.google.com/books/about/Claiming_Diaspora.html?id=Vzv2DrzAL7UC">
-                            Claiming Diaspora by Su Zheng
+                        <p><a href={reading.url}>
+                        {reading.prettyLink}                            
                             </a></p>
                     </div>
-
+                    }
                    
                    
                 </div>

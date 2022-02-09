@@ -10,7 +10,7 @@ import * as classes from "./layout.module.scss";
 import Contact from "../Contact";
 
 
- const Layout = forwardRef(({ children},  ref )  =>{
+ const Layout = forwardRef(({ children, socials},  ref )  =>{
   const { title, description } = useSiteMetadata();
   const [isContact, setContact] = useState(false);
 
@@ -93,10 +93,10 @@ import Contact from "../Contact";
         <div className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}>
           <div className={classes.layout__inner}>
             <h1>{isContact}</h1>
-            <Footer onOpen={openContact}/>
+            <Footer onOpen={openContact} socials={socials}/>
           </div>
         </div>
-        <Contact isOpen={isContact} onClose={closeContact} />
+        <Contact isOpen={isContact} onClose={closeContact} socials={socials} />
         
 
       

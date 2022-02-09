@@ -6,6 +6,8 @@ import LogoIcon from '../LogoIcon';
 import { motion ,useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import {Link} from 'gatsby';
+import PropTypes from 'prop-types';
+
 const container = {
     hidden: { opacity: 1},
     show: { 
@@ -61,7 +63,9 @@ const link = {
   }
 
 
-const MainHeading = ({openContact}) => {
+
+
+const MainHeading = ({openContact, tagline, socials, year}) => {
     const [ ref, inView] = useInView();
     const controls = useAnimation();
     const linkAni = useAnimation();
@@ -149,13 +153,13 @@ const MainHeading = ({openContact}) => {
                         </motion.div>
 
                         <motion.h1 variants={variants} className={`${c.titletext}`}>(of sorts)</motion.h1>
-                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>exploring the tension between practical and experimental</motion.h4>
+                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>{tagline}</motion.h4>
                     </div>
                     
                 </div>
 
                
-                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`}>exploring the tension between practical and experimental</motion.h4>
+                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`}>{tagline}</motion.h4>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
@@ -191,23 +195,28 @@ const MainHeading = ({openContact}) => {
                         <LogoIcon />
 
                     </motion.div>
+
                 <motion.div className={`row7 col2 ${c.links}`}
                 initial="hidden"
                 animate={linkAni}  
                 variants={links}
                 >
-                    <motion.p variants={link} ><a href="https://www.instagram.com/art.last.night/">instagram</a> </motion.p>
-                    <motion.p variants={link} ><a href="https://www.behance.net/artlastnight">behance</a> </motion.p>
-                    <motion.p variants={link} ><a href="https://www.linkedin.com/in/not-simon/">linkedin</a> </motion.p>
+                    {socials && socials.map((element,i) => (
+                         <motion.p variants={link} key={i}>
+                             <a href={element.url}>{element.prettyLink}</a>
+                    </motion.p>
+                    ))}
+                    
                 </motion.div>
                 <motion.div className={`row7 col3__d  ${c.links}`}
                 initial="hidden"
                 animate={linkAni}  
                 variants={links}
                 >
+                    
                     <motion.p variants={link} >©</motion.p>
                     <motion.p variants={link} >copyright</motion.p>
-                    <motion.p variants={link} >2022</motion.p>
+                    <motion.p variants={link} >{year}</motion.p>
 
                 </motion.div>
             </div>
@@ -221,5 +230,12 @@ const MainHeading = ({openContact}) => {
     )
 
 }
+MainHeading.propTypes = {
+    openContact: PropTypes.func,
+    tagline: PropTypes.string,
+    socials: PropTypes.array,
+    year: PropTypes.string
+};  
 
 export default MainHeading;
+

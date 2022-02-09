@@ -7,7 +7,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import './cms-utils'
 
 
-CMS.registerMediaLibrary(uploadcare)
+//CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)

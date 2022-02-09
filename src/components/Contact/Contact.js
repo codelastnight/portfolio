@@ -11,22 +11,21 @@ import {motion} from 'framer-motion'
 
 const variant = {
     hidden: {
-        scaleY: 0,
+        scaleY: 0.5,
         transition: {
-            duration: 0.2,
+            duration: 0.1,
             
         }
     },
     show: {
         scaleY: 1,
         transition: {
-            duration: 0.1,
-            delay: 0.1
+            duration: 0.1
         }
     }
 }
 
-function Contact({onClose,isOpen}) {
+function Contact({onClose,isOpen, socials}) {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
@@ -71,7 +70,12 @@ function Contact({onClose,isOpen}) {
                         <div className={`${c.hero__content} `}>
                            
                  
-                           <p className={`${c.paragraph} ${c.big} long`}>i'm away from my computer right now... shoot me a message or connect with me on <a href="https://www.linkedin.com/in/not-simon/">linkedin</a>. I also have a <a href="https://www.behance.net/artlastnight">behance</a> and <a href="https://www.instagram.com/art.last.night/">instagram</a>. </p>
+                           <p className={`${c.paragraph} ${c.big} long`}>
+                               i'm away from my computer right now... shoot me a message or connect with me on
+                                <SocialLink socials={socials} i={2} />. 
+                               I also have a <SocialLink socials={socials} i={1} /> and 
+                               <SocialLink socials={socials} i={0} />. 
+                               </p>
                            <p style={{color: "#FF5833"}}><span><Away /></span> simon is away</p>
 
                         </div>
@@ -116,6 +120,13 @@ function Contact({onClose,isOpen}) {
         </motion.div>
          
         </Modal>
+    )
+}
+
+const SocialLink = ({socials,i}) => {
+    return (
+        socials &&
+        <a href={socials[i]}>{socials[i].prettyLink}</a>
     )
 }
 
