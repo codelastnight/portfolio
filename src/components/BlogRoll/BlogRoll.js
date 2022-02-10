@@ -74,7 +74,7 @@ export default function BlogRoll() {
       query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___title]}
+          sort: {order: DESC, fields: [frontmatter___date]}
           filter: {frontmatter: {templateKey: {eq: "portfolio-post"}}}
         ) {
           edges {
@@ -88,6 +88,7 @@ export default function BlogRoll() {
                 title
                 templateKey
                 tags
+                date
                 prettydate
                 thumbnail {
                   id
