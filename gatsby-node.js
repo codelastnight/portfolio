@@ -85,3 +85,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type portfolio implements Node {
+      thumbnail: [image]
+      featuredimage: [image]
+    }
+  `
+  createTypes(typeDefs)
+}

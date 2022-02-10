@@ -11,11 +11,11 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: diluc300
-    api_key: 647925268514523
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: diluc300
+#     api_key: 647925268514523
 
 collections:
   - name: "portfolio"
