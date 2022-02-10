@@ -61,22 +61,20 @@ collections:
           - { label: Tagline, name: tagline, widget: text }
           - { label: About Blurb, name: aboutblurb, widget: text }
           - { label: About Description, name: aboutdesc, widget: text }
-          - {
-              label: Listening To,
+          -   label: Listening To,
               name: listen,
               widget: object,
-              fields:
-                - { label: Social name, name: prettyLink, widget: string }
+              fields: 
+                - { label: text, name: prettyLink, widget: string }
                 - { label: url, name: url, widget: string }
-            }
-          - {
-              label: Reading Right Now,
+            
+          -   label: Reading Right Now,
               name: read,
               widget: object,
               fields:
-                - { label: Social name, name: prettyLink, widget: string }
+                - { label: text, name: prettyLink, widget: string }
                 - { label: url, name: url, widget: string }
-            }
+            
 
           - {
               label: socials,
