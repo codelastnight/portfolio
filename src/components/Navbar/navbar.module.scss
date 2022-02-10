@@ -2,8 +2,7 @@
 
 
 .nav {
-    position:fixed;
-    width: 100%;
+    width: 100vw;
     padding: var(--f4) var(--f3);
     max-width: var(--width-max);
     column-gap: var(--f1);
@@ -32,5 +31,7 @@
 .nav__wrapper {
     display: grid;
     justify-content: center;
+    position:fixed;
+    width: 100%;
 
 }

@@ -2,25 +2,34 @@
 
 .mainheading {
     height: fit-content;
-    margin-top: 8vh;
+    width: 100%;
+    padding-top: 8em;
     @media screen and (min-width: v.$width-desktop) {
-        margin-top: 0;
 
     }
+}
+
+.footer {
+    width: 100%;
 }
 .titletext {
     font-size: 13vmin;
     z-index: 1;
+    
 }
 .mainheading__wrapper {
-    display: grid;
+    flex-direction: column;
+
     min-height: 100vh;
     place-items: center;
     position: fixed;
     max-width: var(--width-max);
+    padding-bottom: 8em;
+    width: 100%;
     @media screen and (min-width: v.$width-desktop) {
         min-height: 95vh;
         place-items: end center;
+        padding-bottom: 0;
 
     }
 }
@@ -51,22 +60,25 @@
     min-width: 1em;
     max-width: 2em;
     @media screen and (min-width: v.$width-desktop) {
-        max-width: 10em;
 
 
     }
 }
 
 .w15{
-    max-width: 15em;
-}
+    min-width: 1em;
+    max-width: 2em;
+    @media screen and (min-width: v.$width-desktop) {
+
+
+    }}
 .btn1 {
     transform: rotate(20deg);
 }
 .btn2 {
     transform: rotate(45deg);
 
-    right: 20%;
+    right: -15%;
     top: 50%;
 
 }
@@ -81,9 +93,21 @@
     svg {
         margin-top: var(--f1);
     }
+    max-width: 25em;
     @media screen and (min-width: v.$width-desktop) {
         padding: 0;
 
+
+    }
+    
+    @media screen and (min-width: v.$width-mobile) and (max-width: v.$width-max) {
+        grid-column-start: -4;
+
+
+    }
+    
+    @media screen and (min-width: v.$width-mobile) and (max-height: 750px) {
+        grid-column-start: -4;
 
     }
 }

@@ -9,7 +9,7 @@ const About = ({openContact, blurb, desc, listening, reading}) => {
             <div className='grid'>
             <div className={`z5 col2 end1__r ${c.spacer}`}>
                 <h3 className={`long ${c.paragraph} ${c.bg}`}>
-                    {blurb} <span className='pseudolink' onKeyUp={()=> openContact()} role="button" tabIndex='0' onClick={()=> openContact()}>lets connect</span> {'<3'}
+                    {blurb} <span className='pseudolink' onKeyPress={()=> openContact()} role="button" tabIndex='0' onClick={()=> openContact()}>lets connect</span> {'<3'}
                         
                 </h3>
             </div>

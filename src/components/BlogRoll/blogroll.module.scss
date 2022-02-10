@@ -29,7 +29,7 @@
 
 .article {
     pointer-events: all;
-    p {
+    .text {
         background-color: var(--c-bg);
         padding-top: calc(var(--f1)/2);
         padding-bottom: var(--f1);
@@ -43,11 +43,22 @@
 .img{
     border: 1px solid var(--c-bg);
 
+    
+}
+a {
     &:hover {
         border-color:  var(--c-fg);
 
         .hover{
             background-color: var(--c-hover-l);
+
+        }
+    }
+    &:active {
+
+        .hover{
+            background-color: var(--c-fg);
+            
         }
     }
 }

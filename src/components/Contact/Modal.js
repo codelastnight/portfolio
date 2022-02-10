@@ -31,7 +31,10 @@ const variant = {
                 exit={"hidden"}
                 variants={variant}
                 className={`z100 ${c.wrapper}`}>
-                <div className={`${c.background}`} role='button' onKeyUp={onClose} tabIndex='0' onClick={onClose}>
+                <div className={`${c.background}`} 
+                role='presentation'
+                
+                onClick={onClose}>
     
                 </div>
                     {children}

@@ -78,14 +78,16 @@ const BtnSpam = ({children,count, color, className, onClick}) => {
                 key={i}
                 onClick={() => onClick()}
                 role='button'
-                onKeyUp={() => onClick()}
+                tabIndex={0}
+                onKeyPress={() => onClick()}
+                className={`absolute `} 
+                style={{top: `${e[0]}%`, left: `${e[1]}%`}} 
                 >
                     <Button 
                         color={color} 
                         height="3em" 
                         width="15em" 
-                        className={`absolute `} 
-                        style={{top: `${e[0]}%`, left: `${e[1]}%`}} >
+                        >
                         {children}
                         </Button>
 

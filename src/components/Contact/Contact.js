@@ -1,4 +1,4 @@
-import React , { useState,useEffect }from 'react';
+import React , { useState,useEffect, useCallback, useRef }from 'react';
 import * as c from './contact.module.scss'
 import Modal from './Modal'
 import  { ReactComponent as Battery } from './battery.svg'
@@ -28,22 +28,39 @@ const variant = {
 function Contact({onClose,isOpen, socials}) {
     const [date, setDate] = useState(new Date())
 
+
+    const escFunction = useCallback((event) => {
+        if (event.key === "Escape") {
+          onClose();
+        }
+      }, []);
+    
     useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+        
+   
         var timer = setInterval(()=>setDate(new Date()), 1000 )
         return function cleanup() {
             clearInterval(timer)
-        }
-    
-    });
+            document.removeEventListener("keydown", escFunction, false);
 
+        }
+
+    }, []);
+  
+    
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
-        <motion.div 
+            {isOpen &&    <motion.div 
              initial={"hidden"}
              animate={"show"}
              exit={"hidden"}
              variants={variant}
-            className={c.wrapper}
+             className={c.wrapper}
+             role="dialog" 
+             aria-label="contact me!" 
+             aria-describedby="contact1Desc"
+             aria-modal="true"
             >
             <div className={c.phone}>
                 <div className={`flex justify__between align__center ${c.topbar}`}>
@@ -70,11 +87,10 @@ function Contact({onClose,isOpen, socials}) {
                         <div className={`${c.hero__content} `}>
                            
                  
-                           <p className={`${c.paragraph} ${c.big} long`}>
-                               i'm away from my computer right now... shoot me a message or connect with me on
-                                <SocialLink socials={socials} i={2} />. 
-                               I also have a <SocialLink socials={socials} i={1} /> and 
-                               <SocialLink socials={socials} i={0} />. 
+                           <p id="contact1Desc" className={`${c.paragraph} ${c.big} long`}>
+                               i'm away from my computer right now... shoot me a message or connect with me 
+                               on <SocialLink socials={socials} i={2}  />. 
+                               I also have a <SocialLink socials={socials} i={1} /> and <SocialLink socials={socials} i={0} />. 
                                </p>
                            <p style={{color: "#FF5833"}}><span><Away /></span> simon is away</p>
 
@@ -86,7 +102,7 @@ function Contact({onClose,isOpen, socials}) {
                         <div className='flex flexgap1 wrap'>
                             <label>
                             <p>Your Name</p>
-                            <input type="text" name="name" required />
+                            <input type="text" name="name" required autoFocus />
                             </label>
                             <label>
                             <p>Email</p>
@@ -100,7 +116,7 @@ function Contact({onClose,isOpen, socials}) {
                             <textarea name="comment" placeholder='send a message...' required />
                         </label>
                         <div className="flex justify__between">
-                            <div tabIndex="0" onClick={() => onClose()} role="button" onKeyUp={() => onClose()}>
+                            <div tabIndex="0" onClick={() => onClose()} role="button" aria-label='close' onKeyPress={() => onClose()}>
                                 <Button color='#DCDCDC' height='3em' width='7em' radius='0.7em'><h3 className={` bold `}  >Cancel</h3></Button>
                             </div>
                             <div className='flex align__center flexgap1'>
@@ -117,18 +133,21 @@ function Contact({onClose,isOpen, socials}) {
                    
                 </div>
             </div>
-        </motion.div>
+        </motion.div>}
+     
          
         </Modal>
     )
 }
 
-const SocialLink = ({socials,i}) => {
+const SocialLink = ({socials,i, ref}) => {
     return (
         socials &&
-        <a href={socials[i]}>{socials[i].prettyLink}</a>
+        <a href={socials[i]} ref={ref}>{socials[i].prettyLink}</a>
     )
 }
+
+
 
 export default Contact;
 

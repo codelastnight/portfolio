@@ -25,14 +25,18 @@ const Footer = ({onOpen}) =>  {
           </section>
         <section className="grid ">
             
-            <div className={`col2 end1__r relative ${c.logo}`}>
+            <div className={`col2 end1__r relative ${c.fit} ${c.logo}`}>
            
               <BtnSpam color="#FF9023" className="show__d fg" onClick={() =>onOpen()}>
                 <h3>Contact Me</h3>
               </BtnSpam>
-              <Button color="#FF9023" height="3em " className={`fg show__m`}  >
+
+              <div className={`fg show__m limit__s ${c.m__btn}`} onClick={() =>onOpen()} onKeyPress={() =>onOpen()} role="button" tabIndex="0" >
+              <Button color="#FF9023" height="3em "    >
                 <h3>Contact Me</h3>
               </Button>
+              </div>
+              
 
               <Logo />
             </div>
