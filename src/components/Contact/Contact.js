@@ -113,7 +113,7 @@ function Contact({onClose,isOpen, socials}) {
                        
                         <label>
                             <p>Message</p>
-                            <textarea name="message" type="textarea" id="message" form="theform" placeholder='send a message...' required />
+                            <textarea name="message" type="textarea" id="message" form="theform" placeholder='send a message...' required ></textarea>
                         </label>
                         <div className="flex justify__between">
                             <div tabIndex="0" onClick={() => onClose()} role="button" aria-label='close' onKeyPress={() => onClose()}>
