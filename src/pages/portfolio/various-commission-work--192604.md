@@ -6,9 +6,8 @@ description2: "Clients: Various"
 date: 2022-01-07T04:14:00.630Z
 description: "Small collection of commissioned album cover & song cover for
   various independent music artists.  "
-thumbnail: https://res.cloudinary.com/diluc300/image/upload/v1644466492/j5cpwkco7fmqjjxgz14z.png
-featuredimage: https://res.cloudinary.com/diluc300/image/upload/v1644466492/j5cpwkco7fmqjjxgz14z.png
-tags:
+thumbnail: /img/loopie-customer-thumb.png
+featuredimage: /img/loopie-customer-thumb.png
   - Graphic Design
 ---
 ![](https://res.cloudinary.com/diluc300/image/upload/v1644466511/comission_work-8_qngfc1.png)
