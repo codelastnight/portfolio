@@ -97,8 +97,8 @@ const MainHeading = ({openContact, tagline, socials, year}) => {
              > 
              
             <div className={`grid ${c.mainheading}`}>
-                <motion.h4 variants={variants}
-                            className={`row1 col3__d span2 text`} >hello, my name is simon</motion.h4>
+                <motion.h1 variants={variants}
+                            className={`row1 col3__d span2 text`} >hello, my name is simon</motion.h1>
 
                 <div className={`row2 col2 end1__r flex flexgap3 align__center  ${c.titletext} `}>
                     <motion.h1 variants={variants} className={`${c.maxcontent}`}>i'm a</motion.h1>
@@ -157,13 +157,13 @@ const MainHeading = ({openContact, tagline, socials, year}) => {
                         <motion.h1 variants={variants} className={`z5 ${c.titletext}`}>(of sorts)</motion.h1>
                         
                         </div>
-                        <motion.h4 variants={variants} className={`text z5 show__d ${c.tagline}`}>{tagline}</motion.h4>
+                        <motion.h2 variants={variants} className={`text z5 show__d ${c.tagline}`}>{tagline}</motion.h2>
                     </div>
                     
                 </div>
 
                
-                <motion.h4 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`} >{tagline}</motion.h4>
+                <motion.h2 variants={variants} className={`row5 col2 span2 text z5 show__m ${c.tagline}`} >{tagline}</motion.h2>
 
         
                 {/* <h4 className={`row5 col2 span2 z5 text ${c.paddingtop}`}>industrial design + web dev + UI/UX + graphic design</h4> */}
@@ -176,11 +176,11 @@ const MainHeading = ({openContact, tagline, socials, year}) => {
                 animate={linkAni}  
                 variants={links}
                 >
-                    <h4 className="text" >
+                    <h3 className="text" >
                         <motion.span variants={link}><Link to="#work" type='work' role="link" element="work">scroll down</Link> to see some of my selected work, </motion.span> 
                         <motion.span variants={link}>or send me a message via <span className='pseudolink' onClick={() => openContact()} role="link" onKeyPress={() => openContact()} role="button" tabIndex='0'>online mail. </span></motion.span> 
                         <motion.span variants={link}>If you’re curious, check out what I'm <Link to="#about" type='about' role="link" element="about">listening to</Link> right now. </motion.span>
-                    </h4>
+                    </h3>
                     <a href="#work">
                     <svg width="23" height="28" viewBox="0 0 23 28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" xmlns="http://www.w3.org/2000/svg">
                         <motion.path 
