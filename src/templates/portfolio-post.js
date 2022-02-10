@@ -6,6 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Button from "../components/Button";
 const Heading = ({
     children,
     first,
@@ -93,7 +94,7 @@ export const BlogPostTemplate = ({
         </p>
       </Heading>
 
-      <section className="grid spacer__top">
+      <section className="grid spacer__top v-padding6">
         <article className="col1 col2__d end1__r text long " style={{maxWidth: '70rem'}}>
           <PostContent content={content} />
 
@@ -101,7 +102,13 @@ export const BlogPostTemplate = ({
         </article>
        
       </section>
-
+      <section className="grid v-padding6" style={{maxWidth: '70rem'}}>
+      <div className={`col1 col3__d end1__r fg limit__s `} onClick={()=> window.history.back()} onKeyPress={()=> window.history.back()} role="button" tabIndex="0" >
+              <Button color="#88DC8B" height="6em " radius={"2em"}    >
+                <h3>Return to Works ↩</h3>
+              </Button>
+              </div>
+      </section>
    
     </React.Fragment>
   

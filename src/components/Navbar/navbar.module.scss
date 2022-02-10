@@ -6,7 +6,7 @@
     padding: var(--f4) var(--f3);
     max-width: var(--width-max);
     column-gap: var(--f1);
-
+    width: var(--viewportWidth);
     @media screen and (min-width: v.$width-desktop) {
         padding: var(--f4) var(--f6);
         column-gap: var(--f3);

@@ -96,24 +96,24 @@ function Contact({onClose,isOpen, socials}) {
 
                         </div>
                     </div>
-                    <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                    <form id="theform" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
                         <div className='flex flexgap1 wrap'>
                             <label>
-                            <p>Your Name</p>
-                            <input type="text" name="name" required autoFocus />
+                            <p>Whats Your Name</p>
+                            <input type="text" name="name" placeholder='let me know' required autoFocus />
                             </label>
                             <label>
                             <p>Email</p>
-                            <input type="email" name="email" required />
+                            <input type="email" name="email" placeholder='email@email.com' required />
                         </label>
                         </div>
                         
                        
                         <label>
                             <p>Message</p>
-                            <textarea name="comment" placeholder='send a message...' required />
+                            <textarea name="comment" form="theform" placeholder='send a message...' required />
                         </label>
                         <div className="flex justify__between">
                             <div tabIndex="0" onClick={() => onClose()} role="button" aria-label='close' onKeyPress={() => onClose()}>

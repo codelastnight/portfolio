@@ -1,9 +1,13 @@
-import React from "react";
+import React,  {useState} from "react";
 import { Link } from "gatsby";
 import * as c from './navbar.module.scss'
 
 const Navbar = ({ openContact }) => {
-
+  const [isHome, setHome] = useState(false);
+  const isActive = ({ isCurrent }) => {
+    setHome(isCurrent)
+    return isCurrent ? { className: "none" } : {}
+  }
   return (
     <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
       <div className={` ${c.nav}`}>
@@ -11,7 +15,23 @@ const Navbar = ({ openContact }) => {
         <div className="grid">
 
           <p className={'col2'}>
-            <Link to="/" type="home" element="title" role="menuitem">
+            <Link getProps={isActive}
+              to="/" 
+              type="home" 
+              element="title" 
+              role="menuitem"
+              activeClassName="none"
+              >
+              work
+            </Link>
+            <Link 
+              to="/#work" 
+              type="to work" 
+              element="title" 
+              role="menuitem"
+              className={isHome ? "" : "none"}
+
+              >
               work
             </Link>
           </p>
