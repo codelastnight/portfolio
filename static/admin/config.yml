@@ -39,6 +39,22 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: image }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Body"
+        name: "bodycontent"
+        widget: "list" 
+        types: 
+          - label: Full Image
+            name: bodyfullimage
+            widget: object
+            summary: "{{fields.image}}"
+            fields:
+              - {label: image, name: image, widget: image}
+          - label: Text
+            name: bodytext
+            widget: object
+            summary: "{{fields.text}}"
+            fields:
+              - {label: text, name: text, widget: markdown}
       - { label: "Tags", name: "tags", widget: "list" }
 
  
