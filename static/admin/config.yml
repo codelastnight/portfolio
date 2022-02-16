@@ -48,13 +48,13 @@ collections:
             widget: object
             summary: "{{fields.image}}"
             fields:
-              - {label: image, name: image, widget: image}
+              - {label: Image, name: image, widget: image}
           - label: Text
             name: bodytext
             widget: object
             summary: "{{fields.text}}"
             fields:
-              - {label: text, name: text, widget: markdown}
+              - {label: Text, name: text, widget: markdown}
       - { label: "Tags", name: "tags", widget: "list" }
 
  
