@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Simon Zhang",
   "dependencies": {
+    "@netlify/plugin-gatsby": "^2.0.0-zz-beta.0",
     "cross-env": "^7.0.3",
     "framer-motion": "^5.3.0",
     "gatsby": "^4.0.0",

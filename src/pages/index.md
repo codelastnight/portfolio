@@ -2,10 +2,10 @@
 templateKey: index-page
 title: simon zhang design
 image: /img/og-image.jpg
-tagline: exploring the tension between practical and experimental
+tagline: exploring the tension between accessible and experimental
 aboutblurb: simon zhang is a cross-disciplinary designer based in ATL & SEA —
   netscape-oriented with a windows aero slant. exploring the tension between
-  practical and experimental.
+  accessible and experimental.
 aboutdesc: Currently studying Industrial Design at Georgia Tech, with a minor in Sustainable Cities.
 listen:
   prettyLink: alphahalo w/ blackwinterwells by yandere
