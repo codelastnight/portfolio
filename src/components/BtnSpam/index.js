@@ -1,1 +1,1 @@
-export {default} from './BtnSpam';
+export { default } from './BtnSpam'

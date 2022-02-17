@@ -1,7 +1,3 @@
 import React from 'react'
 
-
-export default function Hover({}) {
-
-
-}
+export default function Hover({}) {}

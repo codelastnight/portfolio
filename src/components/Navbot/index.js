@@ -1,1 +1,1 @@
-export { default } from './Navbot';
+export { default } from './Navbot'

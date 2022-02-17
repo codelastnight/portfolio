@@ -1,14 +1,13 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
-import Button from '../Button';
-import distribute from './poordistribute';
-import { motion ,useAnimation } from "framer-motion"
-import { useInView } from 'react-intersection-observer';
-
+import { useState, useEffect } from 'react'
+import Button from '../Button'
+import distribute from './poordistribute'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 // const container = {
 //     hidden: { opacity: 0},
-//     show: { 
+//     show: {
 //         opacity: 1,
 //         transition: {
 //             staggerChildren: 0.1,
@@ -19,91 +18,73 @@ import { useInView } from 'react-intersection-observer';
 //         }
 //   }
 const variants = {
-    hidden: i=> ({ 
-        opacity: 0, 
-        } ),
-    show: i => ({
-        opacity: 1,
-        transition: {
-          duration: 0,
-          delay: i * 0.2 + 0.4,
+  hidden: (i) => ({
+    opacity: 0,
+  }),
+  show: (i) => ({
+    opacity: 1,
+    transition: {
+      duration: 0,
+      delay: i * 0.2 + 0.4,
+    },
+  }),
+}
 
-        },
-      }),
-  }
+const BtnSpam = ({ children, count, color, className, onClick }) => {
+  const [arr, setArr] = useState()
+  const [ref, inView] = useInView()
+  const controls = useAnimation({
+    threshold: 0.5,
+  })
 
+  useEffect(() => {
+    if (inView) {
+      controls.stop()
+      setArr(distribute(count, 0, 80))
+      controls.start('show')
+    }
+    if (!inView) {
+      controls.stop()
+      controls.start('hidden')
+    }
+  }, [inView, controls, count])
 
+  useEffect(() => {
+    setArr(distribute(count, 0, 80))
+  }, [count])
 
-const BtnSpam = ({children,count, color, className, onClick}) => {
-    const [arr,setArr] = useState()
-    const [ ref, inView] = useInView();
-    const controls = useAnimation({
-        "threshold": 0.5
-      });
-    
-
-    useEffect(() => {
-        if (inView) {
-            controls.stop();
-            setArr(distribute(count,0,80))
-            controls.start("show");
-
-        }
-        if (!inView) {
-        controls.stop();
-        controls.start("hidden");
-
-        }
-    }, [inView,controls, count]);
-  
-    useEffect(() => {
-        setArr(distribute(count,0,80))
-    }, [count]);
-
-    return ( 
-        <React.Fragment>
-
-             {arr && 
-             <div
-             ref={ref}
-                className={className}
-                
+  return (
+    <React.Fragment>
+      {arr && (
+        <div ref={ref} className={className}>
+          {arr.map((e, i) => (
+            <motion.div
+              initial="hidden"
+              custom={i}
+              animate={controls}
+              variants={variants}
+              key={i}
+              onClick={() => onClick()}
+              role="button"
+              tabIndex={0}
+              onKeyPress={() => onClick()}
+              className={`absolute `}
+              style={{ top: `${e[0]}%`, left: `${e[1]}%` }}
             >
-            {arr.map((e, i) => (
-                <motion.div 
-                initial="hidden"
-                custom={i}
-                animate={controls}
-                variants = {variants}
-                key={i}
-                onClick={() => onClick()}
-                role='button'
-                tabIndex={0}
-                onKeyPress={() => onClick()}
-                className={`absolute `} 
-                style={{top: `${e[0]}%`, left: `${e[1]}%`}} 
-                >
-                    <Button 
-                        color={color} 
-                        height="3em" 
-                        width="15em" 
-                        >
-                        {children}
-                        </Button>
-
-                </motion.div>
-            ))}
-
-        </div> }
-
-        </React.Fragment>
-       
-    )
+              <Button color={color} height="3em" width="15em">
+                {children}
+              </Button>
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </React.Fragment>
+  )
 }
 
 BtnSpam.defaultProps = {
-    count: 5,
-    color: '#FF9023'
-}   
+  count: 5,
+  color: '#FF9023',
+}
 
-export default BtnSpam;
+export default BtnSpam

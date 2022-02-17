@@ -1,37 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Button from "../components/Button";
-const Heading = ({
-    children,
-    first,
-    second,
-    label
-  }) => {
+import React from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Button from '../components/Button'
+const Heading = ({ children, first, second, label }) => {
   return (
     <section className="grid spacer__top">
-    <label className="col1 col2__d ">{label}</label>
-    <div className="col1 col3__d end1__r limit">
-      {children}
-    </div>
-    <div className="col1 split text col3__d limit end1__r " style={{marginTop: "var(--f1)"}}>
-      <div>
-        {first}
-
+      <label className="col1 col2__d ">{label}</label>
+      <div className="col1 col3__d end1__r limit">{children}</div>
+      <div
+        className="col1 split text col3__d limit end1__r "
+        style={{ marginTop: 'var(--f1)' }}
+      >
+        <div>{first}</div>
+        <div>{second}</div>
       </div>
-      <div>
-        {second}
-      </div>
-      
-    </div>
     </section>
   )
-  
 }
 
 // eslint-disable-next-line
@@ -46,13 +35,16 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <React.Fragment>
-      {helmet || ""}
-      <div className="flex flex__column justify__end" style={{minHeight: '60vh'}}>
-      {/* <section className="grid">
+      {helmet || ''}
+      <div
+        className="flex flex__column justify__end"
+        style={{ minHeight: '60vh' }}
+      >
+        {/* <section className="grid">
         <div className="col1 col3__d end1__r limirt">
         <PreviewCompatibleImage imageInfo={{
                         image: featuredimage,
@@ -64,56 +56,56 @@ export const BlogPostTemplate = ({
 
       </section> */}
 
-      <Heading 
-        label="title"
-        second={tags && tags.length ? (
-          <div className="flex flexgap1" >
-              {tags.map((tag) => (
-                <p key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </p>
-              ))}
-            </div>
-          ) : null}
+        <Heading
+          label="title"
+          second={
+            tags && tags.length ? (
+              <div className="flex flexgap1">
+                {tags.map((tag) => (
+                  <p key={tag + `tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </p>
+                ))}
+              </div>
+            ) : null
+          }
         >
-        <h1 className="title indent ">
-                {title}
-        </h1>
-      </Heading>
+          <h1 className="title indent ">{title}</h1>
+        </Heading>
       </div>
-    
-      <Heading 
+
+      <Heading
         label="about"
-
         first={<p>{date}</p>}
-
         second={<p>{description2}</p>}
-        >
-        <p className="big long indent ">
-                {description}
-        </p>
+      >
+        <p className="big long indent ">{description}</p>
       </Heading>
 
       <section className="grid spacer__top v-padding6">
-        <article className="col1 col2__d end1__r text long " style={{maxWidth: '70rem'}}>
+        <article
+          className="col1 col2__d end1__r text long "
+          style={{ maxWidth: '70rem' }}
+        >
           <PostContent content={content} />
-
-         
         </article>
-       
       </section>
-      <section className="grid v-padding6" style={{maxWidth: '70rem'}}>
-      <div className={`col1 col3__d end1__r fg limit__s `} onClick={()=> window.history.back()} onKeyPress={()=> window.history.back()} role="button" tabIndex="0" >
-              <Button color="#88DC8B" height="6em " radius={"2em"}    >
-                <h3>Return to Works ↩</h3>
-              </Button>
-              </div>
+      <section className="grid v-padding6" style={{ maxWidth: '70rem' }}>
+        <div
+          className={`col1 col3__d end1__r fg limit__s `}
+          onClick={() => window.history.back()}
+          onKeyPress={() => window.history.back()}
+          role="button"
+          tabIndex="0"
+        >
+          <Button color="#88DC8B" height="6em " radius={'2em'}>
+            <h3>Return to Works ↩</h3>
+          </Button>
+        </div>
       </section>
-   
     </React.Fragment>
-  
-  );
-};
+  )
+}
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -124,10 +116,10 @@ BlogPostTemplate.propTypes = {
   description2: PropTypes.string,
   date: PropTypes.string,
   helmet: PropTypes.object,
-};
+}
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -151,16 +143,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-};
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query PortfolioById($id: String!) {
@@ -181,10 +173,9 @@ export const pageQuery = graphql`
               layout: FULL_WIDTH
               formats: WEBP
             )
-
           }
         }
       }
     }
   }
-`;
+`
