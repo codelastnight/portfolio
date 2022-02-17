@@ -3,7 +3,9 @@
   command = "npm run build"
   ignore = "git log -1 --pretty=%B | grep dependabot"
 [build.environment]
-  NODE_VERSION = "14.15.0"
+  NODE_VERSION = "16"
   YARN_FLAGS = "--no-ignore-optional"
+  YARN_VERSION = "3.1.1"
+  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
 
 
