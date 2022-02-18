@@ -7,7 +7,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import PortfolioPreview from './preview-templates/IndexPagePreview'
 
 import './cms-utils'
-import '../style/index.scss'
+//import '../style/index.scss'
 //CMS.registerMediaLibrary(uploadcare)
 //CMS.registerMediaLibrary(cloudinary)
 

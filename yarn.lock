@@ -7460,7 +7460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"escape-html@npm:^1.0.3, escape-html@npm:~1.0.3":
+"escape-html@npm:~1.0.3":
   version: 1.0.3
   resolution: "escape-html@npm:1.0.3"
   checksum: 6213ca9ae00d0ab8bccb6d8d4e0a98e76237b2410302cf7df70aaa6591d509a2a37ce8998008cbecae8fc8ffaadf3fb0229535e6a145f3ce0b211d060decbb24
@@ -11466,13 +11466,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jquery@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "jquery@npm:3.6.0"
-  checksum: 8fd5fef4aa48fd374ec716dd1c1df1af407814a228e15c1260ca140de3a697c2a77c30c54ff1d238b6a3ab4ddc445ddeef9adce6c6d28e4869d85eb9d3951c0e
-  languageName: node
-  linkType: hard
-
 "js-base64@npm:^3.0.0":
   version: 3.7.2
   resolution: "js-base64@npm:3.7.2"
@@ -13721,25 +13714,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cms-media-library-cloudinary@npm:^1.3.10":
-  version: 1.3.10
-  resolution: "netlify-cms-media-library-cloudinary@npm:1.3.10"
-  peerDependencies:
-    netlify-cms-lib-util: ^2.12.3
-  checksum: 5554d46d751517f6a865a7ecd86937448ae49aaed55cebfcf6b387e222cd9bab64493914f1b087aa39af40f6cfb9bbe676b8a58f02e5e4d39f71923142ddfc1b
-  languageName: node
-  linkType: hard
-
-"netlify-cms-media-library-uploadcare@npm:^0.5.10":
-  version: 0.5.10
-  resolution: "netlify-cms-media-library-uploadcare@npm:0.5.10"
-  dependencies:
-    uploadcare-widget: ^3.7.0
-    uploadcare-widget-tab-effects: ^1.4.0
-  checksum: 960f450fa29dcc20b8eb238e487342eca303c33b3d198514adb6b2b1dbf9719f6d5c56e317478376aae87ae5b1b2d52ac837f0bdc1cd1994acfa9910d30c133b
-  languageName: node
-  linkType: hard
-
 "netlify-cms-ui-default@npm:^2.15.4":
   version: 2.15.4
   resolution: "netlify-cms-ui-default@npm:2.15.4"
@@ -15595,8 +15569,6 @@ __metadata:
     lodash: ^4.17.21
     lodash-webpack-plugin: ^0.11.6
     netlify-cms-app: ^2.15.66
-    netlify-cms-media-library-cloudinary: ^1.3.10
-    netlify-cms-media-library-uploadcare: ^0.5.10
     normalize.css: ^8.0.1
     npm: ^8.5.0
     prettier: ^2.5.1
@@ -20371,25 +20343,6 @@ __metadata:
     semver-diff: ^3.1.1
     xdg-basedir: ^4.0.0
   checksum: 461e5e5b002419296d3868ee2abe0f9ab3e1846d9db642936d0c46f838872ec56069eddfe662c45ce1af0a8d6d5026353728de2e0a95ab2e3546a22ea077caf1
-  languageName: node
-  linkType: hard
-
-"uploadcare-widget-tab-effects@npm:^1.4.0":
-  version: 1.5.0
-  resolution: "uploadcare-widget-tab-effects@npm:1.5.0"
-  peerDependencies:
-    uploadcare-widget: 3.x
-  checksum: ce2ae3a5d333bc066b187c3a2bbadf5a3011df67b7953fa2c05175cb9bf0cbf8cfb0516194e00043df7d0c10ca03dae59b7d9f22aa9633eeecc84d9e6f95ac6f
-  languageName: node
-  linkType: hard
-
-"uploadcare-widget@npm:^3.7.0":
-  version: 3.17.0
-  resolution: "uploadcare-widget@npm:3.17.0"
-  dependencies:
-    escape-html: ^1.0.3
-    jquery: ^3.6.0
-  checksum: cfbeccabca434d2d3435499157ee794b3aba812295b3ab12492731837f6f8e9f7f60f8782487b4b84158fc50ff83211a08ae59ce1038b92138fd6829e326e679
   languageName: node
   linkType: hard
 

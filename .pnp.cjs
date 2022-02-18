@@ -57,8 +57,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],
             ["lodash-webpack-plugin", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:0.11.6"],
             ["netlify-cms-app", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.15.66"],
-            ["netlify-cms-media-library-cloudinary", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:1.3.10"],
-            ["netlify-cms-media-library-uploadcare", "npm:0.5.10"],
             ["normalize.css", "npm:8.0.1"],
             ["npm", "npm:8.5.1"],
             ["prettier", "npm:2.5.1"],
@@ -15478,15 +15476,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["jquery", [
-        ["npm:3.6.0", {
-          "packageLocation": "./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-8fd5fef4aa.zip/node_modules/jquery/",
-          "packageDependencies": [
-            ["jquery", "npm:3.6.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["js-base64", [
         ["npm:3.7.2", {
           "packageLocation": "./.yarn/cache/js-base64-npm-3.7.2-706fb77a0b-573f28e9a2.zip/node_modules/js-base64/",
@@ -18344,39 +18333,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["netlify-cms-media-library-cloudinary", [
-        ["npm:1.3.10", {
-          "packageLocation": "./.yarn/cache/netlify-cms-media-library-cloudinary-npm-1.3.10-97e3711e46-5554d46d75.zip/node_modules/netlify-cms-media-library-cloudinary/",
-          "packageDependencies": [
-            ["netlify-cms-media-library-cloudinary", "npm:1.3.10"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:1.3.10", {
-          "packageLocation": "./.yarn/__virtual__/netlify-cms-media-library-cloudinary-virtual-2a05b4cdbe/0/cache/netlify-cms-media-library-cloudinary-npm-1.3.10-97e3711e46-5554d46d75.zip/node_modules/netlify-cms-media-library-cloudinary/",
-          "packageDependencies": [
-            ["netlify-cms-media-library-cloudinary", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:1.3.10"],
-            ["@types/netlify-cms-lib-util", null],
-            ["netlify-cms-lib-util", null]
-          ],
-          "packagePeers": [
-            "@types/netlify-cms-lib-util",
-            "netlify-cms-lib-util"
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["netlify-cms-media-library-uploadcare", [
-        ["npm:0.5.10", {
-          "packageLocation": "./.yarn/cache/netlify-cms-media-library-uploadcare-npm-0.5.10-dff0969863-960f450fa2.zip/node_modules/netlify-cms-media-library-uploadcare/",
-          "packageDependencies": [
-            ["netlify-cms-media-library-uploadcare", "npm:0.5.10"],
-            ["uploadcare-widget", "npm:3.17.0"],
-            ["uploadcare-widget-tab-effects", "virtual:dff0969863703aac098dc8f3530717703437bc6fd7912416084af85310ffacba5989c647539fbe46f7db8dc50bb212d81c8c7760836c33e5522ed2462932f328#npm:1.5.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["netlify-cms-ui-default", [
         ["npm:2.15.4", {
           "packageLocation": "./.yarn/cache/netlify-cms-ui-default-npm-2.15.4-f828487d2c-a33220baed.zip/node_modules/netlify-cms-ui-default/",
@@ -20860,8 +20816,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],
             ["lodash-webpack-plugin", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:0.11.6"],
             ["netlify-cms-app", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.15.66"],
-            ["netlify-cms-media-library-cloudinary", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:1.3.10"],
-            ["netlify-cms-media-library-uploadcare", "npm:0.5.10"],
             ["normalize.css", "npm:8.0.1"],
             ["npm", "npm:8.5.1"],
             ["prettier", "npm:2.5.1"],
@@ -27142,39 +27096,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.5"],
             ["semver-diff", "npm:3.1.1"],
             ["xdg-basedir", "npm:4.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["uploadcare-widget", [
-        ["npm:3.17.0", {
-          "packageLocation": "./.yarn/cache/uploadcare-widget-npm-3.17.0-eaac257051-cfbeccabca.zip/node_modules/uploadcare-widget/",
-          "packageDependencies": [
-            ["uploadcare-widget", "npm:3.17.0"],
-            ["escape-html", "npm:1.0.3"],
-            ["jquery", "npm:3.6.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["uploadcare-widget-tab-effects", [
-        ["npm:1.5.0", {
-          "packageLocation": "./.yarn/cache/uploadcare-widget-tab-effects-npm-1.5.0-6f598b9e99-ce2ae3a5d3.zip/node_modules/uploadcare-widget-tab-effects/",
-          "packageDependencies": [
-            ["uploadcare-widget-tab-effects", "npm:1.5.0"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:dff0969863703aac098dc8f3530717703437bc6fd7912416084af85310ffacba5989c647539fbe46f7db8dc50bb212d81c8c7760836c33e5522ed2462932f328#npm:1.5.0", {
-          "packageLocation": "./.yarn/__virtual__/uploadcare-widget-tab-effects-virtual-e833237e06/0/cache/uploadcare-widget-tab-effects-npm-1.5.0-6f598b9e99-ce2ae3a5d3.zip/node_modules/uploadcare-widget-tab-effects/",
-          "packageDependencies": [
-            ["uploadcare-widget-tab-effects", "virtual:dff0969863703aac098dc8f3530717703437bc6fd7912416084af85310ffacba5989c647539fbe46f7db8dc50bb212d81c8c7760836c33e5522ed2462932f328#npm:1.5.0"],
-            ["@types/uploadcare-widget", null],
-            ["uploadcare-widget", "npm:3.17.0"]
-          ],
-          "packagePeers": [
-            "@types/uploadcare-widget",
-            "uploadcare-widget"
           ],
           "linkType": "HARD",
         }]
