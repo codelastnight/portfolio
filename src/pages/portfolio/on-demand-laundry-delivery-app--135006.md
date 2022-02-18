@@ -9,23 +9,26 @@ description: A Design System for Loopie Laundry's (an on-demand laundry delivery
   streamline the consumer journey map.
 thumbnail: /img/loopie-customer-thumb.png
 featuredimage: /img/loopie-customer-thumb.png
+bodycontent:
+  - type: bodyfullimage
+    image: /img/loopie-customer-2.png
+  - type: bodyfullimage
+    image: /img/slice-1.png
+  - type: bodyfullimage
+    image: /img/slice-2.png
+  - type: bodyfullimage
+    image: /img/slice-3.png
+  - type: bodyfullimage
+    image: /img/loopie-customer-4.png
+  - type: bodyfullimage
+    image: /img/loopie-customer.png
+  - type: bodyfullimage
+    image: /img/loopie-customer-5.png
+  - type: bodyfullimage
+    image: /img/loopie-customer-1.png
+  - type: bodyfullimage
+    image: /img/loopie-customer-10.png
 tags:
   - UI/UX
 ---
-![](/img/loopie-customer-2.png)
-
-![](/img/slice-1.png)
-
-![](/img/slice-2.png)
-
-![](/img/slice-3.png)
-
-![](/img/loopie-customer.png)
-
-![](/img/loopie-customer-4.png)
-
-![](/img/loopie-customer-5.png)
-
-![](/img/loopie-customer-1.png)
-
-![](/img/loopie-customer-10.png)
+   

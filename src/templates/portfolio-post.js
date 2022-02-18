@@ -6,7 +6,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ExpandImage from '../components/ExpandImage'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -25,9 +24,9 @@ const Heading = ({ children, first, second, label, image }) => {
         
         }
         </div>
-      <label className="col1 col2__d ">{label}</label>
+      <label className="col1 col2__d " style={image && {marginTop: "-6em"}}><mark>{label}</mark></label>
 
-      <div className="col1 col3__d end1__r limit z5" style={image && {marginTop: "-3em"}}>
+      <div className="col1 col3__d end1__r limit z5" style={image && {marginTop: "-6em"}}>
         
         {children}
         </div>
@@ -149,8 +148,6 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
         bodycontent= {post.frontmatter.bodycontent}
         description={post.frontmatter.description}
         description2={post.frontmatter.description2}

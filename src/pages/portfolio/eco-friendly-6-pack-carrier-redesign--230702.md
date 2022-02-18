@@ -8,7 +8,7 @@ description: A paperboard only bottle carrier design. Easy to manufacture,
   environmentally conscious, and has a large marketing surface. Created for the
   2021 48hr Repack student competition.
 thumbnail: /img/thumbnail.jpg
-featuredimage: /img/butterfly-01.png
+featuredimage: /img/thumbnail.jpg
 bodycontent:
   - type: bodyfullimage
     image: /img/butterfly-01.png
@@ -25,18 +25,4 @@ bodycontent:
 tags:
   - Packaging
 ---
-![](/img/butterfly-01.png)
-
-![](/img/butterfly-02.png)
-
-![](/img/butterfly-03.png)
-
-![](/img/butterfly-04.png)
-
-
-
-![](/img/butterfly-05.png)
-
-![](/img/butterfly-06.png)
-
-![](/img/butterfly-7.png)
+ 

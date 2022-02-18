@@ -8,22 +8,27 @@ description: "Small collection of commissioned album cover & song cover for
   various independent music artists.  "
 thumbnail: /img/Frame 83.png
 featuredimage: /img/Frame 83.png
+bodycontent:
+  - type: bodyfullimage
+    image: /img/comission work-8.png
+  - type: bodyfullimage
+    image: /img/comission work.png
+  - type: bodyfullimage
+    image: /img/comission work-2.png
+  - type: bodyfullimage
+    image: /img/comission work-3.png
+  - type: bodyfullimage
+    image: /img/comission work-4.png
+  - type: bodyfullimage
+    image: /img/comission work-6.png
+  - type: bodyfullimage
+    image: /img/comission work-7.png
+  - type: bodyfullimage
+    image: /img/comission work-5.png
+  - type: bodyfullimage
+    image: /img/comission work-1.png
 tags:
   - graphic
   - illustration
 ---
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466511/comission_work-8_qngfc1.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466516/comission_work-2_flvhm3.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466510/comission_work-3_ggku2i.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466512/comission_work-4_wobfco.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466514/comission_work-1_ulfwdq.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466510/comission_work-7_rlg3xa.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466514/comission_work-6_fklbgm.png)
-
-![](https://res.cloudinary.com/diluc300/image/upload/v1644466493/comission_work-5_e7zlix.png)
+      
