@@ -185,7 +185,7 @@ function Contact({ onClose, isOpen, socials }) {
 const SocialLink = ({ socials, i }) => {
   return (
     socials && 
-      <a href={socials[i]} >
+      <a href={socials[i]} key={i}>
         {socials[i].prettyLink}
       </a>
     
