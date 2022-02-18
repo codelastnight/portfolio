@@ -59,6 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-cms-app", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.15.66"],
             ["normalize.css", "npm:8.0.1"],
             ["npm", "npm:8.5.1"],
+            ["path-to-regexp", "npm:6.2.0"],
             ["prettier", "npm:2.5.1"],
             ["prop-types", "npm:15.8.1"],
             ["react", "npm:17.0.2"],
@@ -20586,6 +20587,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["isarray", "npm:0.0.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.2.0", {
+          "packageLocation": "./.yarn/cache/path-to-regexp-npm-6.2.0-efbac3c1ff-a6aca74d2d.zip/node_modules/path-to-regexp/",
+          "packageDependencies": [
+            ["path-to-regexp", "npm:6.2.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["path-type", [
@@ -20818,6 +20826,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["netlify-cms-app", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.15.66"],
             ["normalize.css", "npm:8.0.1"],
             ["npm", "npm:8.5.1"],
+            ["path-to-regexp", "npm:6.2.0"],
             ["prettier", "npm:2.5.1"],
             ["prop-types", "npm:15.8.1"],
             ["react", "npm:17.0.2"],
