@@ -4,7 +4,7 @@ import CMS from 'netlify-cms-app'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-import PortfolioPreview from './preview-templates/IndexPagePreview'
+import PortfolioPreview from './preview-templates/PortfolioPreview'
 
 import './cms-utils'
 //import '../style/index.scss'

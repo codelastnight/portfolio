@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@netlify/plugin-gatsby", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.0.2"],
             ["@svgr/webpack", "npm:6.2.1"],
+            ["@types/node", "npm:17.0.18"],
             ["cross-env", "npm:7.0.3"],
             ["framer-motion", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:6.2.6"],
             ["gatsby", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:4.7.2"],
@@ -21033,6 +21034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["portfolio-site", "workspace:."],
             ["@netlify/plugin-gatsby", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:2.0.2"],
             ["@svgr/webpack", "npm:6.2.1"],
+            ["@types/node", "npm:17.0.18"],
             ["cross-env", "npm:7.0.3"],
             ["framer-motion", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:6.2.6"],
             ["gatsby", "virtual:08fc8264f6bc57f1438bc438f31747041772017bdf7bc01a88c27f34abf6ace9d7be85791c90b54ba88ffe9a5e48569828709713c0c7c1f9832d2c4e1170add2#npm:4.7.2"],

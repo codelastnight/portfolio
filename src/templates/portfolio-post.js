@@ -5,13 +5,32 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import ExpandImage from '../components/ExpandImage'
+import { GatsbyImage } from 'gatsby-plugin-image'
+
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
 import Button from '../components/Button'
-const Heading = ({ children, first, second, label }) => {
+const Heading = ({ children, first, second, label, image }) => {
   return (
-    <section className="grid spacer__top">
+    <section className={`grid ${!image && 'spacer__top'}`}>
+      <div className="col1 col3__d end1__r z1">
+      {image && 
+        <PreviewCompatibleImage imageInfo={{
+          image: image,
+          alt: `featured image for ${label}`,
+          style: {
+            maxHeight: "60vh"          }
+        }}  />
+        
+        }
+        </div>
       <label className="col1 col2__d ">{label}</label>
-      <div className="col1 col3__d end1__r limit">{children}</div>
+
+      <div className="col1 col3__d end1__r limit z5" style={image && {marginTop: "-3em"}}>
+        
+        {children}
+        </div>
       <div
         className="col1 split text col3__d limit end1__r "
         style={{ marginTop: 'var(--f1)' }}
@@ -31,6 +50,7 @@ export const BlogPostTemplate = ({
   description2,
   date,
   featuredimage,
+  bodycontent,
   tags,
   title,
   helmet,
@@ -44,20 +64,11 @@ export const BlogPostTemplate = ({
         className="flex flex__column justify__end"
         style={{ minHeight: '60vh' }}
       >
-        {/* <section className="grid">
-        <div className="col1 col3__d end1__r limirt">
-        <PreviewCompatibleImage imageInfo={{
-                        image: featuredimage,
-                        alt: `featured image for ${title}`
-                        
-                      }}  />
-        </div>
-          
 
-      </section> */}
 
         <Heading
           label="title"
+          image={featuredimage}
           second={
             tags && tags.length ? (
               <div className="flex flexgap1">
@@ -70,7 +81,7 @@ export const BlogPostTemplate = ({
             ) : null
           }
         >
-          <h1 className="title indent ">{title}</h1>
+          <h1 className="title indent "><mark>{title}</mark></h1>
         </Heading>
       </div>
 
@@ -87,7 +98,21 @@ export const BlogPostTemplate = ({
           className="col1 col2__d end1__r text long "
           style={{ maxWidth: '70rem' }}
         >
-          <PostContent content={content} />
+          {
+            bodycontent && bodycontent.length ? (
+              <div className="w100">
+                {bodycontent.map((bodycontent, i) => (
+                   <div key={i}>
+                     <ExpandImage imageInfo={{
+                          image: bodycontent.image,
+                          alt: `featured image thumbnail for post ${bodycontent.image}`
+                        }}
+                        />
+                     </div>
+                ))}
+              </div>
+            ) : null
+          }
         </article>
       </section>
       <section className="grid v-padding6" style={{ maxWidth: '70rem' }}>
@@ -126,6 +151,7 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
+        bodycontent= {post.frontmatter.bodycontent}
         description={post.frontmatter.description}
         description2={post.frontmatter.description2}
         date={post.frontmatter.prettydate}
@@ -165,6 +191,14 @@ export const pageQuery = graphql`
         tags
         description2
         prettydate
+        bodycontent {
+          type
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 90, width: 800, formats: WEBP, layout: FULL_WIDTH)
+            }
+          }
+        }
         featuredimage {
           childImageSharp {
             gatsbyImageData(
