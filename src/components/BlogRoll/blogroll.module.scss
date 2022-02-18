@@ -42,7 +42,9 @@
 
 .img{
     border: 1px solid var(--c-bg);
-
+    &:hover {
+        border-color:  var(--c-fg);
+    }
     
 }
 a {

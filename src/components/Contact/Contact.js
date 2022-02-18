@@ -182,13 +182,13 @@ function Contact({ onClose, isOpen, socials }) {
   )
 }
 
-const SocialLink = ({ socials, i, ref }) => {
+const SocialLink = ({ socials, i }) => {
   return (
-    socials && (
-      <a href={socials[i]} ref={ref}>
+    socials && 
+      <a href={socials[i]} >
         {socials[i].prettyLink}
       </a>
-    )
+    
   )
 }
 

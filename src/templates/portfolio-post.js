@@ -104,7 +104,10 @@ export const BlogPostTemplate = ({
                    <div key={i}>
                      <ExpandImage imageInfo={{
                           image: bodycontent.image,
-                          alt: `featured image thumbnail for post ${bodycontent.image}`
+                          alt: `featured image thumbnail for post ${bodycontent.image}`,
+                          style: {
+                            
+                          }
                         }}
                         />
                      </div>
@@ -132,7 +135,6 @@ export const BlogPostTemplate = ({
 }
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
@@ -192,15 +194,15 @@ export const pageQuery = graphql`
           type
           image {
             childImageSharp {
-              gatsbyImageData(quality: 90, width: 800, formats: WEBP, layout: FULL_WIDTH)
+              gatsbyImageData(quality: 100, breakpoints: [800,1080, 1200, 1400], formats: WEBP, layout: FULL_WIDTH)
             }
           }
         }
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 1000
-              quality: 90
+              quality: 100
+              breakpoints: [800, 1080, 1200,1400]
               layout: FULL_WIDTH
               formats: WEBP
             )

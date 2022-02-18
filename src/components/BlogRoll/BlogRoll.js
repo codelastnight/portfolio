@@ -1,3 +1,4 @@
+//ts-check
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
@@ -103,7 +104,7 @@ export default function BlogRoll() {
  *  thumbnail {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 200
+                        breakpoints: [200, 400, 800]
                         quality: 90
                         layout: FULL_WIDTH
                         

@@ -5,13 +5,13 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 const ExpandImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '0px' }
 
-  const { alt = '', childImageSharp, image } = imageInfo
+  const { alt = '', childImageSharp, image, style } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
-        style={imageStyle}
+        style={{...imageStyle, ...style}}
         alt={alt}
       />
     )
@@ -19,13 +19,13 @@ const ExpandImage = ({ imageInfo }) => {
     return (
       <GatsbyImage
         image={childImageSharp.gatsbyImageData}
-        style={imageStyle}
+        style={{...imageStyle, ...style}}
         alt={alt}
       />
     )
     // for Netlify CMS
   } else if (image) {
-    return <img style={{ imageStyle }} src={image} alt={alt} />
+    return <img style={{...imageStyle, ...style}} src={image} alt={alt} />
   } else {
     return null
   }
