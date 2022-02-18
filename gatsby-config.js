@@ -5,7 +5,16 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    
+    'gatsby-plugin-svgr',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        sassOptions: {
+          //indentedSyntax: true,
+        },
+      },
+    },
+  
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -65,16 +74,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    'gatsby-plugin-svgr',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        sassOptions: {
-          //indentedSyntax: true,
-        },
-      },
-    },
-  
+   
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
