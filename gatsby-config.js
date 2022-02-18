@@ -14,7 +14,7 @@ module.exports = {
         },
       },
     },
-  
+
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -74,7 +74,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-   
+
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

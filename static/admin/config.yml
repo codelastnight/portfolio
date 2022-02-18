@@ -8,6 +8,8 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
+
+
 local_backend: true
 media_folder: static/img
 public_folder: /img
@@ -39,7 +41,7 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: image }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Body"
+      - label: "Body 2"
         name: "bodycontent"
         widget: "list" 
         types: 
