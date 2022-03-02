@@ -10,6 +10,7 @@
 	border-radius: inherit;
 	width: inherit;
 	height: inherit;
+	z-index: -1;
 }
 .button__under {
 	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(255, 255, 255, 0.5) 100%);
