@@ -84,7 +84,7 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
 
   return (
     <React.Fragment>
-      <div tabIndex={0} role="heading" aria-label="top"></div>
+      <div tabIndex={0} role="heading" aria-label="top of page" title="top of page"></div>
       <motion.section
         className={`z5 flex justify__end ${c.mainheading__wrapper}`}
         initial="hidden"
@@ -275,7 +275,7 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                 right now.{' '}
               </motion.span>
             </h3>
-            <Link href="#work" type="work" role="link" element="work">
+            <Link href="#work" type="work" role="link" element="work" aria-label="scroll to work" title="scroll to work">
               <svg
                 width="23"
                 height="28"
