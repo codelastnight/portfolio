@@ -29,7 +29,7 @@ const Footer = ({ onOpen }) => {
             className="show__d fg"
             onClick={() => onOpen()}
           >
-             <p className='bold'><mark>Contact Me</mark></p>
+             <p className='bold'>Contact Me</p>
           </BtnSpam>
 
           <div
@@ -40,7 +40,7 @@ const Footer = ({ onOpen }) => {
             tabIndex="0"
           >
             <Button color="#FF9023" height="3em ">
-              <p className='bold'><mark>Contact Me</mark></p>
+              <p className='bold'>Contact Me</p>
             </Button>
           </div>
 

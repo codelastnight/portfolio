@@ -125,8 +125,8 @@ export const BlogPostTemplate = ({
           role="button"
           tabIndex="0"
         >
-          <Button color="#88DC8B" height="6em " radius={'2em'}>
-            <h3 className='bold'><mark>Return to Works ↩</mark></h3>
+          <Button color="#88DC8B" height="5.5em " radius={'2em'}>
+            <p className='bold'>Return to Works ↩</p>
           </Button>
         </div>
       </section>

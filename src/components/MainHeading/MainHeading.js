@@ -84,7 +84,7 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
 
   return (
     <React.Fragment>
-      <div tabIndex={0} role="heading" aria-label="top of page" title="top of page"></div>
+      <div tabIndex={0} role="separator" aria-label="top of page" title="top of page"></div>
       <motion.section
         className={`z5 flex justify__end ${c.mainheading__wrapper}`}
         initial="hidden"

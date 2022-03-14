@@ -71,7 +71,7 @@ const BtnSpam = ({ children, count, color, className, onClick }) => {
               className={`absolute `}
               style={{ top: `${e[0]}%`, left: `${e[1]}%` }}
             >
-              <Button color={color} height="4em" width="14em">
+              <Button color={color} height="3.5em" width="14em">
                 {children}
               </Button>
             </motion.div>

@@ -10,6 +10,7 @@ const Button = ({
   className,
   style,
   children,
+  isDark
 }) => {
   return (
     <div className={className} style={style}>
@@ -27,7 +28,7 @@ const Button = ({
         <div className={c.button__under}></div>
         <div className={c.button__highlight}></div>
         <div className={c.button__pressed}></div>
-        <div className={`${c.text} z5`}>{children}</div>
+        <div className={`${c.text} z5 ${isDark && c.dark}`}>{children}</div>
 
       </div>
     </div>
@@ -41,5 +42,6 @@ Button.defaultProps = {
   color: '#D7BEFF',
   className: '',
   style: { transform: '' },
+  isDark: false
 }
 export default Button

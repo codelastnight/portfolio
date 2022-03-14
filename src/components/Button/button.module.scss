@@ -90,8 +90,14 @@
 	text-decoration: underline;
 	color: currentColor;
 	min-width: fit-content;
-
+	// visibility on dark text.
+	text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
 	//margin: 0rem 3rem;
+	 
+}
+
+.dark{
+	text-shadow: none;
 }
 
 .padding {

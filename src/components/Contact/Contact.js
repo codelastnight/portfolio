@@ -167,6 +167,7 @@ function Contact({ onClose, isOpen, socials }) {
                         height="3em"
                         width="7em"
                         radius="0.7em"
+                        isDark={true}
                       >
                         <h3 className={`bold   `}>Send</h3>
                       </Button>
