@@ -89,19 +89,3 @@ export default function BlogRoll() {
   )
 }
 
-/**
- * 
- *  thumbnail {
-                    childImageSharp {
-                      gatsbyImageData(
-                        breakpoints: [200, 400, 800]
-                        quality: 90
-                        layout: FULL_WIDTH
-                        
-                      )
-
-                    }
- * 
- * 
- * 
- */

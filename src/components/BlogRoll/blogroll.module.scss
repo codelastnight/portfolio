@@ -43,13 +43,13 @@
 
 .img{
     border: 1px solid var(--c-bg);
-    transition: border-radius 50ms ease;
-    border-radius: var(--f2);
+   // transition: border-radius 50ms ease;
+   // border-radius: var(--f1);
 
     overflow: hidden;
     &:hover {
         border-color:  var(--c-fg);
-        border-radius: 0;
+     //   border-radius: 0;
 
     }
     

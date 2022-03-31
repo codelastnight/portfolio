@@ -22,7 +22,7 @@ const Image = ({ imageInfo }) => {
   const [isThumb, setThumb] = useState(false)
 
   const [ref, inView] = useInView({
-      threshold: 0.4,
+      threshold: 0,
       triggerOnce: true
   });
 

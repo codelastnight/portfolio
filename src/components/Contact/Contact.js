@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import * as c from './contact.module.scss'
-import Modal from './Modal'
+import Modal from '../Modal'
+import { graphql, useStaticQuery } from 'gatsby'
 import { ReactComponent as Battery } from './battery.svg'
 import { ReactComponent as Lte } from './LTE.svg'
 import { ReactComponent as Mail } from './mail.svg'
@@ -8,6 +9,7 @@ import { ReactComponent as Away } from './away.svg'
 
 import Button from '../Button'
 import { motion } from 'framer-motion'
+
 
 const variant = {
   hidden: {
@@ -24,9 +26,23 @@ const variant = {
   },
 }
 
-function Contact({ onClose, isOpen, socials }) {
+function Contact({ onClose}) {
   const [date, setDate] = useState(new Date())
 
+  const data = useStaticQuery(graphql`
+    query ContactQuery {
+      markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+        frontmatter {
+          social_links {
+            prettyLink
+            url
+          }
+        }
+      }
+    }
+  `)
+
+  const socials = data.markdownRemark.frontmatter.social_links
   const escFunction = useCallback((event) => {
     if (event.key === 'Escape') {
       onClose()
@@ -44,8 +60,7 @@ function Contact({ onClose, isOpen, socials }) {
   }, [])
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      {isOpen && (
+    <React.Fragment>
         <motion.div
           initial={'hidden'}
           animate={'show'}
@@ -178,19 +193,21 @@ function Contact({ onClose, isOpen, socials }) {
             </div>
           </div>
         </motion.div>
-      )}
-    </Modal>
+      )
+    </React.Fragment>
+     
   )
 }
 
 const SocialLink = ({ socials, i }) => {
   return (
-    socials && 
-      <a href={socials[i]} key={i}>
+    socials ? 
+      <a href={socials[i].url} key={i}>
         {socials[i].prettyLink}
-      </a>
+      </a> : null
     
   )
 }
+
 
 export default Contact

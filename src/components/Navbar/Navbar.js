@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
 import * as c from './navbar.module.scss'
+import Contact from '../Contact'
+import Modal from '../Modal'
 
-const Navbar = ({ openContact }) => {
+const Navbar = () => {
   const [isHome, setHome] = useState(false)
+  const contactRef = useRef()
+
+
   const isActive = ({ isCurrent }) => {
     setHome(isCurrent)
     return isCurrent ? { className: 'none' } : {}
@@ -43,10 +48,10 @@ const Navbar = ({ openContact }) => {
           <p className={''}>
             <span
               className={'pseudolink'}
-              onClick={() => openContact()}
+              onClick={() => contactRef.current.open()}
               role="menuitem"
               tabIndex="0"
-              onKeyPress={() => openContact()}
+              onKeyPress={() => contactRef.current.open()}
             >
               contact
             </span>
@@ -77,6 +82,10 @@ const Navbar = ({ openContact }) => {
           </div>
         </div>
       </div>
+        <Modal ref={contactRef}>
+          <Contact onClose={() => contactRef.current.close()}  />
+        </Modal>
+      
     </nav>
   )
 }

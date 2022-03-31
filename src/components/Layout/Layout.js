@@ -12,7 +12,6 @@ import '../../style/index.scss'
 import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from 'gatsby'
 import * as classes from './layout.module.scss'
-import Contact from '../Contact'
 
 const Layout = forwardRef(({ children, socials }, ref) => {
   const { title, description } = useSiteMetadata()
@@ -98,7 +97,6 @@ const Layout = forwardRef(({ children, socials }, ref) => {
           <Footer onOpen={openContact} socials={socials} />
         </div>
       </div>
-      <Contact isOpen={isContact} onClose={closeContact} socials={socials} />
     </div>
   )
 })
