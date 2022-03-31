@@ -259,9 +259,8 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                 <span
                   className="pseudolink"
                   onClick={() => openContact()}
-                  role="link"
-                  onKeyPress={() => openContact()}
                   role="button"
+                  onKeyPress={() => openContact()}
                   tabIndex="0"
                 >
                   online mail.{' '}
@@ -343,7 +342,7 @@ MainHeading.propTypes = {
   openContact: PropTypes.func,
   tagline: PropTypes.string,
   socials: PropTypes.array,
-  year: PropTypes.string,
+  year: PropTypes.number,
 }
 
 export default MainHeading

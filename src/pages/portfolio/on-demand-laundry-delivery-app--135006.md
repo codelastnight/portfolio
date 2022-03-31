@@ -7,7 +7,7 @@ date: 2022-02-08T06:05:27.717Z
 description: A Design System for Loopie Laundry's (an on-demand laundry delivery
   service) customer facing app. Built to extend Loopie's existing brand and
   streamline the consumer journey map.
-thumbnail: /img/loopie-customer-thumb.png
+thumbnail: https://ucarecdn.com/3fa39d4e-9c29-4c42-aaf6-1191b0ba537a/
 featuredimage: /img/loopie-customer-thumb.png
 bodycontent:
   - type: bodyfullimage
@@ -31,4 +31,3 @@ bodycontent:
 tags:
   - UI/UX
 ---
-   

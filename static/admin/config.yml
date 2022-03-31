@@ -13,12 +13,12 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
-# media_library:
-#   name: cloudinary
-#   config:
-#     cloud_name: diluc300
-#     api_key: 647925268514523
-
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 75cf951ef49f5d8b6bdf
+    tabs: "file url gdrive instagram"
+    
 collections:
   - name: "portfolio"
     label: "Portfolio"

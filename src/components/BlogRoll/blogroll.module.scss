@@ -38,12 +38,19 @@
 
 .img__placeholder {
     background: var(--c-bg);
+    padding-bottom: 50%;
 }
 
 .img{
     border: 1px solid var(--c-bg);
+    transition: border-radius 50ms ease;
+    border-radius: var(--f2);
+
+    overflow: hidden;
     &:hover {
         border-color:  var(--c-fg);
+        border-radius: 0;
+
     }
     
 }

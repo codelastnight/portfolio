@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from '../PreviewCompatibleImage'
+import Image from '../Image'
 import * as c from './blogroll.module.scss'
 
 class BlogRollTemplate extends React.Component {
@@ -19,7 +19,7 @@ class BlogRollTemplate extends React.Component {
                 <Link to={post.fields.slug}>
                   {post.frontmatter.thumbnail ? (
                     <div className={`featured-thumbnail ${c.img}`}>
-                      <PreviewCompatibleImage
+                      <Image
                         imageInfo={{
                           image: post.frontmatter.thumbnail,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
@@ -77,17 +77,7 @@ export default function BlogRoll() {
                   tags
                   date
                   prettydate
-                  thumbnail {
-                    id
-                    childImageSharp {
-                      gatsbyImageData(
-                        formats: WEBP
-                        width: 200
-                        quality: 90
-                        layout: FULL_WIDTH
-                      )
-                    }
-                  }
+                  thumbnail
                 }
               }
             }

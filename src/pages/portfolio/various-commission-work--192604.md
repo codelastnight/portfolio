@@ -6,7 +6,7 @@ description2: "Clients: Various"
 date: 2022-01-07T04:14:00.630Z
 description: "Small collection of commissioned album cover & song cover for
   various independent music artists.  "
-thumbnail: /img/Frame 83.png
+thumbnail: https://ucarecdn.com/7f2ebb2f-cde0-49c7-81f6-848850b1b05d/
 featuredimage: /img/Frame 83.png
 bodycontent:
   - type: bodyfullimage
@@ -31,4 +31,3 @@ tags:
   - graphic
   - illustration
 ---
-      
