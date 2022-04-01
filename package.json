@@ -49,7 +49,7 @@
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
-    "start": "gatsby clean && gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "yarn netlify-cms-proxy-server",

@@ -67,6 +67,7 @@ const Layout = ({ children }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
+
       </Helmet>
 
       <Navbar />

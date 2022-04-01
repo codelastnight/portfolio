@@ -22,19 +22,28 @@ const Navbar = () => {
       setHome(isCurrent)
     }
     
-    return isCurrent ? { className: 'none' } : {}
+    return isCurrent ? {className: "none"} : {}
   }
   return (
     <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
       <div className={` ${c.nav}`}>
         <div className="grid">
           <p className={'col2'}>
-           
+            <Link
+              getProps={isActive}
+              to="/"
+              type="to work"
+              element="title"
+              role="menuitem"
+            >
+              work
+            </Link>
             <Link
               to="/#work"
               type="to work"
               element="title"
               role="menuitem"
+              className={isHome ? "" : "none"}
             >
               work
             </Link>

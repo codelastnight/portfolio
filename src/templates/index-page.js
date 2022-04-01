@@ -7,7 +7,6 @@ import loadable from '@loadable/component'
 import Layout from '../components/Layout'
 import MainHeading from '../components/MainHeading'
 import Modal from '../components/Modal'
-import '../style/index.scss'
 
 const Contact = loadable(() => import('../components/Contact'));
 const BlogRoll = loadable(() => import('../components/BlogRoll'));
