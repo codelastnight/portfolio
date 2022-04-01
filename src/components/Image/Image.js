@@ -17,7 +17,7 @@ const defsizes = `
   40vw
   `
 
-const Image = ({ imageInfo }) => {
+const Image = ({ imageInfo, onThumbLoad }) => {
   const [isLoaded, setLoaded] = useState(false)
   const [isThumb, setThumb] = useState(false)
 
@@ -25,6 +25,11 @@ const Image = ({ imageInfo }) => {
       threshold: 0,
       triggerOnce: true
   });
+
+  const onImgLoad= ({ target: img }) => {
+    onThumbLoad && onThumbLoad(img);
+    setThumb(true)
+  }
 
   const { alt = '', sizes, image, style } = imageInfo
 
@@ -35,7 +40,7 @@ const Image = ({ imageInfo }) => {
             className={`${c.image} ${c.thumb}`}
             style={ { ...style, visibility: isLoaded ? "hidden" : "visible" } } 
             src={`${image}-/resize/16x/`}  
-            onLoad={()=>setThumb(true)}  
+            onLoad={onImgLoad}  
 
             alt={alt} />
           {inView && (
@@ -67,6 +72,7 @@ Image.propTypes = {
     style: PropTypes.object,
     transformOptions: PropTypes.object
   }).isRequired,
+  onThumbLoad: PropTypes.func
 }
 
 export default Image

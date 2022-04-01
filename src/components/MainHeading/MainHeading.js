@@ -274,7 +274,6 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                 right now.{' '}
               </motion.span>
             </h3>
-            <Link href="#work" type="work" role="link" element="work" aria-label="scroll to work" title="scroll to work">
               <svg
                 width="23"
                 height="28"
@@ -298,7 +297,6 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                   d="M1 15.594C2.44192 17.9503 4.25581 20.0564 5.82173 22.3302C6.62219 23.4926 7.64517 24.4532 8.63441 25.4502C9.00712 25.8258 9.80773 27.0473 10.5016 26.892C11.3709 26.6974 12.2628 25.7503 12.9361 25.2375C14.3168 24.186 15.722 23.1606 17.0724 22.0702C18.9255 20.574 19.8713 18.5755 21.4215 16.8703"
                 />
               </svg>
-            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
