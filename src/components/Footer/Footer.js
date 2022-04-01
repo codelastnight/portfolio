@@ -1,11 +1,14 @@
 import  React, {useRef} from 'react'
 import * as c from './footer.module.scss'
 import Logo from './../Logo'
-import BtnSpam from '../BtnSpam'
 import Button from '../Button'
 import Modal from '../Modal'
-import Contact from '../Contact'
+import loadable from '@loadable/component'
+
 import { Link , graphql, useStaticQuery } from 'gatsby'
+const Contact = loadable(() => import('../Contact'));
+const BtnSpam = loadable(() => import('../BtnSpam'));
+
 
 const Footer = () => {
   const ref = useRef();

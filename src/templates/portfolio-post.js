@@ -7,6 +7,8 @@ import Layout from '../components/Layout'
 import ExpandImage from '../components/ExpandImage'
 import Image from '../components/Image'
 import Button from '../components/Button'
+import '../style/index.scss'
+
 const Heading = ({ children, first, second, label, image }) => {
   return (
     <section className={`grid ${!image && 'spacer__top'}`}>

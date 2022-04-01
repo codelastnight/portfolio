@@ -2,13 +2,17 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import loadable from '@loadable/component'
 
 import Layout from '../components/Layout'
 import MainHeading from '../components/MainHeading'
 import Modal from '../components/Modal'
-import Contact from '../components/Contact'
-import BlogRoll from '../components/BlogRoll'
-import About from '../components/About'
+import '../style/index.scss'
+
+const Contact = loadable(() => import('../components/Contact'));
+const BlogRoll = loadable(() => import('../components/BlogRoll'));
+const About = loadable(() => import('../components/About'));
+
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   tagline,

@@ -2,13 +2,14 @@ import React, {
   useEffect,
 } from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../Footer'
-import Navbar from '../Navbar'
 import '../../fonts/PPNeueMontreal-Medium.woff2'
-import '../../style/index.scss'
 import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from 'gatsby'
 import * as classes from './layout.module.scss'
+
+import loadable from '@loadable/component'
+const Footer = loadable(() => import('../Footer'));
+const Navbar = loadable(() => import('../Navbar'));
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()

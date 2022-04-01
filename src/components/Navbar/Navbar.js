@@ -1,16 +1,27 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import { Link } from 'gatsby'
 import * as c from './navbar.module.scss'
 import Modal from '../Modal'
-import Contact from '../Contact'
+
+import loadable from '@loadable/component'
+
+const Contact = loadable(() => import('../Contact'));
 
 const Navbar = () => {
   const [isHome, setHome] = useState(false)
+  const [isload, setLoad] = useState(false)
+
   const contactRef = useRef()
 
+  useEffect(()=> {
+    setLoad(true)
+  },[])
 
   const isActive = ({ isCurrent }) => {
-    setHome(isCurrent)
+    if (isload) {
+      setHome(isCurrent)
+    }
+    
     return isCurrent ? { className: 'none' } : {}
   }
   return (
@@ -18,16 +29,7 @@ const Navbar = () => {
       <div className={` ${c.nav}`}>
         <div className="grid">
           <p className={'col2'}>
-            <Link
-              getProps={isActive}
-              to="/"
-              type="home"
-              element="title"
-              role="menuitem"
-              activeClassName="none"
-            >
-              work
-            </Link>
+           
             <Link
               to="/#work"
               type="to work"

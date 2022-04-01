@@ -5,6 +5,8 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-loadable-components-ssr',
+
     'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-sass',
