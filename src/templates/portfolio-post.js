@@ -4,7 +4,6 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content from '../components/Content'
 import ExpandImage from '../components/ExpandImage'
 import Image from '../components/Image'
 import Button from '../components/Button'
@@ -49,8 +48,7 @@ const Heading = ({ children, first, second, label, image }) => {
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
+
   description,
   description2,
   date,
@@ -58,9 +56,9 @@ export const BlogPostTemplate = ({
   bodycontent,
   tags,
   title,
+  role,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
 
   return (
     <React.Fragment>
@@ -74,6 +72,7 @@ export const BlogPostTemplate = ({
         <Heading
           label="title"
           image={featuredimage}
+          first={<p>{description2}</p>}
           second={
             tags && tags.length ? (
               <div className="flex flexgap1">
@@ -93,7 +92,7 @@ export const BlogPostTemplate = ({
       <Heading
         label="about"
         first={<p>{date}</p>}
-        second={<p>{description2}</p>}
+        second={<p>{role}</p>}
       >
         <p className="big long indent ">{description}</p>
       </Heading>
@@ -162,6 +161,7 @@ const BlogPost = ({ data }) => {
         description2={post.frontmatter.description2}
         date={post.frontmatter.prettydate}
         featuredimage={post.frontmatter.featuredimage}
+        role={post.frontmatter.role}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -196,6 +196,7 @@ export const pageQuery = graphql`
         description
         tags
         description2
+        role
         prettydate
         bodycontent {
           type

@@ -1,7 +1,7 @@
 .expanded {
     border: 2px solid var(--c-fg);
-    max-width: 95vmin;
     max-height: 95vmin;
+    max-width: 90vw;
     width: 100%;
     position: relative;
     background: var(--c-bg);
@@ -11,10 +11,15 @@
 .close {
     all: initial;
     cursor: pointer;
+    display: block;
     background: var(--c-fg);
     position: absolute;
     right: 0;
     top: 0;
+    font-size: var(--f4);
+    color: var(--c-bg);
+    font-family: "Neue Montreal", sans-serif;
+    text-decoration: underline;
 }
 
 .imgbtn {
@@ -29,6 +34,6 @@
         border-color: var(--c-fg)
     }
     &:focus {
-        outline: 2px solid black;
+        outline: 1.5px solid black;
     }
 }

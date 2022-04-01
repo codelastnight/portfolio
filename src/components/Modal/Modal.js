@@ -60,6 +60,8 @@ const Modal = ({ children }, ref) => {
               exit={'hidden'}
               variants={variant}
               className={`z100 ${c.wrapper}`}
+              aria-modal={isOpen}
+              role="dialog"
             >
               <div
                 className={`${c.background}`}

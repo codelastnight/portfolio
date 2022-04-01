@@ -22,10 +22,11 @@ const ExpandImage = ({ imageInfo }) => {
       </button>
     <Modal ref={ref}>
       <div className={`${c.expanded} reverse`}>
-        <button className={`z5 ${c.close} pseudolink`} onClick={() => close()} onKeyPress={() => close()}>
-          <p className='white'>close</p>
-          </button>
         <Image imageInfo={{...imageInfo, sizes: '80vw'}} />
+
+        <button className={`z5 ${c.close} pseudolink`} onClick={() => close()} onKeyPress={() => close()}>
+          <p className='white'>escape</p>
+          </button>
       </div>
     </Modal>
     </React.Fragment>

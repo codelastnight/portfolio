@@ -2,9 +2,8 @@
 templateKey: portfolio-post
 title: Eco-friendly 6-Pack Carrier Redesign
 prettydate: "2021"
-description2: |-
-  Sponsors: Hi-Cone, CocaCola 
-  Role: Ideation, 3D modeling & Render
+description2: "Sponsors: Hi-Cone, CocaCola "
+role: "Role: Ideation, 3D modeling & Render"
 date: 2022-02-08T20:49:38.602Z
 description: A paperboard only bottle carrier design. Easy to manufacture,
   environmentally conscious, and has a large marketing surface. Created for the

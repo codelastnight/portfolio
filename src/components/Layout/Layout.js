@@ -1,5 +1,4 @@
 import React, {
-  useState,
   useEffect,
 } from 'react'
 import { Helmet } from 'react-helmet'
@@ -11,7 +10,7 @@ import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from 'gatsby'
 import * as classes from './layout.module.scss'
 
-const Layout = ({ children, socials }) => {
+const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
 

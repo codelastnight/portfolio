@@ -2,9 +2,8 @@
 templateKey: portfolio-post
 title: On-demand Laundry Delivery App
 prettydate: "2021"
-description2: |-
-  Client: Loopie, LLC 
-  Role: Ideation, Low-Fidelity, Hi-Fidelity Prototypes
+description2: "Client: Loopie, LLC "
+role: "Role: Ideation, Low-Fidelity, Hi-Fidelity Prototypes"
 date: 2022-02-08T06:05:27.717Z
 description: A Design System for Loopie Laundry's (an on-demand laundry delivery
   service) customer facing app. Built to extend Loopie's existing brand and
