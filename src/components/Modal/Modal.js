@@ -3,8 +3,10 @@ import React, {
   useEffect,
   forwardRef,
   useImperativeHandle,
+  useCallback
 } from 'react'
 import * as c from './modal.module.scss'
+
 import { motion, AnimatePresence } from 'framer-motion'
 import Portal from '../Portal'
 const variant = {
@@ -27,13 +29,27 @@ const Modal = ({ children }, ref) => {
   const [isOpen, setOpen] = useState(false)
   
   useImperativeHandle(ref, () => ({
-     
+      setOpen: (state) =>setOpen(state),
       open: ()=>setOpen(true),
       close: ()=>setOpen(false),
 
   }))
 
- 
+  const escFunction = useCallback((event) => {
+    if (event.key === 'Escape') {
+      setOpen(false)
+        }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener('keydown', escFunction, false)
+
+    return function cleanup() {
+      document.removeEventListener('keydown', escFunction, false)
+    }
+  }, [])
+    
+
   return (
     <Portal>
         <AnimatePresence>

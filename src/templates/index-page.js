@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import MainHeading from '../components/MainHeading'
-
+import Modal from '../components/Modal'
+import Contact from '../components/Contact'
 import BlogRoll from '../components/BlogRoll'
 import About from '../components/About'
 // eslint-disable-next-line
@@ -13,12 +14,12 @@ export const IndexPageTemplate = ({
   socials,
   blurb,
   year,
-  openContact,
   desc,
   listening,
   reading,
 }) => {
   // const heroImage = getImage(image) || image;
+  const ref = useRef()
 
   return (
     <div>
@@ -26,17 +27,20 @@ export const IndexPageTemplate = ({
         tagline={tagline}
         socials={socials}
         year={year}
-        openContact={() => openContact()}
+        openContact={() => ref.current.open()}
       />
 
       <BlogRoll />
       <About
         blurb={blurb}
-        openContact={() => openContact()}
+        openContact={() => ref.current.open()}
         desc={desc}
         listening={listening}
         reading={reading}
       />
+      <Modal ref={ref}>
+          <Contact onClose={() => ref.current.close()}  />
+        </Modal>
     </div>
   )
 }
@@ -49,16 +53,14 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const layoutRef = useRef()
   return (
-    <Layout ref={layoutRef} socials={frontmatter.social_links}>
+    <Layout socials={frontmatter.social_links}>
       <IndexPageTemplate
         // image={frontmatter.image}
         tagline={frontmatter.tagline}
         socials={frontmatter.social_links}
         blurb={frontmatter.aboutblurb}
         year={frontmatter.year}
-        openContact={() => layoutRef.current.openContact()}
         desc={frontmatter.aboutdesc}
         listening={frontmatter.listen}
         reading={frontmatter.read}

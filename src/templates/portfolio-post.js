@@ -4,25 +4,31 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Content from '../components/Content'
 import ExpandImage from '../components/ExpandImage'
-
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-
+import Image from '../components/Image'
 import Button from '../components/Button'
 const Heading = ({ children, first, second, label, image }) => {
   return (
     <section className={`grid ${!image && 'spacer__top'}`}>
       <div className="col1 col3__d end1__r z1">
-      {image && 
-        <PreviewCompatibleImage imageInfo={{
+       
+          {image && 
+        <Image imageInfo={{
           image: image,
           alt: `featured image for ${label}`,
           style: {
-            maxHeight: "60vh"          }
+            height: '60vh',
+            width: '100%',
+            objectFit: 'cover', 
+            objectPosition: 'center'
+          }
         }}  />
         
         }
+        
+
+     
         </div>
       <label className="col1 col2__d " style={image && {marginTop: "-6em"}}><mark>{label}</mark></label>
 
@@ -95,16 +101,16 @@ export const BlogPostTemplate = ({
       <section className="grid spacer__top v-padding6">
         <article
           className="col1 col2__d end1__r text long "
-          style={{ maxWidth: '70rem' }}
+          style={{ maxWidth: '60rem' }}
         >
           {
             bodycontent && bodycontent.length ? (
-              <div className="w100">
-                {bodycontent.map((bodycontent, i) => (
+              <div className="w100" role="list" >
+                {bodycontent.map((content, i) => (
                    <div key={i}>
                      <ExpandImage imageInfo={{
-                          image: bodycontent.image,
-                          alt: `featured image thumbnail for post ${bodycontent.image}`,
+                          image: content.image,
+                          alt: content.alt,
                           style: {
                             
                           }
@@ -142,6 +148,7 @@ BlogPostTemplate.propTypes = {
   description2: PropTypes.string,
   date: PropTypes.string,
   helmet: PropTypes.object,
+  alt:  PropTypes.string
 }
 
 const BlogPost = ({ data }) => {
@@ -181,7 +188,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query PortfolioById($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: {eq: $id}) {
       id
       html
       frontmatter {
@@ -192,23 +199,12 @@ export const pageQuery = graphql`
         prettydate
         bodycontent {
           type
-          image {
-            childImageSharp {
-              gatsbyImageData(quality: 100, breakpoints: [800,1080, 1200, 1400], formats: WEBP, layout: FULL_WIDTH)
-            }
-          }
+          image 
+          alt
         }
-        featuredimage {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 100
-              breakpoints: [800, 1080, 1200,1400]
-              layout: FULL_WIDTH
-              formats: WEBP
-            )
-          }
-        }
+        featuredimage 
       }
     }
   }
+
 `

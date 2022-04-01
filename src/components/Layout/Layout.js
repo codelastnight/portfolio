@@ -1,8 +1,6 @@
 import React, {
   useState,
   useEffect,
-  forwardRef,
-  useImperativeHandle,
 } from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../Footer/Footer'
@@ -13,15 +11,9 @@ import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from 'gatsby'
 import * as classes from './layout.module.scss'
 
-const Layout = forwardRef(({ children, socials }, ref) => {
+const Layout = ({ children, socials }) => {
   const { title, description } = useSiteMetadata()
-  const [isContact, setContact] = useState(false)
 
-  useImperativeHandle(ref, () => {
-    return {
-      openContact: openContact,
-    }
-  })
 
   useEffect(() => {
     let root = document.documentElement
@@ -34,13 +26,8 @@ const Layout = forwardRef(({ children, socials }, ref) => {
     }
   })
 
-  const openContact = () => {
-    setContact(true)
-  }
 
-  const closeContact = () => {
-    setContact(false)
-  }
+
   return (
     <div id="top">
       <Helmet>
@@ -82,7 +69,7 @@ const Layout = forwardRef(({ children, socials }, ref) => {
         />
       </Helmet>
 
-      <Navbar openContact={openContact} />
+      <Navbar />
 
       <div className={classes.layout__wrapper}>
         <div className={classes.layout__inner}>
@@ -93,12 +80,11 @@ const Layout = forwardRef(({ children, socials }, ref) => {
         className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}
       >
         <div className={classes.layout__inner}>
-          <h1>{isContact}</h1>
-          <Footer onOpen={openContact} socials={socials} />
+          <Footer   />
         </div>
       </div>
     </div>
   )
-})
+}
 
 export default Layout

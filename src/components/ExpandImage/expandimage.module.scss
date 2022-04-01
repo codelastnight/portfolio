@@ -1,0 +1,34 @@
+.expanded {
+    border: 2px solid var(--c-fg);
+    max-width: 95vmin;
+    max-height: 95vmin;
+    width: 100%;
+    position: relative;
+    background: var(--c-bg);
+    overflow: hidden;
+}
+
+.close {
+    all: initial;
+    cursor: pointer;
+    background: var(--c-fg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.imgbtn {
+    all: initial;
+    display: block;
+    overflow: hidden;
+
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid transparent;
+    &:hover {
+        border-color: var(--c-fg)
+    }
+    &:focus {
+        outline: 2px solid black;
+    }
+}

@@ -12,7 +12,7 @@ class BlogRollTemplate extends React.Component {
 
     return (
       <section id="work" className={`grid grid-row ${c.blogroll}`}>
-        <div className={c.posts}>
+        <div className={c.posts} role="list" >
           {posts &&
             posts.map(({ node: post }) => (
               <article key={post.id} className={`text ${c.article}`}>

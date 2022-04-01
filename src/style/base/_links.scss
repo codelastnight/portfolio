@@ -23,17 +23,14 @@ a, .pseudolink {
   
 // for use in reverse color context (eg footer)
 .reverse {
-    a {
-  
+    a, .pseudolink {
         background-color: var(--c-fg);
-    }
-
-    a:hover {
-        background-color:var(--c-hover-d) ;
-    
-    }
-    a:active {
-        color: var(--c-fg);
-        background-color:var(--c-bg) ;
+        & :hover {
+            background-color:var(--c-hover-d) ;
+        }
+        & :active {
+            color: var(--c-fg);
+            background-color:var(--c-bg) ;
+        }
     }
 }

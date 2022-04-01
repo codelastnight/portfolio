@@ -12,12 +12,12 @@ const dynImg = (image) => {
   return image
 }
 
-const sizes = `
+const defsizes = `
   (max-width: 1080px) 80vw,
   40vw
   `
+
 const Image = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '0px' }
   const [isLoaded, setLoaded] = useState(false)
   const [isThumb, setThumb] = useState(false)
 
@@ -26,38 +26,36 @@ const Image = ({ imageInfo }) => {
       triggerOnce: true
   });
 
-  const { alt = '', childImageSharp, image, style } = imageInfo
+  const { alt = '', sizes, image, style } = imageInfo
 
    if (!!image) {
     return (
       <div ref={ref} className={`${c.wrapper}`} style={{paddingBottom: isThumb ? "0": `100%`}}>
+          <img 
+            className={`${c.image} ${c.thumb}`}
+            style={ { ...style, visibility: isLoaded ? "hidden" : "visible" } } 
+            src={`${image}-/resize/16x/`}  
+            onLoad={()=>setThumb(true)}  
 
-        {inView && (
-          <React.Fragment>
-            <img 
-                className={`${c.image} ${c.thumb}`}
-                style={ {...imageStyle, ...style, visibility: isLoaded ? "hidden" : "visible" } } 
-                src={`${image}-/resize/16x/`}  
-                onLoad={()=>setThumb(true)}  
+            alt={alt} />
+          {inView && (
+            
 
-                alt={alt} />
+              <img 
+                  className={`${c.image} ${c.full}`}
+                  style={ { ...style, opacity: isLoaded ? 1 : 0 }} 
+                  src={`${image}-/resize/300x/`} 
+                  srcSet={dynImg(image)} 
+                  sizes={!!sizes ? sizes : defsizes}
+                  onLoad={()=>setLoaded(true)}  
+                  alt={alt} />
 
-            <img 
-                className={`${c.image} ${c.full}`}
-                style={ {...imageStyle, ...style, opacity: isLoaded ? 1 : 0 }} 
-                src={`${image}-/resize/300x/`} 
-                srcSet={dynImg(image)} 
-                sizes={sizes}
-                onLoad={()=>setLoaded(true)}  
-                alt={alt} />
-
-          </React.Fragment>
-        )}
+          )}
       </div>
     
     )
   } else {
-    return (<div>{image}</div>)
+    return (null)
   }
 }
 

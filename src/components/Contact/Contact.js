@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as c from './contact.module.scss'
-import Modal from '../Modal'
 import { graphql, useStaticQuery } from 'gatsby'
 import { ReactComponent as Battery } from './battery.svg'
 import { ReactComponent as Lte } from './LTE.svg'
@@ -9,7 +8,6 @@ import { ReactComponent as Away } from './away.svg'
 
 import Button from '../Button'
 import { motion } from 'framer-motion'
-
 
 const variant = {
   hidden: {
@@ -43,21 +41,15 @@ function Contact({ onClose}) {
   `)
 
   const socials = data.markdownRemark.frontmatter.social_links
-  const escFunction = useCallback((event) => {
-    if (event.key === 'Escape') {
-      onClose()
-    }
-  }, [])
-
+  
   useEffect(() => {
-    document.addEventListener('keydown', escFunction, false)
 
     var timer = setInterval(() => setDate(new Date()), 1000)
     return function cleanup() {
       clearInterval(timer)
-      document.removeEventListener('keydown', escFunction, false)
     }
   }, [])
+ 
 
   return (
     <React.Fragment>

@@ -1,11 +1,27 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import  React, {useRef} from 'react'
 import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import BtnSpam from '../BtnSpam'
 import Button from '../Button'
+import Modal from '../Modal'
+import Contact from '../Contact'
+import { Link , graphql, useStaticQuery } from 'gatsby'
 
-const Footer = ({ onOpen }) => {
+const Footer = () => {
+  const ref = useRef();
+  const data = useStaticQuery(graphql`
+    query FooterQuery {
+      markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+        frontmatter {
+          social_links {
+            prettyLink
+            url
+          }
+        }
+      }
+    }
+`)
+  const socials = data.markdownRemark.frontmatter.social_links
   return (
     <footer className={`${c.footer__wrapper} reverse`}>
       <section className="grid v-margin6">
@@ -27,15 +43,15 @@ const Footer = ({ onOpen }) => {
           <BtnSpam
             color="#FF9023"
             className="show__d fg"
-            onClick={() => onOpen()}
+            onClick={()=> ref.current.open()}
           >
              <p className='bold'>Contact Me</p>
           </BtnSpam>
 
           <div
             className={`fg show__m limit__s ${c.m__btn}`}
-            onClick={() => onOpen()}
-            onKeyPress={() => onOpen()}
+            onClick={() => ref.current.open()}
+            onKeyPress={() => ref.current.open()}
             role="button"
             tabIndex="0"
           >
@@ -53,15 +69,15 @@ const Footer = ({ onOpen }) => {
         </div>
 
         <div className={`col6__r `}>
-          <p>
-            <a href="https://www.instagram.com/art.last.night/">instagram</a>{' '}
-          </p>
-          <p>
-            <a href="https://www.behance.net/artlastnight">behance</a>{' '}
-          </p>
-          <p>
-            <a href="https://www.linkedin.com/in/not-simon/">linkedin</a>{' '}
-          </p>
+        {console.log(socials)}
+
+          {socials.map((link, i) => 
+             <p key={i}>
+              <a href={link.url}>{link.prettyLink}</a>{' '}
+            </p>
+          )}
+         
+      
         </div>
         <div className={`col5__r `}>
           <p>©</p>
@@ -71,6 +87,9 @@ const Footer = ({ onOpen }) => {
       </section>
       <section className="grid v-padding6 "></section>
       <section className="grid v-padding6 "></section>
+      <Modal ref={ref}>
+          <Contact onClose={() => ref.current.close()}  />
+        </Modal>
     </footer>
   )
 }
