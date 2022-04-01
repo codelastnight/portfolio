@@ -2,7 +2,7 @@ import React, {
   useEffect,
 } from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../Footer/Footer'
+import Footer from '../Footer'
 import Navbar from '../Navbar'
 import '../../fonts/PPNeueMontreal-Medium.woff2'
 import '../../style/index.scss'

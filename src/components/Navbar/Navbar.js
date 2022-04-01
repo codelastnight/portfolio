@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'gatsby'
 import * as c from './navbar.module.scss'
-import Contact from '../Contact'
 import Modal from '../Modal'
+import Contact from '../Contact'
 
 const Navbar = () => {
   const [isHome, setHome] = useState(false)
