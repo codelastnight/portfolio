@@ -69,7 +69,6 @@ const Footer = () => {
         </div>
 
         <div className={`col6__r `}>
-        {console.log(socials)}
 
           {socials.map((link, i) => 
              <p key={i}>

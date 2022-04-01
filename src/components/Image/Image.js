@@ -27,7 +27,8 @@ const Image = ({ imageInfo, onThumbLoad }) => {
   });
 
   const onImgLoad= ({ target: img }) => {
-    onThumbLoad && onThumbLoad(img);
+    if(!!onThumbLoad) onThumbLoad(img);
+
     setThumb(true)
   }
 
