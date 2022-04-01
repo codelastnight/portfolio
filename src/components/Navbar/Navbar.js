@@ -35,7 +35,6 @@ const Navbar = () => {
               type="to work"
               element="title"
               role="menuitem"
-              className={isHome ? '' : 'none'}
             >
               work
             </Link>
