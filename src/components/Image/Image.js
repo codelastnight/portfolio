@@ -18,8 +18,8 @@ const defsizes = `
   `
 
 const Image = ({ imageInfo, onThumbLoad }) => {
-  const [isLoaded, setLoaded] = useState(false)
   const [isThumb, setThumb] = useState(false)
+  const [isLoaded, setLoaded] = useState(false)
 
   const [ref, inView] = useInView({
       threshold: 0,
@@ -27,16 +27,16 @@ const Image = ({ imageInfo, onThumbLoad }) => {
   });
 
   const onImgLoad= ({ target: img }) => {
+    setThumb(true)
     if(!!onThumbLoad) onThumbLoad(img);
 
-    setThumb(true)
   }
 
   const { alt = '', sizes, image, style } = imageInfo
 
    if (!!image) {
     return (
-      <div ref={ref} className={`${c.wrapper}`} style={{paddingBottom: isThumb ? "0": `100%`}}>
+      <div ref={ref} className={`${c.wrapper}`} >
           <img 
             className={`${c.image} ${c.thumb}`}
             style={ { ...style, visibility: isLoaded ? "hidden" : "visible" } } 
