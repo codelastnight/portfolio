@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer'
 import * as c from './image.module.scss'
 
 const dynImg = (image) => {
-  image = `${image}-/resize/300x/ 300w,
-            ${image}-/resize/600x/ 600w,
-            ${image}-/resize/1200x/ 1200w,
-            ${image}-/resize/2000x/ 2000w`  
+  image = `${image}-/resize/300x/-/format/webp/ 300w,
+            ${image}-/resize/600x/-/format/webp/ 600w,
+            ${image}-/resize/1200x/-/format/webp/ 1200w,
+            ${image}-/resize/2000x/-/format/webp/ 2000w`  
   return image
 }
 
@@ -40,7 +40,7 @@ const Image = ({ imageInfo, onThumbLoad }) => {
           <img 
             className={`${c.image} ${c.thumb}`}
             style={ { ...style, visibility: isLoaded ? "hidden" : "visible" } } 
-            src={`${image}-/resize/16x/`}  
+            src={`${image}-/resize/64x/-/format/webp/`}  
             onLoad={onImgLoad}  
 
             alt={alt} />
@@ -50,7 +50,7 @@ const Image = ({ imageInfo, onThumbLoad }) => {
               <img 
                   className={`${c.image} ${c.full}`}
                   style={ { ...style, opacity: isLoaded ? 1 : 0 }} 
-                  src={`${image}-/resize/300x/`} 
+                  src={`${image}-/resize/300x/-/format/webp/`} 
                   srcSet={dynImg(image)} 
                   sizes={!!sizes ? sizes : defsizes}
                   onLoad={()=>setLoaded(true)}  

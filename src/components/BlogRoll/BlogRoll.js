@@ -15,7 +15,7 @@ class BlogRollTemplate extends React.Component {
         <div className={c.posts} role="list" >
           {posts &&
             posts.map(({ node: post }) => (
-              <article key={post.id} className={`text ${c.article}`}>
+              <article key={post.id} role="listitem" className={`text ${c.article}`}>
                 <Link to={post.fields.slug}>
                   {post.frontmatter.thumbnail ? (
                     <div className={`featured-thumbnail ${c.img}`}>

@@ -106,7 +106,7 @@ export const BlogPostTemplate = ({
             bodycontent && bodycontent.length ? (
               <div className="w100" role="list" >
                 {bodycontent.map((content, i) => (
-                   <div key={i}>
+                   <div key={i} role="listitem">
                      <ExpandImage imageInfo={{
                           image: content.image,
                           alt: content.alt,
