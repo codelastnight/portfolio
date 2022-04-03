@@ -120,21 +120,24 @@ collections:
           - { label: Tagline, name: tagline, widget: text }
           - { label: About Blurb, name: aboutblurb, widget: text }
           - { label: About Description, name: aboutdesc, widget: text }
-          -   label: Listening To,
-              name: listen,
-              widget: object,
-              fields: 
-                - { label: text, name: prettyLink, widget: string }
-                - { label: url, name: url, widget: string }
-            
-          -   label: Reading Right Now,
-              name: read,
-              widget: object,
+          - {
+              label: current interests,
+              name: interests,
+              widget: list,
               fields:
-                - { label: text, name: prettyLink, widget: string }
-                - { label: url, name: url, widget: string }
-            
+                [
+                  { label: title, name: title, widget: string },
+                  { label: url Label, name: prettyLink, widget: string },
+                  { label: url, name: url, widget: string },
+                ],
+            }
 
+          - label: Featured Posts
+            name: featured
+            widget: ncw-reorder
+            collection: portfolio
+            id_field: id
+            display_template: '{{title}}'
           - {
               label: socials,
               name: social links,
@@ -146,17 +149,18 @@ collections:
                 ],
             }
           - {label: year, name: year, widget: string}
+          
 
 
       - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+        label: "play"
+        name: "play"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page",
+              default: "play-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }

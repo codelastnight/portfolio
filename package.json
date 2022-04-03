@@ -5,6 +5,7 @@
   "author": "Simon Zhang",
   "dependencies": {
     "@loadable/component": "^5.15.2",
+    "@ncwidgets/reorder": "^0.9.0",
     "@netlify/plugin-gatsby": "^2.1.4",
     "cross-env": "^7.0.3",
     "framer-motion": "^6.2.6",

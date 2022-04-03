@@ -6,10 +6,13 @@
     position: relative;
     background: var(--c-bg);
     overflow: hidden;
+    color: var(--c-bg);
+
 }
 
 .close {
     all: initial;
+    color: currentColor;
     cursor: pointer;
     display: block;
     background: var(--c-fg);
@@ -17,7 +20,6 @@
     right: 0;
     top: 0;
     font-size: var(--f4);
-    color: var(--c-bg);
     font-family: "Neue Montreal", sans-serif;
     text-decoration: underline;
 }

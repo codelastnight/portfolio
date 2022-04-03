@@ -1,7 +1,7 @@
 import React from 'react'
 import * as c from './about.module.scss'
 
-const About = ({ openContact, blurb, desc, listening, reading }) => {
+const About = ({ openContact, blurb, desc, interests,}) => {
   return (
     <section id="about" className={` ${c.about}`}>
       <div className="grid">
@@ -26,22 +26,16 @@ const About = ({ openContact, blurb, desc, listening, reading }) => {
           </div>
 
           <div>
-            {listening && (
+            {interests && interests.map(interest => (
               <div className={c.bg}>
-                <h4>Listening to:</h4>
-                <p>
-                  <a href={listening.url}>{listening.prettyLink}</a>
-                </p>
-              </div>
-            )}
-            {reading && (
-              <div className={c.bg}>
-                <h4>Reading right now: </h4>
-                <p>
-                  <a href={reading.url}>{reading.prettyLink}</a>
-                </p>
-              </div>
-            )}
+              <h4>{interest.title}</h4>
+              <p>
+                <a href={interest.url}>{interest.prettyLink}</a>
+              </p>
+            </div>
+            ))}
+            
+            
           </div>
         </div>
       </div>

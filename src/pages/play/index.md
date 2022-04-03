@@ -1,6 +1,6 @@
 ---
-templateKey: 'about-page'
-path: /about
+templateKey: 'play-page'
+path: /play
 title: About Me!!
 ---
 ### Shade-grown coffee

@@ -19,8 +19,7 @@ export const IndexPageTemplate = ({
   blurb,
   year,
   desc,
-  listening,
-  reading,
+  interests,
 }) => {
   // const heroImage = getImage(image) || image;
   const ref = useRef()
@@ -39,8 +38,8 @@ export const IndexPageTemplate = ({
         blurb={blurb}
         openContact={() => ref.current.open()}
         desc={desc}
-        listening={listening}
-        reading={reading}
+
+        interests={interests}
       />
       <Modal ref={ref}>
           <Contact onClose={() => ref.current.close()}  />
@@ -66,8 +65,8 @@ const IndexPage = ({ data }) => {
         blurb={frontmatter.aboutblurb}
         year={frontmatter.year}
         desc={frontmatter.aboutdesc}
-        listening={frontmatter.listen}
-        reading={frontmatter.read}
+        interests={frontmatter.interests}
+
       />
     </Layout>
   )
@@ -93,16 +92,14 @@ export const pageQuery = graphql`
         tagline
         year
         aboutdesc
-        listen {
-          prettyLink
-          url
-        }
-        read {
-          prettyLink
-          url
-        }
+    
         social_links {
           prettyLink
+          url
+        }
+        interests {
+          prettyLink
+          title
           url
         }
       }
