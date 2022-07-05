@@ -49,11 +49,12 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "serve": "yarn netlify-cms-proxy-server",
+    "develop": "gatsby develop",
+
     "clean": "gatsby clean",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "yarn netlify-cms-proxy-server",
     "deploy": "netlify build && netlify deploy",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
