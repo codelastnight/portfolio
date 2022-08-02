@@ -3,6 +3,8 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
     svg {
         height: 100%;
         width: 100%;
@@ -11,6 +13,5 @@
 
 .logoicon {
     position: relative;
-    margin: 1.5vmin;
 }
 

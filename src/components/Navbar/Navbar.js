@@ -1,8 +1,8 @@
-import React, { useState, useRef,useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
 import * as c from './navbar.module.scss'
 import Modal from '../Modal'
-
+import LogoIcon from '../LogoIcon'
 import loadable from '@loadable/component'
 
 const Contact = loadable(() => import('../Contact'));
@@ -13,22 +13,26 @@ const Navbar = () => {
 
   const contactRef = useRef()
 
-  useEffect(()=> {
+  useEffect(() => {
     setLoad(true)
-  },[])
+  }, [])
 
   const isActive = ({ isCurrent }) => {
     if (isload) {
       setHome(isCurrent)
     }
-    
-    return isCurrent ? {className: "none"} : {}
+
+    return isCurrent ? { className: "none" } : {}
   }
   return (
     <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
+
+      <Link class={c.at__link} href="#main">
+        Skip to content
+      </Link>
       <div className={` ${c.nav}`}>
-        <div className="grid">
-          <p className={'col2'}>
+        <div className={`grid ${c.m__row}`}>
+          <p className={`col2 ${c.m__start}`}>
             <Link
               getProps={isActive}
               to="/"
@@ -48,14 +52,15 @@ const Navbar = () => {
               work
             </Link>
           </p>
+          <LogoIcon className={`col4 show__m ${c.logoIcon}`} />
 
-          <p className={'col4__d col3'}>
+          <p className={`col4__d col3 ${c.m__start}`}>
             <Link to="/#about" type="about" element="title" role="menuitem">
               about
             </Link>
           </p>
 
-          <p className={''}>
+          <p className={`${c.m__start}`}>
             <span
               className={'pseudolink'}
               onClick={() => contactRef.current.open()}
@@ -66,8 +71,7 @@ const Navbar = () => {
               contact
             </span>
           </p>
-
-          <div className={` col2__r span2 ${c.logo} show__d`}>
+          <div className={` col2__r span2 ${c.logo} flex justify__end show__d`}>
             <svg
               viewBox="0 0 138 35"
               fill="currentColor"
@@ -92,10 +96,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <Modal ref={contactRef}>
-          <Contact onClose={() => contactRef.current.close()}  />
-        </Modal>
-      
+      <Modal ref={contactRef}>
+        <Contact onClose={() => contactRef.current.close()} isOpen={contactRef.current.state()} />
+      </Modal>
+
     </nav>
   )
 }

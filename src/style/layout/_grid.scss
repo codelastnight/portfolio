@@ -1,7 +1,7 @@
 @use '../variables' as v;
 .grid {
     display: grid;
-    //width: 100%;
+    width: 100%;
     grid-template-columns: var(--grid);
     max-width: var(--width-max);
     column-gap: var(--f1);

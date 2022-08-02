@@ -10,28 +10,49 @@
     @media screen and (min-width: v.$width-desktop) {
         padding: var(--f4) var(--f6);
         column-gap: var(--f3);
-
-
     }
     
 }
 
-
+.at__link {
+    left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  &:focus {
+    transform: translateY(0%);
+  }
+}
 .logo {
 
-    display: flex;
-    justify-content: flex-end;
     
     svg {
         height: var(--f4);
     }
 }
 
+.logoIcon {
+    grid-row: span 3;
+    width: 5rem;
+    pointer-events: none;
+}
 
 .nav__wrapper {
     display: grid;
     justify-content: center;
     position:fixed;
     width: 100%;
+
+}
+
+@media screen and (max-width: v.$width-mobile) {
+  .m__row {
+    grid-template-columns: 1fr;
+    gap: var(--f1);
+
+    
+  }
+  .m__start {
+    grid-column-start: 1;
+}
 
 }

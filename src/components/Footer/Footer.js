@@ -1,11 +1,11 @@
-import  React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import * as c from './footer.module.scss'
 import Logo from './../Logo'
 import Button from '../Button'
 import Modal from '../Modal'
 import loadable from '@loadable/component'
 
-import { Link , graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 const Contact = loadable(() => import('../Contact'));
 const BtnSpam = loadable(() => import('../BtnSpam'));
 
@@ -32,13 +32,13 @@ const Footer = () => {
           <Link to="/">back to top</Link>
         </p>
         <p className="col3 ">
-          <Link to="/">back to top</Link>
+          <Link to="/" aria-hidden="true">back to top</Link>
         </p>
         <p className="col6 show__d">
-          <Link to="/">back to top</Link>
+          <Link to="/" aria-hidden="true">back to top</Link>
         </p>
         <p className="col1__r justify__end show__d">
-          <Link to="/">back to top</Link>
+          <Link to="/" aria-hidden="true">back to top</Link>
         </p>
       </section>
       <section className="grid ">
@@ -46,9 +46,9 @@ const Footer = () => {
           <BtnSpam
             color="#FF9023"
             className="show__d fg"
-            onClick={()=> ref.current.open()}
+            onClick={() => ref.current.open()}
           >
-             <p className='bold'>Contact Me</p>
+            <p className='bold'>Contact Me</p>
           </BtnSpam>
 
           <div
@@ -73,13 +73,13 @@ const Footer = () => {
 
         <div className={`col6__r `}>
 
-          {socials.map((link, i) => 
-             <p key={i}>
+          {socials.map((link, i) =>
+            <p key={i}>
               <a href={link.url}>{link.prettyLink}</a>{' '}
             </p>
           )}
-         
-      
+
+
         </div>
         <div className={`col5__r `}>
           <p>©</p>
@@ -90,8 +90,8 @@ const Footer = () => {
       <section className="grid v-padding6 "></section>
       <section className="grid v-padding6 "></section>
       <Modal ref={ref}>
-          <Contact onClose={() => ref.current.close()}  />
-        </Modal>
+        <Contact onClose={() => ref.current.close()} isOpen={ref.current.state()} />
+      </Modal>
     </footer>
   )
 }

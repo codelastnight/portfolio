@@ -1,0 +1,19 @@
+{
+    "launch": {
+      
+
+         "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${file}",
+      "args": [ ],
+      "windows": { "runtimeExecutable": "nvs.cmd" },
+      "osx": { "runtimeExecutable": "nvs" },
+      "linux": { "runtimeExecutable": "nvs" }
+    },
+  ],
+        "compounds": []
+    }
+}

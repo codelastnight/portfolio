@@ -74,14 +74,14 @@ const Layout = ({ children }) => {
 
       <div className={classes.layout__wrapper}>
         <div className={classes.layout__inner}>
-          <main className="">{children}</main>
+          <main id="main" className="">{children}</main>
         </div>
       </div>
       <div
         className={`z5 relative ${classes.footer} ${classes.margintop} ${classes.layout__wrapper}`}
       >
         <div className={classes.layout__inner}>
-          <Footer   />
+          <Footer />
         </div>
       </div>
     </div>

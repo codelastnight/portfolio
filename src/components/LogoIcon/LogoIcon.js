@@ -6,13 +6,13 @@ import {
   useTransform,
 } from 'framer-motion'
 import * as c from './logoicon.module.scss'
-const LogoIcon = () => {
+const LogoIcon = ({ className }) => {
   const { scrollYProgress } = useViewportScroll()
   const yValue = useTransform(scrollYProgress, [0, 1], [45, 405])
   const pathLength = useSpring(yValue, { stiffness: 200, damping: 30 })
 
   return (
-    <div className={c.logoicon}>
+    <div className={`${c.logoicon} ${className}`}>
       <motion.div
         className={c.rotate}
         style={{ rotate: pathLength, originX: 0.5, originY: 0.5 }}
