@@ -23,7 +23,7 @@ const variant = {
   },
 }
 
-function Contact({ onClose, isOpen }) {
+function Contact({ onClose }) {
   const [date, setDate] = useState(new Date())
 
   const data = useStaticQuery(graphql`
@@ -53,15 +53,15 @@ function Contact({ onClose, isOpen }) {
   return (
     <React.Fragment>
       <motion.div
-        initial={'hidden'}
-        animate={'show'}
-        exit={'hidden'}
-        variants={variant}
+        // initial={'hidden'}
+        // animate={'show'}
+        // exit={'hidden'}
+        // variants={variant}
         className={c.wrapper}
         role="dialog"
         aria-label="contact me!"
         aria-describedby="contact1Desc"
-        aria-modal="true"
+      // aria-modal="true"
       >
         <div className={c.phone}>
           <div className={`flex justify__between align__center ${c.topbar}`}>

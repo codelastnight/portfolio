@@ -11,7 +11,13 @@ $width-max: 1920px;
     --f5: 36px;
     --f6: 42px;
     --f7: 64px;
-
+    --f1-half: calc(var(--f1) / 2);
+    --f2-half: calc(var(--f2) / 2);
+    --f3-half: calc(var(--f3) / 2);
+    --f4-half: calc(var(--f4) / 2);
+    --f5-half: calc(var(--f5) / 2);
+    --f6-half: calc(var(--f6) / 2);
+    --f7-half: calc(var(--f7) / 2);
     --width-max: 1920px;
 
     --width-desktop: $width-desktop;

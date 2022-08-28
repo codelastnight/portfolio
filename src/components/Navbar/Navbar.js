@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
 
-      <Link class={c.at__link} href="#main">
+      <Link class={"at__link"} href="/#main">
         Skip to content
       </Link>
       <div className={` ${c.nav}`}>
@@ -97,7 +97,7 @@ const Navbar = () => {
         </div>
       </div>
       <Modal ref={contactRef}>
-        <Contact onClose={() => contactRef.current.close()} isOpen={contactRef.current.state()} />
+        <Contact onClose={() => contactRef.current.close()} />
       </Modal>
 
     </nav>

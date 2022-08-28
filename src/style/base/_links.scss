@@ -1,19 +1,25 @@
 
 a, .pseudolink {
+    position: relative;
     text-decoration: underline;
     color: currentColor;
-    background-color: var(--c-bg);
+    background-color:var(--c-bg) ;
+
+  
     &:visited {
         color: currentColor;
     }
-    &:hover {
-        background-color:var(--c-hover-l) ;
-    
+    &:hover  {
+            background-color:var(--c-hover-l) ;
     }
     &:active {
         color: var(--c-bg);
+
+  
         background-color:var(--c-fg) ;
+        
     }
+
 
 }
 
@@ -33,4 +39,14 @@ a, .pseudolink {
             background-color:var(--c-bg) ;
         }
     }
+}
+
+// accessibility link
+.at__link {
+    left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  &:focus {
+    transform: translateY(0%);
+  }
 }

@@ -6,6 +6,7 @@
     height: 100%;
     display: grid;
     place-items: center;
+    z-index: 500;
 }
 .background {
     position: absolute;
@@ -16,6 +17,8 @@
     background-color: var(--c-hover-l);
     opacity: 0.5;
     cursor: pointer;
+    z-index: 500;
+
 }
 
 
