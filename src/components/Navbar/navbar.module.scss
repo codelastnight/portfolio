@@ -41,7 +41,7 @@
     display: grid;
     justify-content: center;
     position:fixed;
-    width: inherit;
+    width: var(--viewportWidth);
 
 }
 
