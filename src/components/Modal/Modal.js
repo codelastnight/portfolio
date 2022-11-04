@@ -26,7 +26,7 @@ const variant = {
   },
 }
 
-const Modal = ({ children }, ref) => {
+const Modal = ({ children, title }, ref) => {
   const [isOpen, setOpen] = useState(false)
 
   useImperativeHandle(ref, () => ({
@@ -66,11 +66,7 @@ const Modal = ({ children }, ref) => {
         <div className={c.background} aria-hidden="true" />
 
         <div className={c.wrapper}>
-          <Dialog.Panel className="">
-            <Dialog.Title>Deactivate account</Dialog.Title>
-            <Dialog.Description>
-              This will permanently deactivate your account
-            </Dialog.Description>
+          <Dialog.Panel className="" aria-label='title'>
             {children}
           </Dialog.Panel>
         </div>

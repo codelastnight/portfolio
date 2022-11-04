@@ -1,4 +1,4 @@
-import React, {useState, useRef, useCallback} from 'react'
+import React, { useState, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import Image from '../Image'
 import Modal from '../Modal'
@@ -16,28 +16,28 @@ const ExpandImage = ({ imageInfo }) => {
     setOpen(false)
   }
 
-  const onImgLoad = useCallback(( img ) => {
+  const onImgLoad = useCallback((img) => {
     const { offsetHeight, offsetWidth } = img;
-    setRatio(offsetWidth/ offsetHeight)
+    setRatio(offsetWidth / offsetHeight)
   })
   return (
     <React.Fragment >
       <button className={`${c.imgbtn}`} aria-expanded={isOpen} onClick={() => open()} onKeyPress={() => open()} >
-          <Image imageInfo={imageInfo} onThumbLoad={onImgLoad} />
+        <Image imageInfo={imageInfo} onThumbLoad={onImgLoad} />
       </button>
-    <Modal ref={ref}>
-      <div className={`${c.expanded} reverse`} style={{maxWidth: `${95 * ratio}vmin`}}>
-        <Image imageInfo={{...imageInfo, sizes: '80vw'}} />
+      <Modal ref={ref} title="Full Size Image">
+        <div className={`${c.expanded} reverse`} style={{ maxWidth: `${95 * ratio}vmin` }}>
+          <Image imageInfo={{ ...imageInfo, sizes: '80vw' }} />
 
-        <button className={`z5 ${c.close} pseudolink`} onClick={() => close()} onKeyPress={() => close()}>
-          <p className='white'>escape</p>
+          <button className={`z5 ${c.close} pseudolink`} onClick={() => close()} onKeyPress={() => close()}>
+            <p className='white'>escape</p>
           </button>
-      </div>
-    </Modal>
+        </div>
+      </Modal>
     </React.Fragment>
-  
-    )
- 
+
+  )
+
 }
 
 ExpandImage.propTypes = {

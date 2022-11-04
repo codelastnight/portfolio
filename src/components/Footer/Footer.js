@@ -89,7 +89,7 @@ const Footer = () => {
       </section>
       <section className="grid v-padding6 "></section>
       <section className="grid v-padding6 "></section>
-      <Modal ref={ref}>
+      <Modal ref={ref} title="Contact Me">
         <Contact onClose={() => ref.current.close()} />
       </Modal>
     </footer>

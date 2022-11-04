@@ -1,8 +1,11 @@
 body {
     background-color: var(--c-bg);
     color: var(--c-fg);
-}
+    scrollbar-gutter: stable;
 
+}
+html {
+}
 
 * {
     box-sizing: border-box;

@@ -32,21 +32,22 @@
 
 .logoIcon {
     grid-row: span 3;
-    width: 5rem;
+    width: 4rem;
     pointer-events: none;
+    justify-self: end;
 }
 
 .nav__wrapper {
     display: grid;
     justify-content: center;
     position:fixed;
-    width: 100%;
+    width: inherit;
 
 }
 
 @media screen and (max-width: v.$width-mobile) {
   .m__row {
-    grid-template-columns: 1fr;
+    //grid-template-columns: 1fr;
     gap: var(--f1);
 
     
@@ -54,5 +55,7 @@
   .m__start {
     grid-column-start: 1;
 }
-
+.m__col2 {
+  grid-column: 2;
+}
 }

@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
   const ref = useRef()
 
   return (
-    <div>
+    <div >
       <MainHeading
         tagline={tagline}
         socials={socials}
@@ -41,9 +41,9 @@ export const IndexPageTemplate = ({
 
         interests={interests}
       />
-      <Modal ref={ref}>
-          <Contact onClose={() => ref.current.close()}  />
-        </Modal>
+      <Modal ref={ref} title="Contact Me">
+        <Contact onClose={() => ref.current.close()} />
+      </Modal>
     </div>
   )
 }

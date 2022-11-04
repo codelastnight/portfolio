@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
 
 
   return (
-    <div id="top">
+    <div id="top" >
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

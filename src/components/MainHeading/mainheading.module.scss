@@ -23,9 +23,8 @@
     min-height: 100vh;
     place-items: center;
     position: fixed;
-    max-width: var(--width-max);
+    width: Min(inherit,var(--width-max));
     padding-bottom: 8em;
-    width: 100%;
     @media screen and (min-width: v.$width-desktop) {
         min-height: 95vh;
         place-items: end center;

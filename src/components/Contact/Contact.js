@@ -8,6 +8,7 @@ import { ReactComponent as Away } from './away.svg'
 
 import Button from '../Button'
 import { motion } from 'framer-motion'
+
 const variant = {
   hidden: {
     scaleY: 0.5,
@@ -64,7 +65,7 @@ function Contact({ onClose }) {
       // aria-modal="true"
       >
         <div className={c.phone}>
-          <div className={`flex justify__between align__center ${c.topbar}`}>
+          <div className={`flex justify__between align__center ${c.topbar}`} aria-hidden="true">
             <div className='basis__0 grow__1'>
               <Lte />
 
@@ -73,7 +74,7 @@ function Contact({ onClose }) {
               <Mail />
               <p>New Mail</p>
             </div>
-            <div className="flex flexgap1 align__center basis__0 grow__1 justify__end">
+            <div className="flex flexgap1 align__center basis__0 grow__1 justify__end" >
               <p>
                 {date.toLocaleString('en-US', {
                   hour: 'numeric',
@@ -101,7 +102,7 @@ function Contact({ onClose }) {
                   also have a <SocialLink socials={socials} i={1} /> and{' '}
                   <SocialLink socials={socials} i={0} />.
                 </p>
-                <p style={{ color: '#FF5833' }}>
+                <p style={{ color: '#FF5833' }} aria-hidden="true">
                   <span>
                     <Away />
                   </span>{' '}
@@ -156,7 +157,7 @@ function Contact({ onClose }) {
                   tabIndex="0"
                   onClick={() => onClose()}
                   role="button"
-                  aria-label="close"
+                  aria-label="close dialog"
                   onKeyPress={() => onClose()}
                 >
                   <Button
@@ -170,7 +171,9 @@ function Contact({ onClose }) {
                 </div>
                 <div className="flex align__center flexgap1">
                   <p>ℹ️ sending as online mail</p>
-                  <button type="submit" className={`${c.button} ${c.white}`}>
+                  <button type="submit" className={`${c.button} ${c.white}`}
+                    aria-label="send message"
+                  >
                     <Button
                       color="#1c1c1c"
                       height="3em"

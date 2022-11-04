@@ -1,3 +1,28 @@
+.modal__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 500;
+}
+.modal__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-hover-l);
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 500;
+
+}
+
+
+
 $borderRadius: var(--f1);
 
 .wrapper {

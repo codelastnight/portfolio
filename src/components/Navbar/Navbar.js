@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
 
-      <Link class={"at__link"} href="/#main">
+      <Link class={"at__link"} href="#main">
         Skip to content
       </Link>
       <div className={` ${c.nav}`}>
@@ -52,15 +52,14 @@ const Navbar = () => {
               work
             </Link>
           </p>
-          <LogoIcon className={`col4 show__m ${c.logoIcon}`} />
 
-          <p className={`col4__d col3 ${c.m__start}`}>
+          <p className={`col4__d col2 ${c.m__col2}`}>
             <Link to="/#about" type="about" element="title" role="menuitem">
               about
             </Link>
           </p>
 
-          <p className={`${c.m__start}`}>
+          <p className={``}>
             <span
               className={'pseudolink'}
               onClick={() => contactRef.current.open()}
@@ -71,7 +70,8 @@ const Navbar = () => {
               contact
             </span>
           </p>
-          <div className={` col2__r span2 ${c.logo} flex justify__end show__d`}>
+          <LogoIcon className={`col4 show__m ${c.logoIcon}`} />
+          <div className={` col2__r span2 ${c.logo} flex justify__end show__d`} aria-hidden="true">
             <svg
               viewBox="0 0 138 35"
               fill="currentColor"
@@ -96,10 +96,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Modal ref={contactRef}>
+      <Modal ref={contactRef} title="Contact Me">
         <Contact onClose={() => contactRef.current.close()} />
       </Modal>
-
     </nav>
   )
 }

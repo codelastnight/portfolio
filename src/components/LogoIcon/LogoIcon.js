@@ -12,7 +12,7 @@ const LogoIcon = ({ className }) => {
   const pathLength = useSpring(yValue, { stiffness: 200, damping: 30 })
 
   return (
-    <div className={`${c.logoicon} ${className}`}>
+    <div className={`${c.logoicon} ${className}`} aria-hidden="true">
       <motion.div
         className={c.rotate}
         style={{ rotate: pathLength, originX: 0.5, originY: 0.5 }}
