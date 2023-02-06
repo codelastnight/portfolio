@@ -5,13 +5,13 @@ import uploadcare from 'netlify-cms-media-library-uploadcare'
 import PlayPagePreview from './preview-templates/PlayPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import PortfolioPreview from './preview-templates/PortfolioPreview'
-import { Widget as ReorderWidget } from '@ncwidgets/reorder'
+//import { Widget as ReorderWidget } from '@ncwidgets/reorder'
 
 import './cms-utils'
 CMS.registerMediaLibrary(uploadcare)
 //CMS.registerMediaLibrary(cloudinary)
 
-CMS.registerWidget(ReorderWidget)
+//CMS.registerWidget(ReorderWidget)
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', PlayPagePreview)
 CMS.registerPreviewTemplate('portfolio', PortfolioPreview)
