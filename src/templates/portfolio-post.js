@@ -101,7 +101,7 @@ export const BlogPostTemplate = ({
                 {bodycontent.map((content, i) => (
                   <div key={i} role="listitem">
                     {content.type === "bodytext" ?
-                      <div className="medium long spacer__s">
+                      <div className="medium long spacer__s" style={{ maxWidth: '30em' }}>
                         {content.text}
                       </div> : <ExpandImage imageInfo={{
                         image: content.image,

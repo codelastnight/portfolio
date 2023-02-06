@@ -15,7 +15,6 @@ const Layout = ({ children, fgColor, bgColor }) => {
   const { title, description } = useSiteMetadata()
 
   function setColor(fg, bg) {
-    console.log(fg, bg)
     const root = document.body
 
     if (!bg) bg = "var(--theme-purple)"
@@ -33,6 +32,12 @@ const Layout = ({ children, fgColor, bgColor }) => {
     root.style.setProperty('--scrollbarWidth', `${scrollbarWidth}px`)
     //customcolor
     setColor(fgColor, bgColor)
+    //console my info
+    const style = "color:blue;font-family:'Neue Montreal', sans-serif; "
+    console.clear()
+    console.log("%c2023 Designed & Developed by Simon Zhang", `${style} font-size:3rem;`);
+    console.log("%cGithub: https://github.com/codelastnight/portfolio", `${style} font-size:1.5rem;`);
+
     return () => {
       root.style.setProperty('--scrollbarWidth', `0px`)
     }
