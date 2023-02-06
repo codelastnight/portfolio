@@ -29,6 +29,7 @@ const LogoIcon = ({ className }) => {
       </motion.div>
 
       <svg
+        className={c.maxWidth}
         stroke="currentColor"
         fill="none"
         viewBox="0 0 90 90"

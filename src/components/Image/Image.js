@@ -7,8 +7,12 @@ import * as c from './image.module.scss'
 const dynImg = (image) => {
   image = `${image}-/resize/300x/-/format/webp/ 300w,
             ${image}-/resize/600x/-/format/webp/ 600w,
+            ${image}-/resize/800x/-/format/webp/ 800w,
+            ${image}-/resize/1000x/-/format/webp/ 1000w,
             ${image}-/resize/1200x/-/format/webp/ 1200w,
-            ${image}-/resize/2000x/-/format/webp/ 2000w`  
+            ${image}-/resize/1400x/-/format/webp/ 1400w,
+            ${image}-/resize/1600x/-/format/webp/ 1600w,
+            ${image}-/resize/2000x/-/format/webp/ 2000w`
   return image
 }
 
@@ -22,43 +26,43 @@ const Image = ({ imageInfo, onThumbLoad }) => {
   const [isLoaded, setLoaded] = useState(false)
 
   const [ref, inView] = useInView({
-      threshold: 0,
-      triggerOnce: true
+    threshold: 0,
+    triggerOnce: true
   });
 
-  const onImgLoad= ({ target: img }) => {
+  const onImgLoad = ({ target: img }) => {
     setThumb(true)
-    if(!!onThumbLoad) onThumbLoad(img);
+    if (!!onThumbLoad) onThumbLoad(img);
 
   }
 
   const { alt = '', sizes, image, style } = imageInfo
 
-   if (!!image) {
+  if (!!image) {
     return (
       <div ref={ref} className={`${c.wrapper}`} >
-          <img 
-            className={`${c.image} ${c.thumb}`}
-            style={ { ...style, visibility: isLoaded ? "hidden" : "visible" } } 
-            src={`${image}-/resize/64x/-/format/webp/`}  
-            onLoad={onImgLoad}  
+        <img
+          className={`${c.image} ${c.thumb}`}
+          style={{ ...style, visibility: isLoaded ? "hidden" : "visible" }}
+          src={`${image}-/resize/64x/-/format/webp/`}
+          onLoad={onImgLoad}
 
+          alt={alt} />
+        {inView && (
+
+
+          <img
+            className={`${c.image} ${c.full}`}
+            style={{ ...style, opacity: isLoaded ? 1 : 0 }}
+            src={`${image}-/resize/300x/-/format/webp/`}
+            srcSet={dynImg(image)}
+            sizes={!!sizes ? sizes : defsizes}
+            onLoad={() => setLoaded(true)}
             alt={alt} />
-          {inView && (
-            
 
-              <img 
-                  className={`${c.image} ${c.full}`}
-                  style={ { ...style, opacity: isLoaded ? 1 : 0 }} 
-                  src={`${image}-/resize/300x/-/format/webp/`} 
-                  srcSet={dynImg(image)} 
-                  sizes={!!sizes ? sizes : defsizes}
-                  onLoad={()=>setLoaded(true)}  
-                  alt={alt} />
-
-          )}
+        )}
       </div>
-    
+
     )
   } else {
     return (null)

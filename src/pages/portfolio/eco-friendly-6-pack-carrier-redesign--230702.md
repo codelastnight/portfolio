@@ -2,6 +2,8 @@
 templateKey: portfolio-post
 title: Eco-friendly 6-Pack Carrier Redesign
 prettydate: "2021"
+fgcolor: "#000000"
+bgcolor: "#f0f0f0"
 description2: "Sponsors: Hi-Cone, CocaCola "
 role: "Role: Ideation, 3D modeling & Render"
 date: 2022-02-08T20:49:38.602Z
@@ -44,6 +46,8 @@ bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/c496bed1-9dbf-48e7-9659-54dc93cddcd3/
     alt: Thank you
+  - type: bodytext
+    text: \
 tags:
   - Packaging
 ---

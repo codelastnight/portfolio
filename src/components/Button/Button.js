@@ -7,6 +7,7 @@ const Button = ({
   height,
   radius,
   color,
+  bgcolor,
   className,
   style,
   children,
@@ -20,8 +21,9 @@ const Button = ({
           width: width,
           height: height,
           borderRadius: radius,
-          background: color,
-          borderColor: color,
+          color: color ? color : 'currentColor',
+          background: bgcolor,
+          borderColor: bgcolor,
         }}
       >
 
@@ -39,7 +41,7 @@ Button.defaultProps = {
   width: '100%',
   height: 'inherit',
   radius: '30rem',
-  color: '#D7BEFF',
+  bgcolor: '#D7BEFF',
   className: '',
   style: { transform: '' },
   isDark: false

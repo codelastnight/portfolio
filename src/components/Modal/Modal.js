@@ -1,14 +1,11 @@
 import React, {
   useState,
-  useEffect,
   forwardRef,
   useImperativeHandle,
-  useCallback,
   Fragment
 } from 'react'
 import * as c from './modal.module.scss'
-import { motion, AnimatePresence } from 'framer-motion'
-import Portal from '../Portal'
+
 import { Dialog, Transition } from '@headlessui/react'
 const variant = {
   hidden: {
@@ -66,7 +63,7 @@ const Modal = ({ children, title }, ref) => {
         <div className={c.background} aria-hidden="true" />
 
         <div className={c.wrapper}>
-          <Dialog.Panel className="" aria-label='title'>
+          <Dialog.Panel className="width100" >
             {children}
           </Dialog.Panel>
         </div>

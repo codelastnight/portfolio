@@ -45,10 +45,11 @@ const Footer = () => {
         <div className={`col2 end1__r relative ${c.fit} ${c.logo}`}>
           <BtnSpam
             color="#FF9023"
-            className="show__d fg"
+            className="show__d "
             onClick={() => ref.current.open()}
+            style={{ color: 'black' }}
           >
-            <p className='bold'>Contact Me</p>
+            <p className='bold' >Contact Me</p>
           </BtnSpam>
 
           <div
@@ -58,7 +59,7 @@ const Footer = () => {
             role="button"
             tabIndex="0"
           >
-            <Button color="#FF9023" height="3em ">
+            <Button bgcolor="#FF9023" height="3em ">
               <p className='bold'>Contact Me</p>
             </Button>
           </div>

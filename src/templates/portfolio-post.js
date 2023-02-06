@@ -10,38 +10,11 @@ import Button from '../components/Button'
 
 const Heading = ({ children, first, second, label, image }) => {
   return (
-    <section className={`grid ${!image && 'spacer__top'}`}>
-      <div className="col1 col3__d end1__r z1">
-       
-          {image && 
-        <Image imageInfo={{
-          image: image,
-          alt: `featured image for ${label}`,
-          style: {
-            height: '60vh',
-            width: '100%',
-            objectFit: 'cover', 
-            objectPosition: 'center'
-          }
-        }}  />
-        
-        }
-        
-
-     
+    <section className={`grid spacer__top`}>
+      <div className="col1 col2__d end1__r end1__rd z1">
+        <div className="col1 end5 limit z5" >
+          {children}
         </div>
-      <label className="col1 col2__d " style={image && {marginTop: "-6em"}}><mark>{label}</mark></label>
-
-      <div className="col1 col3__d end1__r limit z5" style={image && {marginTop: "-6em"}}>
-        
-        {children}
-        </div>
-      <div
-        className="col1 split text col3__d limit end1__r "
-        style={{ marginTop: 'var(--f1)' }}
-      >
-        <div>{first}</div>
-        <div>{second}</div>
       </div>
     </section>
   )
@@ -69,54 +42,77 @@ export const BlogPostTemplate = ({
         style={{ minHeight: '60vh' }}
       >
 
+        <section className={`grid ${!featuredimage && 'spacer__top'}`}>
+          <div className="col1 col2__d end1__r end1__rd z1">
 
-        <Heading
-          label="title"
-          image={featuredimage}
-          first={<p>{description2}</p>}
-          second={
-            tags && tags.length ? (
-              <div className="flex flexgap1">
-                {tags.map((tag) => (
-                  <p key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  </p>
-                ))}
-              </div>
-            ) : null
-          }
-        >
-          <h1 className="title indent "><mark>{title}</mark></h1>
-        </Heading>
+            <div className="col1 end5 limit z5" style={{ marginTop: '20vh', marginBottom: 'var(--f3)' }}>
+              <h1 className="title "><mark>{title}</mark></h1>
+            </div>
+            <div
+              className="col1 split text col3__d limit end1__r "
+              style={{ marginBottom: 'var(--f3)' }}
+            >
+              <p>{description2}</p>
+              <p>{role}</p>
+              <div>{tags && tags.length ? (
+                <div className="flex flexgap1">
+                  {tags.map((tag) => (
+                    <p key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </p>
+                  ))}
+                </div>
+              ) : null}</div>
+              <p>{date}</p>
+            </div>
+
+            {featuredimage &&
+              <Image imageInfo={{
+                image: featuredimage,
+                alt: `featured image for ${title}`,
+                style: {
+                  width: '100%',
+                }
+              }} />
+            }
+
+
+
+          </div>
+
+
+        </section>
+
       </div>
 
       <Heading
-        label="about"
-        first={<p>{date}</p>}
-        second={<p>{role}</p>}
       >
         <p className="big long indent ">{description}</p>
       </Heading>
 
       <section className="grid spacer__top v-padding6">
         <article
-          className="col1 col2__d end1__r text long "
-          style={{ maxWidth: '60rem' }}
+          className="col1 col2__d end1__r end1__rd text long "
+          style={{}}
         >
           {
             bodycontent && bodycontent.length ? (
               <div className="w100" role="list" >
                 {bodycontent.map((content, i) => (
-                   <div key={i} role="listitem">
-                     <ExpandImage imageInfo={{
-                          image: content.image,
-                          alt: content.alt,
-                          style: {
-                            
-                          }
-                        }}
-                        />
-                     </div>
+                  <div key={i} role="listitem">
+                    {content.type === "bodytext" ?
+                      <div className="medium long spacer__s">
+                        {content.text}
+                      </div> : <ExpandImage imageInfo={{
+                        image: content.image,
+                        alt: content.alt,
+                        style: {
+
+                        }
+                      }}
+                      />}
+
+                  </div>
                 ))}
               </div>
             ) : null
@@ -131,7 +127,8 @@ export const BlogPostTemplate = ({
           role="button"
           tabIndex="0"
         >
-          <Button color="#88DC8B" height="5.5em " radius={'2em'}>
+          <Button bgcolor="#88DC8B" color={'black'} height="5.5em " radius={'2em'} style={{ color: 'black' }}
+          >
             <p className='bold'>Return to Works ↩</p>
           </Button>
         </div>
@@ -148,16 +145,16 @@ BlogPostTemplate.propTypes = {
   description2: PropTypes.string,
   date: PropTypes.string,
   helmet: PropTypes.object,
-  alt:  PropTypes.string
+  alt: PropTypes.string
 }
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout fgColor={post.frontmatter.fgcolor} bgColor={post.frontmatter.bgcolor}>
       <BlogPostTemplate
-        bodycontent= {post.frontmatter.bodycontent}
+        bodycontent={post.frontmatter.bodycontent}
         description={post.frontmatter.description}
         description2={post.frontmatter.description2}
         date={post.frontmatter.prettydate}
@@ -195,6 +192,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        fgcolor
+        bgcolor
         tags
         description2
         role
@@ -203,6 +202,7 @@ export const pageQuery = graphql`
           type
           image 
           alt
+          text
         }
         featuredimage 
       }

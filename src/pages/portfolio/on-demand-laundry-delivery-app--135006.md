@@ -2,6 +2,8 @@
 templateKey: portfolio-post
 title: On-demand Laundry Delivery App
 prettydate: "2021"
+fgcolor: "#0025bf"
+bgcolor: "#f9f9ff"
 description2: "Client: Loopie, LLC "
 role: "Role: Ideation, Low-Fidelity, Hi-Fidelity Prototypes"
 date: 2022-02-08T06:05:27.717Z

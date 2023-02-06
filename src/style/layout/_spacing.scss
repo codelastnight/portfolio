@@ -28,6 +28,16 @@ section {
         margin-top: calc(var(--f6)*3);
     }
 }
+.spacer__s {
+    margin-top: calc(var(--f4));
+    margin-bottom: calc(var(--f4));
+
+    @media screen and (min-width:calc(v.$width-mobile)) {
+        margin-top: calc(var(--f6));
+
+        margin-bottom: calc(var(--f6));
+    }
+}
 
 .negative3 {
     margin-top: -var(--f3);

@@ -11,15 +11,15 @@ import { motion } from 'framer-motion'
 
 const variant = {
   hidden: {
-    scaleY: 0.5,
+    opacity: 0,
     transition: {
-      duration: 0.1,
+      duration: 0.0,
     },
   },
   show: {
-    scaleY: 1,
+    opacity: 1,
     transition: {
-      duration: 0.1,
+      duration: 0.3,
     },
   },
 }
@@ -54,10 +54,10 @@ function Contact({ onClose }) {
   return (
     <React.Fragment>
       <motion.div
-        // initial={'hidden'}
-        // animate={'show'}
-        // exit={'hidden'}
-        // variants={variant}
+        initial={'hidden'}
+        animate={'show'}
+        exit={'hidden'}
+        variants={variant}
         className={c.wrapper}
         role="dialog"
         aria-label="contact me!"
@@ -127,7 +127,6 @@ function Contact({ onClose }) {
                     name="name"
                     placeholder="let me know"
                     required
-                    autoFocus
                   />
                 </label>
                 <label>
@@ -161,7 +160,7 @@ function Contact({ onClose }) {
                   onKeyPress={() => onClose()}
                 >
                   <Button
-                    color="#DCDCDC"
+                    bgcolor="#DCDCDC"
                     height="3em"
                     width="7em"
                     radius="0.7em"
@@ -175,7 +174,7 @@ function Contact({ onClose }) {
                     aria-label="send message"
                   >
                     <Button
-                      color="#1c1c1c"
+                      bgcolor="#1c1c1c"
                       height="3em"
                       width="7em"
                       radius="0.7em"

@@ -14,6 +14,8 @@
     
 }
 
+
+
 .at__link {
     left: 50%;
   position: absolute;
@@ -30,13 +32,26 @@
     }
 }
 
-.logoIcon {
-    grid-row: span 3;
-    width: 4rem;
-    pointer-events: none;
-    justify-self: end;
+
+
+.logoIcon__d {
+  position: relative;
 }
 
+.logoIcon__dInner {
+  position: absolute;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  height: calc(100vh - var(--f4));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: var(--f4);
+  @media screen and (min-width: v.$width-mobile) {
+    padding-bottom: var(--f6);
+
+  }
+}
 .nav__wrapper {
     display: grid;
     justify-content: center;
@@ -50,7 +65,11 @@
     //grid-template-columns: 1fr;
     gap: var(--f1);
 
-    
+    .logoIcon {
+      width: 4rem;
+      justify-self: end;
+      right: 0;
+  }
   }
   .m__start {
     grid-column-start: 1;

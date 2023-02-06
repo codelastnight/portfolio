@@ -61,10 +61,18 @@ mark {
 
   }
 }
-.title {
-  font-size: var(--f6);
+.medium {
+  font-size: var(--f3);
   @media screen and (min-width: v.$width-mobile) {
-    font-size: var(--f7);
+    font-size: var(--f4);
+
+  }
+}
+.title {
+  font-size: var(--f9);
+  @media screen and (min-width: v.$width-mobile) {
+    
+      font-size: min(10vmin);
 
   }
 }

@@ -4,13 +4,16 @@ $width-desktop-l: 1440px;
 $width-mobile: 1080px;
 $width-max: 1920px;
 :root {
-    --f1: 12px;
-    --f2: 14px;
-    --f3: 18px;
-    --f4: 24px;
-    --f5: 36px;
-    --f6: 42px;
-    --f7: 64px;
+    --base: 0.694rem;
+    --f1: 0.833rem;
+    --f2: 1rem;
+    --f3: 1.2rem;
+    --f4: 1.44rem;
+    --f5: 1.728rem;
+    --f6: 2.074rem;
+    --f7: 2.488rem;
+    --f8: 2.986rem;
+    --f9: 3.583rem;
     --f1-half: calc(var(--f1) / 2);
     --f2-half: calc(var(--f2) / 2);
     --f3-half: calc(var(--f3) / 2);
@@ -54,10 +57,12 @@ $width-max: 1920px;
         // colors
         // light mode
     
-        --c-bg: #ECEAEF;
-        --c-bg: #F0EBF6;
+      //  --c-bg: #ECEAEF;
+        --theme-blue: #0500E1;
+        --theme-purple:#F0EBF6;
+        --c-bg: var(--theme-purple);
     
-        --c-fg: #0500E1;
+        --c-fg: var(--theme--blue);
         --c-hover-l: #DBDDE3;
         --c-hover-d: #3A3D4A;
     

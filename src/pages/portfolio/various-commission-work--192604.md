@@ -2,6 +2,8 @@
 templateKey: portfolio-post
 title: "Various Commission Work "
 prettydate: 2019-2021
+fgcolor: "#fff3f7"
+bgcolor: "#030781"
 description2: "Clients: Various"
 role: "Role: Branding, Concept, Render, Illustration"
 date: 2022-01-07T04:14:00.630Z

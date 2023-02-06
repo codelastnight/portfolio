@@ -4,7 +4,6 @@ import * as c from './navbar.module.scss'
 import Modal from '../Modal'
 import LogoIcon from '../LogoIcon'
 import loadable from '@loadable/component'
-
 const Contact = loadable(() => import('../Contact'));
 
 const Navbar = () => {
@@ -25,13 +24,14 @@ const Navbar = () => {
     return isCurrent ? { className: "none" } : {}
   }
   return (
-    <nav className={`z100 ${c.nav__wrapper}`} role="menubar">
+    <nav className={`z100 ${c.nav__wrapper}`} >
 
-      <Link class={"at__link"} href="#main">
+      <Link className={"at__link"} to="#main">
         Skip to content
       </Link>
       <div className={` ${c.nav}`}>
         <div className={`grid ${c.m__row}`}>
+
           <p className={`col2 ${c.m__start}`}>
             <Link
               getProps={isActive}
@@ -70,7 +70,13 @@ const Navbar = () => {
               contact
             </span>
           </p>
-          <LogoIcon className={`col4 show__m ${c.logoIcon}`} />
+          <div
+            className={`pointerNone col1__d ${c.logoIcon__d}`}
+          >
+            <div className={`${c.logoIcon} ${c.logoIcon__dInner}`}>
+              <LogoIcon />
+            </div>
+          </div>
           <div className={` col2__r span2 ${c.logo} flex justify__end show__d`} aria-hidden="true">
             <svg
               viewBox="0 0 138 35"

@@ -11,16 +11,28 @@ import loadable from '@loadable/component'
 const Footer = loadable(() => import('../Footer'));
 const Navbar = loadable(() => import('../Navbar'));
 
-const Layout = ({ children }) => {
+const Layout = ({ children, fgColor, bgColor }) => {
   const { title, description } = useSiteMetadata()
 
+  function setColor(fg, bg) {
+    console.log(fg, bg)
+    const root = document.body
+
+    if (!bg) bg = "var(--theme-purple)"
+    if (!fg) fg = "var(--theme-blue)"
+
+    root.style.setProperty('--c-fg', fg)
+    root.style.setProperty('--c-bg', bg)
+
+  }
 
   useEffect(() => {
-    let root = document.documentElement
+    const root = document.documentElement
 
     const scrollbarWidth = window.innerWidth - document.body.clientWidth
     root.style.setProperty('--scrollbarWidth', `${scrollbarWidth}px`)
-
+    //customcolor
+    setColor(fgColor, bgColor)
     return () => {
       root.style.setProperty('--scrollbarWidth', `0px`)
     }

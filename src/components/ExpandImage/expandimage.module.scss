@@ -1,12 +1,13 @@
+ 
 .expanded {
     border: 2px solid var(--c-fg);
     max-height: 95vmin;
-    max-width: 90vw;
-    width: 100%;
+    width: max(100%,90vw);
     position: relative;
     background: var(--c-bg);
     overflow: hidden;
     color: var(--c-bg);
+    margin: 0 auto;
 
 }
 
@@ -17,11 +18,15 @@
     display: block;
     background: var(--c-fg);
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    font-size: var(--f4);
+    font-size: var(--f2);
     font-family: "Neue Montreal", sans-serif;
     text-decoration: underline;
+    @media screen and (min-width: 1080px) {
+        font-size: var(--f4);
+    
+      }
 }
 
 .imgbtn {
@@ -29,7 +34,7 @@
     display: block;
     overflow: hidden;
 
-    cursor: pointer;
+    cursor: zoom-in;
     width: 100%;
     border: 1px solid transparent;
     &:hover {

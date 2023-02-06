@@ -9,9 +9,9 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 const container = {
-  hidden: { opacity: 1 },
+  hidden: {},
   show: {
-    opacity: 1,
+
     transition: {
       staggerChildren: 0.07,
       delayChildren: 0.5,
@@ -109,7 +109,7 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
               <motion.div variants={variants} className="absolute width100">
                 <Button
                   className={`width100 ${c.button} ${c.margin1rem}`}
-                  color="#F8ACF0"
+                  bgcolor="#F8ACF0"
                   height="5vmin"
                   radius="0.5rem"
                 />
@@ -212,7 +212,7 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                 <motion.div variants={variants} className={''}>
                   <Button
                     className={`absolute z-1 ${c.button} ${c.btn2}`}
-                    color="#88DC8B"
+                    bgcolor="#88DC8B"
                     height="18vmin"
                     width="18vmin"
                     radius="3vmin"
@@ -274,37 +274,29 @@ const MainHeading = ({ openContact, tagline, socials, year }) => {
                 right now.{' '}
               </motion.span>
             </h3>
-              <svg
-                width="23"
-                height="28"
-                viewBox="0 0 23 28"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <motion.path
-                  initial="hidden"
-                  animate={linkAni}
-                  variants={line}
-                  d="M11.211 1.34155C10.9258 6.19 11.3931 10.9613 11.4237 15.8067C11.4398 18.3644 11.3535 20.9187 11.6364 23.4648"
-                />
-                <motion.path
-                  initial="hidden"
-                  animate={linkAni}
-                  variants={line}
-                  d="M1 15.594C2.44192 17.9503 4.25581 20.0564 5.82173 22.3302C6.62219 23.4926 7.64517 24.4532 8.63441 25.4502C9.00712 25.8258 9.80773 27.0473 10.5016 26.892C11.3709 26.6974 12.2628 25.7503 12.9361 25.2375C14.3168 24.186 15.722 23.1606 17.0724 22.0702C18.9255 20.574 19.8713 18.5755 21.4215 16.8703"
-                />
-              </svg>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ when: 'beforeChildren', duration: 0.2 }}
-            className={`row7 show__d`}
-          >
-            <LogoIcon />
+            <svg
+              width="23"
+              height="28"
+              viewBox="0 0 23 28"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                initial="hidden"
+                animate={linkAni}
+                variants={line}
+                d="M11.211 1.34155C10.9258 6.19 11.3931 10.9613 11.4237 15.8067C11.4398 18.3644 11.3535 20.9187 11.6364 23.4648"
+              />
+              <motion.path
+                initial="hidden"
+                animate={linkAni}
+                variants={line}
+                d="M1 15.594C2.44192 17.9503 4.25581 20.0564 5.82173 22.3302C6.62219 23.4926 7.64517 24.4532 8.63441 25.4502C9.00712 25.8258 9.80773 27.0473 10.5016 26.892C11.3709 26.6974 12.2628 25.7503 12.9361 25.2375C14.3168 24.186 15.722 23.1606 17.0724 22.0702C18.9255 20.574 19.8713 18.5755 21.4215 16.8703"
+              />
+            </svg>
           </motion.div>
 
           <motion.div
