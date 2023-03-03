@@ -3,13 +3,14 @@ templateKey: portfolio-post
 title: A Virtual Pet that Optimally Navigates Your Grocery Shopping
 prettydate: Spring 2023
 bgcolor: "#DBE1ED"
+visible: true
 description2: "Professor: Noah Posner"
 role: Individual Project
 date: 2023-02-06T08:34:52.858Z
 description: 'Created for prompt: "Wayfinding for Chefs" —  Increase customer
   loyalty and retention through a grocery store experience where a customizable
   virtual pet leads users through their shopping list.'
-thumbnail: https://ucarecdn.com/c40548db-0bc2-4016-89fa-16583a8398a4/
+thumbnail: https://ucarecdn.com/7beef390-b17a-4c25-a8ba-232afcd31b1e/
 featuredimage: https://ucarecdn.com/c40548db-0bc2-4016-89fa-16583a8398a4/
 bodycontent:
   - type: bodyfullimage
@@ -18,12 +19,15 @@ bodycontent:
   - type: bodytext
     text: L﻿oad in your shopping list onto your member account from home, or use the
       kiosk to create one.
+    heading: Simple onboarding through grocery membership cards
   - type: bodyfullimage
     image: https://ucarecdn.com/34c860ae-c470-4065-a06b-149029effe87/
     alt: navigation experience
   - type: bodytext
     text: Active UWB (ultra-wideband) RFID technology allows for centimeter accuracy
-      of the device, allowing for the pet to seamlessly guide you.
+      of the device. Others can also see your customized pet, creating a unique
+      opportunity for customer engagement
+    heading: The virtual pet guides shopper to items in an optimal route
   - type: bodyfullimage
     image: https://ucarecdn.com/9630466c-c2c4-48d2-b89d-1bc4b45ca177/
     alt: closeup images
@@ -31,6 +35,7 @@ bodycontent:
     text: Press & hold to request help from a store worker; Quickly modify and edit
       shopping list by sliding open device. For more in-depth editing and adding
       items, head to a nearby kiosk.
+    heading: The handheld acts as a safety net in case of uhappy paths.
   - type: bodyfullimage
     image: https://ucarecdn.com/8a0a24ac-12f7-452a-a0c6-9787a1e80bb8/
     alt: exploded diagram of product

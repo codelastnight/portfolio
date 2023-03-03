@@ -32,13 +32,13 @@ const Footer = () => {
           <Link to="/">back to top</Link>
         </p>
         <p className="col3 ">
-          <Link to="/" aria-hidden="true">back to top</Link>
+          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
         <p className="col6 show__d">
-          <Link to="/" aria-hidden="true">back to top</Link>
+          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
         <p className="col1__r justify__end show__d">
-          <Link to="/" aria-hidden="true">back to top</Link>
+          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
       </section>
       <section className="grid ">
@@ -59,7 +59,7 @@ const Footer = () => {
             role="button"
             tabIndex="0"
           >
-            <Button bgcolor="#FF9023" height="3em ">
+            <Button color={'black'} bgcolor="#FF9023" height="3em ">
               <p className='bold'>Contact Me</p>
             </Button>
           </div>
@@ -71,6 +71,7 @@ const Footer = () => {
         <div className={`col2 `}>
           <p>portfolio</p>
         </div>
+        <a className={`col3 end4 `} href="https://github.com/codelastnight/portfolio">Github Source</a>
 
         <div className={`col6__r `}>
 

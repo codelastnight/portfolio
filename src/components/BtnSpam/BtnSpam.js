@@ -64,6 +64,7 @@ const BtnSpam = ({ children, count, color, className, onClick }) => {
               animate={controls}
               variants={variants}
               key={i}
+              tabindex={i === 0 ? "0" : "-1"}
               onClick={() => onClick()}
               role="button"
               tabIndex={0}

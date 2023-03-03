@@ -4,14 +4,15 @@ title: Eco-friendly 6-Pack Carrier Redesign
 prettydate: "2021"
 fgcolor: "#000000"
 bgcolor: "#f0f0f0"
+visible: true
 description2: "Sponsors: Hi-Cone, CocaCola "
 role: "Role: Ideation, 3D modeling & Render"
 date: 2022-02-08T20:49:38.602Z
 description: A paperboard only bottle carrier design. Easy to manufacture,
-  environmentally conscious, and has a large marketing surface. Created for the
-  2021 48hr Repack student competition.
-thumbnail: https://ucarecdn.com/09975cd4-68a2-48ef-8999-d570d91c0291/
-featuredimage: https://ucarecdn.com/7bf2790c-6010-4509-b6fc-fdfe2fbb426a/
+  environmentally conscious, and has a large marketing surface. Won 2nd place in
+  the 2021 48hr Repack student competition.
+thumbnail: https://ucarecdn.com/7e3b7a0b-1c2f-4049-be79-f8dfcd55cdec/
+featuredimage: https://ucarecdn.com/6b8c41e1-5ee9-4022-9e69-fce336b7ba37/
 bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/277a0690-3f0b-465c-8396-48a97fb124c7/
@@ -46,8 +47,6 @@ bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/c496bed1-9dbf-48e7-9659-54dc93cddcd3/
     alt: Thank you
-  - type: bodytext
-    text: \
 tags:
   - Packaging
 ---

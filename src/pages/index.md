@@ -2,10 +2,10 @@
 templateKey: index-page
 title: simon zhang design
 image: /img/og-image.jpg
-tagline: exploring the tension between accessible and experimental
+tagline: creating intimacy between physical and digital products
 aboutblurb: simon zhang is a cross-disciplinary designer based in ATL & SEA —
-  netscape-oriented with a windows aero slant. exploring the tension between
-  accessible and experimental.
+  netscape-oriented with a windows aero slant. creating intimacy between
+  physical and digital products.
 interests:
   - title: "Listening To:"
     prettyLink: sanctuary by karnaboy

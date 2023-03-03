@@ -46,7 +46,7 @@ export const BlogPostTemplate = ({
           <div className="col1 col2__d end1__r end1__rd z1">
 
             <div className="col1 end5 limit z5" style={{ marginTop: '20vh', marginBottom: 'var(--f3)' }}>
-              <h1 className="title "><mark>{title}</mark></h1>
+              <h1 className="title ">{title}</h1>
             </div>
             <div
               className="col1 split text col3__d limit end1__r "
@@ -101,8 +101,9 @@ export const BlogPostTemplate = ({
                 {bodycontent.map((content, i) => (
                   <div key={i} role="listitem">
                     {content.type === "bodytext" ?
-                      <div className="medium long spacer__s" style={{ maxWidth: '30em' }}>
-                        {content.text}
+                      <div className=" long spacer__m" style={{ maxWidth: '30em' }}>
+                        {content.heading ? <h3 className="big">{content.heading}</h3> : null}
+                        <p className='text'>{content.text}</p>
                       </div> : <ExpandImage imageInfo={{
                         image: content.image,
                         alt: content.alt,
@@ -203,6 +204,7 @@ export const pageQuery = graphql`
           image 
           alt
           text
+          heading
         }
         featuredimage 
       }

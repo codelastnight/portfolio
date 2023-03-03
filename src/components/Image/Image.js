@@ -5,14 +5,13 @@ import { useInView } from 'react-intersection-observer'
 import * as c from './image.module.scss'
 
 const dynImg = (image) => {
-  image = `${image}-/resize/300x/-/format/webp/ 300w,
-            ${image}-/resize/600x/-/format/webp/ 600w,
-            ${image}-/resize/800x/-/format/webp/ 800w,
-            ${image}-/resize/1000x/-/format/webp/ 1000w,
-            ${image}-/resize/1200x/-/format/webp/ 1200w,
-            ${image}-/resize/1400x/-/format/webp/ 1400w,
-            ${image}-/resize/1600x/-/format/webp/ 1600w,
-            ${image}-/resize/2000x/-/format/webp/ 2000w`
+  image = `${image}-/resize/600x/-/format/webp/ 300w,
+            ${image}-/resize/800x/-/format/webp/ 600w,
+            ${image}-/resize/1200x/-/format/webp/ 800w,
+            ${image}-/resize/1600x/-/format/webp/ 1000w,
+            ${image}-/resize/1800x/-/format/webp/ 1200w,
+            ${image}-/resize/2000x/-/format/webp/ 1400w
+`
   return image
 }
 

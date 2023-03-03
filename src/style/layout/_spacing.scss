@@ -39,6 +39,16 @@ section {
     }
 }
 
+.spacer__m {
+    margin-top: calc(var(--f6));
+    margin-bottom: calc(var(--f6));
+
+    @media screen and (min-width:calc(v.$width-mobile)) {
+        margin-top: calc(var(--f8));
+
+        margin-bottom: calc(var(--f8));
+    }
+}
 .negative3 {
     margin-top: -var(--f3);
 }
