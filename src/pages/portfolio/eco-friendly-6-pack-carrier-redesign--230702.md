@@ -1,12 +1,12 @@
 ---
 templateKey: portfolio-post
 title: Eco-friendly 6-Pack Carrier Redesign
-prettydate: "2021"
+prettydate: 48 hours
 fgcolor: "#000000"
 bgcolor: "#f0f0f0"
 visible: true
 description2: "Sponsors: Hi-Cone, CocaCola "
-role: "Role: Ideation, 3D modeling & Render"
+role: "Group: Simon Zhang, Owen Cheung"
 date: 2022-02-08T20:49:38.602Z
 description: A paperboard only bottle carrier design. Easy to manufacture,
   environmentally conscious, and has a large marketing surface. Won 2nd place in
@@ -33,9 +33,19 @@ bodycontent:
       materials: mushroom / agar-based packaging, rope / twine, hanging /
       clustering. In the end, we stuck with a simple paperboard design: low
       manufacturing cost, uses existing recycling infrastructure"
+  - type: bodytext
+    heading: My role was in Ideation, 3D modeling & Rendering
+    text: T﻿here was a challenge in designing a flexible paperboard package design
+      in fusion 360. I learned how to use the sheet metal tool to create a
+      parametric design that we could quickly iterate on.
   - type: bodyfullimage
     image: https://ucarecdn.com/beddf75f-ad17-4562-ac1e-7dd1d24bf6f6/
     alt: "Ideation: Communication using online collaborative whiteboard"
+  - type: bodytext
+    heading: Our Solution
+    text: Single sheet of standard 6mm paperboard (comparable to cereal boxes). No
+      glue required. Easily modified to fit other sizes, simple to manufacture.
+      Large marketable surface area.
   - type: bodyfullimage
     image: https://ucarecdn.com/c5757194-df39-4994-a143-7f3cc79472ee/
     alt: Our Solution
@@ -47,6 +57,15 @@ bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/c496bed1-9dbf-48e7-9659-54dc93cddcd3/
     alt: Thank you
+  - type: bodytext
+    heading: Reflection
+    text: For further iterations, we would adjust and update the cutouts on the
+      paperboard. For example, the fit of each bottle should be tested to make
+      sure the design works best. Because it was my first year at Tech, I did
+      not have access to the laser cutters. I would have loved to physically
+      iterate. Additionally, matching timezones to work together proved a
+      challenge.
 tags:
   - Packaging
+  - Industrial Design
 ---

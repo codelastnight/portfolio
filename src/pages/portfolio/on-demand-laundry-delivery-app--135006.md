@@ -1,7 +1,7 @@
 ---
 templateKey: portfolio-post
 title: On-demand Laundry Delivery App
-prettydate: "2021"
+prettydate: 2 months
 fgcolor: "#0025bf"
 bgcolor: "#f9f9ff"
 visible: true
@@ -53,6 +53,15 @@ bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/e005bdcc-82e0-4da7-a159-9950a5b76fc4/
     alt: Thank you.
+  - type: bodytext
+    heading: Reflection
+    text: "T﻿his project was the culmination of what I learned from this job. I self
+      taught onsite, learning Visual proportions, Auto-Layout grids, components,
+      a dynamic typescale, deriving insights from users, utilizing design
+      heuristics, prototyping and handoff to developers, and arguing for users
+      in a team full of engineers. Ultimately, I came to understand the
+      realities of agile app development and how it is often at odds with
+      perfecting designs. "
 tags:
   - UI/UX
 ---
