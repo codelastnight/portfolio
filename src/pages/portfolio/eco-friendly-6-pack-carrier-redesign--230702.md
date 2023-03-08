@@ -6,7 +6,8 @@ fgcolor: "#000000"
 bgcolor: "#f0f0f0"
 visible: true
 description2: "Sponsors: Hi-Cone, CocaCola "
-role: "Group: Simon Zhang, Owen Cheung"
+members: "Group: Simon Zhang, Owen Cheung"
+role: "Role: Ideation, 3D modeling & Rendering"
 date: 2022-02-08T20:49:38.602Z
 description: A paperboard only bottle carrier design. Easy to manufacture,
   environmentally conscious, and has a large marketing surface. Won 2nd place in
@@ -16,7 +17,8 @@ featuredimage: https://ucarecdn.com/6b8c41e1-5ee9-4022-9e69-fce336b7ba37/
 bodycontent:
   - type: bodyfullimage
     image: https://ucarecdn.com/277a0690-3f0b-465c-8396-48a97fb124c7/
-    alt: Butterfly Multipack. Eco-friendly 6-pack Bottle Carrier Redesign. By Simon
+    alt:
+      Butterfly Multipack. Eco-friendly 6-pack Bottle Carrier Redesign. By Simon
       Zhang and Owen Cheung
   - type: bodyfullimage
     image: https://ucarecdn.com/1b9ba3e0-9666-46d5-93c6-5a8dbdd17694/
@@ -35,7 +37,8 @@ bodycontent:
       manufacturing cost, uses existing recycling infrastructure"
   - type: bodytext
     heading: My role was in Ideation, 3D modeling & Rendering
-    text: T﻿here was a challenge in designing a flexible paperboard package design
+    text:
+      T﻿here was a challenge in designing a flexible paperboard package design
       in fusion 360. I learned how to use the sheet metal tool to create a
       parametric design that we could quickly iterate on.
   - type: bodyfullimage
@@ -43,7 +46,8 @@ bodycontent:
     alt: "Ideation: Communication using online collaborative whiteboard"
   - type: bodytext
     heading: Our Solution
-    text: Single sheet of standard 6mm paperboard (comparable to cereal boxes). No
+    text:
+      Single sheet of standard 6mm paperboard (comparable to cereal boxes). No
       glue required. Easily modified to fit other sizes, simple to manufacture.
       Large marketable surface area.
   - type: bodyfullimage
@@ -51,7 +55,8 @@ bodycontent:
     alt: Our Solution
   - type: bodyfullimage
     image: https://ucarecdn.com/1e64cb4d-2eca-477e-8020-4bdf8bdf8f50/
-    alt: Single sheet of standard 6mm paperboard (comparable to cereal boxes). No
+    alt:
+      Single sheet of standard 6mm paperboard (comparable to cereal boxes). No
       glue required. Easily modified to fit other sizes, simple to manufacture.
       Large marketable surface area.
   - type: bodyfullimage

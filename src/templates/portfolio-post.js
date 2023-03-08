@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import ExpandImage from '../components/ExpandImage'
 import Image from '../components/Image'
 import Button from '../components/Button'
+import ProjectFooterNav from '../components/ProjectFooterNav/ProjectFooterNav'
 
 const Heading = ({ children, first, second, label, image }) => {
   return (
@@ -22,18 +23,10 @@ const Heading = ({ children, first, second, label, image }) => {
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
-
-  description,
-  description2,
-  date,
-  featuredimage,
-  bodycontent,
-  tags,
-  title,
-  role,
+  frontmatter,
   helmet,
 }) => {
-
+  const { description, description2, prettydate, featuredimage, bodycontent, tags, title, role, members } = frontmatter;
   return (
     <React.Fragment>
       {helmet || ''}
@@ -63,7 +56,8 @@ export const BlogPostTemplate = ({
                   ))}
                 </div>
               ) : null}</div>
-              <p>{date}</p>
+              <p>{prettydate}</p>
+              {members && <p>{members}</p>}
             </div>
 
             {featuredimage &&
@@ -120,20 +114,7 @@ export const BlogPostTemplate = ({
           }
         </article>
       </section>
-      <section className="grid v-padding6" style={{ maxWidth: '70rem' }}>
-        <div
-          className={`col1 col3__d end1__r fg limit__s `}
-          onClick={() => window.history.back()}
-          onKeyPress={() => window.history.back()}
-          role="button"
-          tabIndex="0"
-        >
-          <Button bgcolor="#88DC8B" color={'black'} height="5.5em " radius={'2em'} style={{ color: 'black' }}
-          >
-            <p className='bold'>Return to Works ↩</p>
-          </Button>
-        </div>
-      </section>
+      <ProjectFooterNav />
     </React.Fragment>
   )
 }
@@ -155,12 +136,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout fgColor={post.frontmatter.fgcolor} bgColor={post.frontmatter.bgcolor}>
       <BlogPostTemplate
-        bodycontent={post.frontmatter.bodycontent}
-        description={post.frontmatter.description}
-        description2={post.frontmatter.description2}
-        date={post.frontmatter.prettydate}
-        featuredimage={post.frontmatter.featuredimage}
-        role={post.frontmatter.role}
+        frontmatter={post.frontmatter}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -170,8 +146,7 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+
       />
     </Layout>
   )
@@ -198,6 +173,7 @@ export const pageQuery = graphql`
         tags
         description2
         role
+        members
         prettydate
         bodycontent {
           type

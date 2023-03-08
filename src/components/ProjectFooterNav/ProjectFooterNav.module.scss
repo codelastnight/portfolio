@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    place-items: center;
+    p  {
+        padding: var(--f3) var(--f6);
+        text-align: center;
+        line-height: 150%;
+    }
+}

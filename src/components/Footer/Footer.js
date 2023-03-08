@@ -29,16 +29,16 @@ const Footer = () => {
     <footer className={`${c.footer__wrapper} reverse`}>
       <section className="grid v-margin6">
         <p className="col2">
-          <Link to="/">back to top</Link>
+          <Link to="#main">back to top</Link>
         </p>
         <p className="col3 ">
-          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
+          <Link to="#main" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
         <p className="col6 show__d">
-          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
+          <Link to="#main" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
         <p className="col1__r justify__end show__d">
-          <Link to="/" aria-hidden="true" tabindex="-1">back to top</Link>
+          <Link to="#main" aria-hidden="true" tabindex="-1">back to top</Link>
         </p>
       </section>
       <section className="grid ">
