@@ -7,21 +7,21 @@ import React, {
 import * as c from './modal.module.scss'
 
 import { Dialog, Transition } from '@headlessui/react'
-const variant = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      duration: 0.1,
-      delay: 0.2,
-    },
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-    },
-  },
-}
+// const variant = {
+//   hidden: {
+//     opacity: 0,
+//     transition: {
+//       duration: 0.1,
+//       delay: 0.2,
+//     },
+//   },
+//   show: {
+//     opacity: 1,
+//     transition: {
+//       duration: 0.1,
+//     },
+//   },
+// }
 
 const Modal = ({ children, title }, ref) => {
   const [isOpen, setOpen] = useState(false)

@@ -2,13 +2,18 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import * as c from './ProjectFooterNav.module.scss'
 const ProjectFooterTemplate = ({ data, }) => {
+  const [location, setLocation] = React.useState('')
+  React.useEffect(() => {
+    const isBrowser = () => typeof window !== "undefined"
+    isBrowser() && setLocation(window.location.href);
+  }, [])
   const { edges: posts } = data.allMarkdownRemark;
   return (
     <div className={c.container}>
       <p className='medium ' style={{ maxWidth: '30em' }}>
         {posts && posts.map(({ node: post }, index) =>
-          < >
-            {!window.location.href.includes(post.fields.slug) ?
+          post.frontmatter.visible && < >
+            {!location.includes(post.fields.slug) ?
               <Link href={post.fields.slug} key={post.id}>
                 {post.frontmatter.title}
               </Link> :
@@ -16,7 +21,6 @@ const ProjectFooterTemplate = ({ data, }) => {
                 {post.frontmatter.title}
               </mark>
             }
-
             {index === (posts.length - 1) ? '' : ' / '}
           </>
         )}
@@ -41,6 +45,7 @@ function ProjectFooterNav({ link }) {
                   }
                   frontmatter {
                     title
+                    visible
                   }
                 }
               }

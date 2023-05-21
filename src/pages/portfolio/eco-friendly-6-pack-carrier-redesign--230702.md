@@ -64,12 +64,7 @@ bodycontent:
     alt: Thank you
   - type: bodytext
     heading: Reflection
-    text: For further iterations, we would adjust and update the cutouts on the
-      paperboard. For example, the fit of each bottle should be tested to make
-      sure the design works best. Because it was my first year at Tech, I did
-      not have access to the laser cutters. I would have loved to physically
-      iterate. Additionally, matching timezones to work together proved a
-      challenge.
+    text: This project was the culmination of what I learned from this job. Built on top of UX initially developed by Anna Dawson and Hilary Painter. I self taught onsite, learning Visual proportions, Auto-Layout grids, components, a dynamic typescale, deriving insights from users, utilizing design heuristics, prototyping and handoff to developers, and arguing for users in a team full of engineers. Ultimately, I came to understand the realities of agile app development and how it is often at odds with perfecting designs.
 tags:
   - Packaging
   - Industrial Design

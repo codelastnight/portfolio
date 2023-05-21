@@ -23,27 +23,23 @@ function getDistance(x1, y1, x2, y2) {
 
 export default function distribute(count, min, max) {
   let arr = []
-  for (var i = 0; i < count; i++) {
-    if (arr.length > 0) {
-      var test = null
-      var r = 30
-      for (var repeat = 0; repeat < 8; repeat++) {
-        var track = false
-        test = randomInt(min, max)
-        arr.forEach((e) => {
-          track = checkPoint(test, e, r)
-        })
-
-        if (repeat > 5) {
-          r += -5
-        }
-        if (track) {
-          break
-        }
-      }
-      arr.push(test)
-    } else {
+  for (let i = 0; i < count; i++) {
+    if (arr.length === 0) {
       arr.push(randomInt(min, max))
+      continue
+    }
+    //let test = 0
+    let r = 30
+    for (let repeat = 0; repeat < 5; repeat++) {
+      let track = false
+      let test = randomInt(min, max)
+      arr.forEach((e) => {
+        track = checkPoint(test, e, r)
+      })
+      if (track) {
+        arr.push(test)
+        break
+      }
     }
   }
   return arr

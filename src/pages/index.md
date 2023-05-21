@@ -13,6 +13,9 @@ interests:
   - title: "Reading right now:"
     prettyLink: Multiethnic Japan by John Lie
     url: https://www.hup.harvard.edu/catalog.php?isbn=9780674013582
+  - title: See how this site was built 👀
+    prettyLink: Source Code on Github
+    url: https://github.com/codelastnight/portfolio
 social links:
   - prettyLink: instagram
     url: https://www.instagram.com/art.last.night/

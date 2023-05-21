@@ -52,14 +52,18 @@ const Navbar = () => {
               work
             </Link>
           </p>
-
-          <p className={`col4__d col2 ${c.m__col2}`}>
+          <p className={`col3__d col2 ${c.m__col2}`}>
+            <Link to="/play" type="about" element="title" role="menuitem">
+              play
+            </Link>
+          </p>
+          <p className={`col5__d col3 `}>
             <Link to="/#about" type="about" element="title" role="menuitem">
               about
             </Link>
           </p>
 
-          <p className={``}>
+          <p className={`col6__d col4`}>
             <span
               className={'pseudolink'}
               onClick={() => contactRef.current.open()}
@@ -70,8 +74,9 @@ const Navbar = () => {
               contact
             </span>
           </p>
+
           <div
-            className={`pointerNone col1__d ${c.logoIcon__d}`}
+            className={`pointerNone col1__d col4 ${c.logoIcon__d}`}
           >
             <div className={`${c.logoIcon} ${c.logoIcon__dInner}`}>
               <LogoIcon />

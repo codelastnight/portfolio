@@ -15,6 +15,7 @@ class BlogRollTemplate extends React.Component {
         <div className={c.posts} role="list" >
           {posts &&
             posts.map(({ node: post }) => (
+              post.frontmatter.visible &&
               <article key={post.id} role="listitem" className={`text ${c.article}`}>
                 <Link to={post.fields.slug}>
                   {post.frontmatter.thumbnail ? (
@@ -40,6 +41,8 @@ class BlogRollTemplate extends React.Component {
                   </p>
                 </Link>
               </article>
+
+
             ))}
         </div>
       </section>
@@ -66,7 +69,6 @@ export default function BlogRoll() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
                 id
                 fields {
                   slug
@@ -74,9 +76,8 @@ export default function BlogRoll() {
                 frontmatter {
                   title
                   templateKey
-                  tags
+                  visible
                   date
-                  prettydate
                   thumbnail
                 }
               }

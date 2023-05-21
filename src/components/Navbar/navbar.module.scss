@@ -42,7 +42,8 @@
   position: absolute;
   width: -moz-available;
   width: -webkit-fill-available;
-  height: calc(100vh - var(--f4));
+  height: calc(100vh - var(--f4) - 1em);
+  height: calc(100dvh - var(--f4) - 1em);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

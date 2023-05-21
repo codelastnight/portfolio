@@ -65,49 +65,6 @@ collections:
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: markdown, required: false}
       - { label: "Tags", name: "tags", widget: "list" }
-  - name: "playground"
-    label: "playground"
-    folder: "src/pages/playground"
-    create: true
-    slug: "{{slug}}--{{minute}}{{second}}{{hour}}"
-    fields:
-    - {
-        label: "Template Key",
-        name: "templateKey",
-        widget: "hidden",
-        default: "playground-post",
-      }
-    - { label: "Title", name: "title", widget: "string" }
-
-    - { label: "Date", name: "prettydate", widget: "string" }
-    - { label: "small description", name: "description2", widget: "string" }
-    - { label: "role", name: "role", widget: "string" }
-    - { label: "Publish Date", name: "date", widget: "datetime" }
-
-    - { label: "Description", name: "description", widget: "text" }
-    - { label: "Thumbnail", name: "thumbnail", widget: image }
-    - label: "Body 2"
-      name: "bodycontent"
-      widget: "list" 
-      types: 
-        - label: Full Image
-          name: bodyfullimage
-          widget: object
-          summary: "{{fields.image}}"
-          fields:
-            - {label: Image, name: image, widget: image}
-            - {label: alt, name: alt, widget: string}
-
-        - label: Text
-          name: bodytext
-          widget: object
-          summary: "{{fields.text}}"
-          fields:
-            - {label: Text, name: text, widget: markdown,required: false}
-    - { label: "Tags", name: "tags", widget: "list" }
-
- 
-
   - name: "pages"
     label: "Pages"
     files:
@@ -153,7 +110,7 @@ collections:
           
 
 
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/play/index.md"
         label: "play"
         name: "play"
         fields:
@@ -165,7 +122,24 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-          - { label: "Featured Image", name: "profile", widget: image }
+          - label: "Body 2"
+            name: "bodycontent"
+            widget: "list" 
+            types: 
+              - label: Full Image
+                name: bodyfullimage
+                widget: object
+                summary: "{{fields.image}}"
+                fields:
+                  - {label: Image, name: image, widget: image}
+                  - {label: alt, name: alt, widget: string}
+
+              - label: Text
+                name: bodytext
+                widget: object
+                summary: "{{fields.text}}"
+                fields:
+                  - {label: Text, name: text, widget: markdown,required: false}
 
      
 

@@ -21,7 +21,7 @@ const defsizes = `
   `
 
 const Image = ({ imageInfo, onThumbLoad }) => {
-  const [isThumb, setThumb] = useState(false)
+  //const [isThumb, setThumb] = useState(false)
   const [isLoaded, setLoaded] = useState(false)
 
   const [ref, inView] = useInView({
@@ -30,7 +30,7 @@ const Image = ({ imageInfo, onThumbLoad }) => {
   });
 
   const onImgLoad = ({ target: img }) => {
-    setThumb(true)
+    //setThumb(true)
     if (!!onThumbLoad) onThumbLoad(img);
 
   }

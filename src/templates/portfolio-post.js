@@ -6,10 +6,9 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import ExpandImage from '../components/ExpandImage'
 import Image from '../components/Image'
-import Button from '../components/Button'
 import ProjectFooterNav from '../components/ProjectFooterNav/ProjectFooterNav'
 
-const Heading = ({ children, first, second, label, image }) => {
+const Heading = ({ children }) => {
   return (
     <section className={`grid spacer__top`}>
       <div className="col1 col2__d end1__r end1__rd z1">

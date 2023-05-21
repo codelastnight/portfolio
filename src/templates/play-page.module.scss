@@ -1,3 +1,27 @@
+$pink: #f5ecf4;
+
 .aboutsection {
-    margin-top: var(--f6);
+  margin-top: var(--f6);
+}
+.playsection {
+}
+.title {
+  font-size: 13vmin;
+  margin-top: -0.35em;
+  svg {
+    height: 1em;
+    padding: 0 var(--f3);
+    padding-top: var(--f3);
+  }
+}
+
+.content {
+  background-color: $pink;
+  border: 1px dashed var(--c-fg);
+  padding: var(--f3);
+}
+.imagecontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--f3);
 }
