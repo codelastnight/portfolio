@@ -10,8 +10,18 @@ $pink: #f5ecf4;
   margin-top: -0.35em;
   svg {
     height: 1em;
+    width: 100%;
     padding: 0 var(--f3);
     padding-top: var(--f3);
+  }
+}
+.title span {
+  display: block;
+}
+
+@media screen and (min-width: 1080px) {
+  .title span {
+    display: inline-block;
   }
 }
 

@@ -75,13 +75,7 @@ const Navbar = () => {
             </span>
           </p>
 
-          <div
-            className={`pointerNone col1__d col4 ${c.logoIcon__d}`}
-          >
-            <div className={`${c.logoIcon} ${c.logoIcon__dInner}`}>
-              <LogoIcon />
-            </div>
-          </div>
+
           <div className={` col2__r span2 ${c.logo} flex justify__end show__d`} aria-hidden="true">
             <svg
               viewBox="0 0 138 35"
@@ -104,6 +98,13 @@ const Navbar = () => {
                 fillRule="evenodd"
               />
             </svg>
+          </div>
+          <div
+            className={`pointerNone col1__d col4 ${c.logoIcon__d}`}
+          >
+            <div className={`${c.logoIcon} ${c.logoIcon__dInner}`}>
+              <LogoIcon />
+            </div>
           </div>
         </div>
       </div>
